@@ -7,3 +7,6 @@ Plus a few years of Walter ADey (Smithsonian) algal biomass sampling
 
 Also, environmental data (mostly water temperature) from NOAA buoys downloaded and stiched together, with mild EC
 
+Comments herein are largely from TSS (suskiewicz.thew@gmail.com) with input from DBR and JEB.
+
+Thanks for all the kelp!
