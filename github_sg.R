@@ -2,7 +2,7 @@
 ##~~##~~##~~##~~  RoyalB_Model Generation                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Purpose: Running a model to test if temp and/or urchin influences kelp cover       ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Thew Suskiewicz   - March 10th, 2020                                         ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: July 2020 (The COVID Days)                                 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Last Worked On: Aug 11, 2020 (The COVID Days)                                 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 
@@ -34,16 +34,13 @@ library(car) #for quantile-quantile plots
 library(lattice) #data exploration
 library(glmmTMB) # General Lineawr Mixed Models & beta regression
 
-
-#glmmTMB
-
-#load dataframes: dmr = DMR's randomly surveyed annual urchin dives (with kelp data), stenecksg = steneck and Sea Grant master file
-dmr <- read.csv("dmr.csv", header=TRUE)
-stenecksg <- read.csv("stenecksg.csv", header=TRUE)
+#load dataframes
+dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
+stenecksg <- read.csv("stenecksg.csv", header=TRUE) #merged datasets of algal % cover from Steneck, Adey and Rasher/Suskiewicz
 
 #check structure
 str(dmr) #note: Date is a factor, but currently this doesn't matter for inner_join
-str(stenecksg)
+str(stenecksg) #looks good
 
 #select only categories needed for merging (joining) dataframes, create two new DFs - dmr.join & stenecksg.join
 dmr.join <-dmr %>%
@@ -74,10 +71,8 @@ stenecksg.join$urchin <- as.numeric(stenecksg.join$urchin) #forces $urchin to be
 
 #change values where kelp >100 to equal 100 (these are outliers but problematic - mostly desmarestia confounding kelp cover estimates).
 stenecksg.join <- stenecksg.join %>% 
-    mutate(kelp = replace(kelp, kelp > 100, 100))
-
-#create new column: kelp.perc = kelp/100
-stenecksg.join <- transform(stenecksg.join, kelp.perc=(kelp/100))
+    mutate(kelp = replace(kelp, kelp > 100, 100)) %>%
+    transform(stenecksg.join, kelp.perc=(kelp/100)) #creates new column 'kelp.perc'
 
 #set epsilon to 1/2 of lowest value (0.1%, or 0.001, ergo epsilon = 0.0005).  Then mutate 0 values to 0+epsilon, and 100 values to 100-epsilon.
 #this eliminates -Inf/Inf values from transformation
@@ -85,19 +80,18 @@ stenecksg.join <- stenecksg.join %>%
     mutate(kelp.perc = replace(kelp.perc, kelp.perc == 1, 0.9995)) %>% 
     mutate(kelp.perc = replace(kelp.perc, kelp.perc == 0, 0.0005))
 
-stenecksg.join$urchin <- as.numeric(stenecksg.join$urchin)
-
-#First, create kelp.perc column with values from 0 to 1
-dmr.join <- transform(dmr.join, kelp.perc=(kelp/100))
-
-#Second, mutate values so 0 = 0.0005 and 1 = 0.9995
+#Joining Dataframes####
+#First, create kelp.perc column with values from 0 to 1; mutate values so 0 = 0.0005 and 1 = 0.9995
 dmr.join <- dmr.join %>% 
+    transform(dmr.join, kelp.perc=(kelp/100)) %>%
     mutate(kelp.perc = replace(kelp.perc, kelp.perc == 1, 0.9995)) %>% 
-    mutate(kelp.perc = replace(kelp.perc, kelp.perc == 0, 0.0005))
+    mutate(kelp.perc = replace(kelp.perc, kelp.perc == 0, 0.0005)) #this avoids inf/-inf errors
 
-#use full_join to merge two dataframes (stenecksg.join and dmr.join)
+#use full_join to merge two dataframes (stenecksg.join and dmr.join). Create master dataframe 'DF'
 DF <-full_join(dmr.join,stenecksg.join, by=c('year','latitude', 'longitude', 'depth', 'urchin', 'region', 'kelp', 'exposure', 'coastal', 'kelp.perc'))
 
+
+#logit transformation####
 #perform logit transformation on kelp.perc within DF ($logit.kelp)
 DF$logit.kelp <- logit(DF$kelp.perc)
 
@@ -128,8 +122,13 @@ xyplot (kelp.perc~year | region, group = region, data=DF,
 
 ##~~##~~##~~##~~##~~##~~##~~##~~##
 #Note: Logit transformation does not appear any better than non-transformed data.  
-# Try alternative transformation? Guidance of JEB - beta regression
+# Try alternative transformation? Guidance of JEB - beta regression!
 ##~~##~~##~~##~~##~~##~~##~~##~~##
+
+#beta regression####
+#goal: transform kelp.perc to improve normalicy and address zero-inflated data (glmmTMB package)
+#I'm lost as how to accomplish this:
+#from glmmTMB: beta Beta distribution: parameterization of Ferrari and Cribari-Neto (2004) and the betareg package (Cribari-Neto and Zeileis 2010); V=mu*(1-mu)/(phi+1)
 
 
 #Set Urchin values to 0 (< 10) and 1 (> 10) for binary determination.
