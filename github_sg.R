@@ -125,12 +125,6 @@ xyplot (kelp.perc~year | region, group = region, data=DF,
 # Try alternative transformation? Guidance of JEB - beta regression!
 ##~~##~~##~~##~~##~~##~~##~~##~~##
 
-#beta regression####
-#goal: transform kelp.perc to improve normalicy and address zero-inflated data (glmmTMB package)
-#I'm lost as how to accomplish this:
-#from glmmTMB: beta Beta distribution: parameterization of Ferrari and Cribari-Neto (2004) and the betareg package (Cribari-Neto and Zeileis 2010); V=mu*(1-mu)/(phi+1)
-
-
 #Set Urchin values to 0 (< 10) and 1 (> 10) for binary determination.
 # Urchin 1/0 ####
 DF <- transform(DF, urchin.limit=(urchin)) #-- no longer necessary(?)
@@ -140,33 +134,23 @@ DF<- DF %>%
     mutate(urchin.limit = replace(urchin.limit, urchin <9.99, 0))
 
 #GMC dataframes####
-
-##~~##~~  Train of Thought ##~~##~~##
-##~~##~~##~~##~~##~~##~~##~~##
-##   Here (below) we are taking the logit-transformation of kelp and TEMPERATURE in order to 
-##    ARG>>>> NEED TO GET THIS WORKED OUT>  I THINK IT IS TEMP KELP GMC, BUT KELP IS LOGIT TRANSFERED TO ACCOUNT FOR DISTRIBUTION 
-##  Kelp is logit transformed.  This creates a more linear distrbution, rather than clumps at the low end and high end.
-## asked for guidance... DBR deferred to JEB, waiting response
-## Model (conceptuatlly) is: the effect of temperature degree days (GMC) and urchin abundance (GMC) on kelp cover (logit trasnformed) 
-##... with year and region as random variables
-
-
+#take group mean centering approach for both Kelp%Cover and Temperature Degree Days
+#NOTE: Currently kelp uses 'logit.kelp' transformation.  Change if/when better method is found (beta-regression)
 
 GMC.kelp <-gmc(DF, c("urchin.limit", "logit.kelp"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
     fulldataframe = TRUE)
 
-
-#GMC for temperature data
+#Temperature Data####
 #load in dataframe for temperature
 combined <- read.csv ("gom_combined.csv", header=TRUE)
-str(combined)
+str(combined) #check structure
 
 #rename the variables we are interested in, drop others
 combined$variable <- factor(combined$variable,
                             levels = c("B01.1mc", "casco", "E01.1m", "F01.1m", "I01.1m","noaa44027.1m"),
                             labels = c("york", "casco", "midcoast", "penbay", "mdi", "downeast"))
 
-#filter out all values which exceed 17.0ºC
+#filter out all values which exceed 10.0ºC (this speeds things up downstream)
 stress <- combined %>%
     filter(value > 10, year>2000, variable %in%c("casco", "york", "midcoast", "penbay", "mdi", "downeast")) 
 
@@ -175,7 +159,7 @@ stress$stress.temp <- stress$value - 17. # takes the value from the 'column'valu
 #rename column 'variable' to 'region' to facilitate merging downstream
 stress <- rename(stress, region=variable)
 
-#change negative values to zero
+#change negative values to zero (negative values are degree days < 17ºC and not of interest to us here)
 stress$stress.temp[stress$stress.temp<0] <-0
 
 #Create GMC value for stress.temp by region
@@ -209,15 +193,18 @@ DF.join <- full_join(temp.tbl, GMC.kelp, by=c('year', 'region'))
 
 #Success??!!
 
+#beta regression####
+#problem: kelp.perc is zero-inflated and non-linear.  Normal logit transformation did little.
+#approach: use beta-regression analysis (glmmTMB package) to improve model.
+#I'm lost as how to accomplish this.  From my limited understanding beta-regression (if successful) would have a lower aAIC score than logit-transformed kelp.perc
+#from glmmTMB:  Beta distribution: parameterization of Ferrari and Cribari-Neto (2004) and the betareg package (Cribari-Neto and Zeileis 2010); V=mu*(1-mu)/(phi+1)
+#see Douma & Weedon (2019) in Methods Ecol Evol.
+
 #Run Model####
 
 #working model: Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
-#syntax is much different for gllvm package though.
 
-
-              
-
-##BELOW are notes and musings.  Largely where I'm getting stuck.
+##BELOW are notes and musings.  syntax for (glmmTMB) differs considerably from base R package.  All attempts at getting a working model (even a poor one) give me errors.
 
 # MODEL GENERATION ####
 # if I use the gllvm and compare via anova, my syntax should look like this:
@@ -227,28 +214,4 @@ DF.join <- full_join(temp.tbl, GMC.kelp, by=c('year', 'region'))
 # gllvm(y, X, TR, formula = ~ Kelp Percent  + TempStress + Urchin Abundance )
 
 
-
 #what are we trying to measure here...?   "Is Kelp Percent Cover by region a function of Temperature and Urchin Abundance?"  
-    
-
-#y in example = abundance data; kelp abundance
-#X in exmaple = enviornmental data; temperature data
-#TR in example = traits of ants.  
-
-
-
-
-
-##NEXT: Before generating model, need better kelp data transformation, as kelp cover is highly non-linear and bound between 0 and 100.
-# Beta regression a may improve for porportional data such as this 
-#see Douma & Weedon (2019) in Methods Ecol Evol.
-#use glmmTMB package for beta-regression transformation
-
-
-
-\##Additional problems:  Which gllvm syntax to use for question being asked.
-## how to make 'region' and 'year' random factors ('1|year' does not work within package) - STILL A PROBLEM (post JEB conversation)
-
-
-
-
