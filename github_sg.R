@@ -248,7 +248,7 @@ modzi <- glmmTMB(kelp.perc ~ stress.temp +
                 ziformula = ~urchin.limit,
                 data = DF.join)
 
-simRes <- simulationOutput <- simulateResiduals(fittedModel = modzi)
+simResZi <- simulationOutput <- simulateResiduals(fittedModel = modzi)
 plotQQunif(simRes)
 
 summary(modzi)
