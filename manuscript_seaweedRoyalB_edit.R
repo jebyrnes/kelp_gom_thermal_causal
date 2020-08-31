@@ -17,11 +17,15 @@
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 #Top####
 
-rm(list=ls()) # Clears the R brain. 
+#NOOOOOOOOOO! See 
+#https://twitter.com/trevorabranch/status/1178767331037601793
+#https://www.tidyverse.org/blog/2017/12/workflow-vs-script/
+#rm(list=ls()) # Clears the R brain. 
 
 #set working directory and load data
-setwd("~/Desktop/data_depot/sg2018")
-getwd()
+#setwd("~/Desktop/data_depot/sg2018")
+#getwd()
+setwd(here::here())
 
 #load necessary packages
 library(tidyverse)
