@@ -20,10 +20,11 @@
 
 #Top####
 #clear R brain, set WD
-rm(list=ls())
+#rm(list=ls())
 
-setwd("~/Desktop/data_depot/gom_seaweed")
-getwd()
+#setwd("~/Desktop/data_depot/gom_seaweed")
+#getwd()
+setwd(here::here())
 
 #load necessary packages
 library(tidyverse) #for datawrangling
@@ -215,3 +216,40 @@ DF.join <- full_join(temp.tbl, GMC.kelp, by=c('year', 'region'))
 
 
 #what are we trying to measure here...?   "Is Kelp Percent Cover by region a function of Temperature and Urchin Abundance?"  
+
+
+# Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
+# 0 inflated by urchin.limit
+
+library(lme4)
+
+DF.join <- DF.join %>%
+    group_by(region) %>%
+    mutate(stress.temp_mn = mean(stress.temp, na.rm=TRUE)) %>%
+    ungroup()
+
+library(lme4)
+library(DHARMa)
+mod <- lmer(logit(kelp.perc) ~ urchin.limit * stress.temp + stress.temp_mn +
+                   (1|year) + (1|region),
+               data = DF.join)
+
+simRes <- simulationOutput <- simulateResiduals(fittedModel = mod)
+plotQQunif(simRes)
+
+#OK, not good - need zero inflation
+library(glmmTMB)
+
+#here, it's a temp driven model with a ZI driven by the urchin threshold
+modzi <- glmmTMB(kelp.perc ~ stress.temp +
+                     stress.temp_mn +
+                (1|year) + (1|region),
+                family = beta_family(),
+                ziformula = ~urchin.limit,
+                data = DF.join)
+
+simRes <- simulationOutput <- simulateResiduals(fittedModel = modzi)
+plotQQunif(simRes)
+
+summary(modzi)
+car::Anova(modzi)
