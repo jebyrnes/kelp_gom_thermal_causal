@@ -2,7 +2,7 @@
 ##~~##~~##~~##~~  RoyalB_Model Generation                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Purpose: Running a model to test if temp and/or urchin influences kelp cover       ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Thew Suskiewicz   - March 10th, 2020                                         ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: Aug 11, 2020 (The COVID Days)                                 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Last Worked On: Sept 11th, 2020 (The COVID Days)                                 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 
@@ -12,7 +12,7 @@
 ## Datasets Used:
 ##      dmr.csv - Annual random surveys of kelp and urchin cover by DMR from 2001 thru 2019.  Kelp is % cover. urchins are count
 ##      stenecksg.csv  - Fleshy macroalgae surveys (in % cover) by Bob Steneck (1997-present) & Doug Rasher (2016-present)
-##      gom_combined.csv  - Water Temperature derived from NOAA & NERACOOS ocean buoys (2001-present)
+##      gom_combined.csv  - Water Temperature derived from NOAA & NERACOOS ocean buoys (2001-present), EC'd and compiled by TSS
 
 #working model is: Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
 #where GMC = Group Mean Centering
@@ -34,6 +34,8 @@ library(gllvm) #generalize linear latent variable models
 library(car) #for quantile-quantile plots
 library(lattice) #data exploration
 library(glmmTMB) # General Lineawr Mixed Models & beta regression
+library(lme4) # linear Mixed-effects models using 'Eigen' and S4
+library(DHARMa) # Residual diagnostics for hierarchal regression models
 
 #load dataframes
 dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
@@ -205,31 +207,11 @@ DF.join <- full_join(temp.tbl, GMC.kelp, by=c('year', 'region'))
 
 #working model: Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
 
-##BELOW are notes and musings.  syntax for (glmmTMB) differs considerably from base R package.  All attempts at getting a working model (even a poor one) give me errors.
-
-# MODEL GENERATION ####
-# if I use the gllvm and compare via anova, my syntax should look like this:
-# y =  ... a datafram
-# x =  ... a dataframe
-# TR = ... a dataframe
-# gllvm(y, X, TR, formula = ~ Kelp Percent  + TempStress + Urchin Abundance )
-
-
-#what are we trying to measure here...?   "Is Kelp Percent Cover by region a function of Temperature and Urchin Abundance?"  
-
-
-# Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
-# 0 inflated by urchin.limit
-
-library(lme4)
-
 DF.join <- DF.join %>%
     group_by(region) %>%
     mutate(stress.temp_mn = mean(stress.temp, na.rm=TRUE)) %>%
     ungroup()
 
-library(lme4)
-library(DHARMa)
 mod <- lmer(logit(kelp.perc) ~ urchin.limit * stress.temp + stress.temp_mn +
                    (1|year) + (1|region),
                data = DF.join)
