@@ -143,6 +143,21 @@ DF<- DF %>%
 GMC.kelp <-gmc(DF, c("urchin.limit", "logit.kelp"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
     fulldataframe = TRUE)
 
+#ATTEMPT to bring numerous urchin limits into this DF
+GMC.kelp <-gmc(DF, c("urchin.limit1", 
+                     "urchin.limit5", 
+                     "urchin.limit8", 
+                     "urchin.limit10", 
+                     "urchin.limit12", 
+                     "urchin.limit15", 
+                     "urchin.limit20","logit.kelp"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
+               fulldataframe = TRUE)
+
+#ATTEMPT to bring numerous urchin limits into this DF
+GMC.kelp <-gmc(DF, c("urchin.limit1", 
+                     "logit.kelp"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
+               fulldataframe = TRUE)
+
 #Temperature Data####
 #load in dataframe for temperature
 combined <- read.csv ("gom_combined.csv", header=TRUE)
@@ -231,7 +246,45 @@ modzi <- glmmTMB(kelp.perc ~ stress.temp +
                 data = DF.join)
 
 simResZi <- simulationOutput <- simulateResiduals(fittedModel = modzi)
-plotQQunif(simRes)
+plotQQunif(simResZi) 
 
 summary(modzi)
 car::Anova(modzi)
+
+## Thew's Thoughts:
+## Why are we using stress.temp + mean stress temp; 
+## Should we attempt to chane the urgin limit to test whether fit is better at different thresholds?
+## We are still using logit.kelp in this model (go back to GMC.kelp before DF.join is created)
+
+#urchin limits####
+#Below will create different urchin 'thresholds' to run glmmTMB model for best fit (lowest AIC score)
+
+#set urchin limit to 5
+DF <- transform(DF, urchin.limit1=(urchin)) # set urchin threshold at 1
+DF <- transform(DF, urchin.limit5=(urchin)) # set urchin threshold at 5
+DF <- transform(DF, urchin.limit8=(urchin)) # set urchin threshold at 8
+DF <- transform(DF, urchin.limit10=(urchin)) # set urchin threshold at 10
+DF <- transform(DF, urchin.limit12=(urchin)) # set urchin threshold at 12
+DF <- transform(DF, urchin.limit15=(urchin)) # set urchin threshold at 15
+DF <- transform(DF, urchin.limit20=(urchin)) # set urchin threshold at 20
+
+DF<- DF %>% 
+    mutate(urchin.limit1 = replace(urchin.limit1, urchin >1, 1)) %>% 
+        mutate(urchin.limit1 = replace(urchin.limit1, urchin <0.99, 0))%>%  #urchin threshold at 1
+    mutate(urchin.limit5 = replace(urchin.limit5, urchin >5, 1)) %>% 
+        mutate(urchin.limit5 = replace(urchin.limit5, urchin <4.99, 0))%>%  #urchin threshold at 5
+    mutate(urchin.limit8 = replace(urchin.limit8, urchin >8, 1)) %>% 
+        mutate(urchin.limit8 = replace(urchin.limit8, urchin <7.99, 0))%>%  #urchin threshold at 8
+    mutate(urchin.limit10 = replace(urchin.limit10, urchin >10, 1)) %>% 
+        mutate(urchin.limit10 = replace(urchin.limit10, urchin <9.99, 0))%>%  #urchin threshold at 10
+    mutate(urchin.limit12 = replace(urchin.limit12, urchin >12, 1)) %>% 
+        mutate(urchin.limit12 = replace(urchin.limit12, urchin <11.99, 0)) %>% #urchin threshold at 12
+    mutate(urchin.limit15 = replace(urchin.limit15, urchin >15, 1)) %>% 
+        mutate(urchin.limit15 = replace(urchin.limit15, urchin <14.99, 0))%>%  #urchin threshold at 15
+    mutate(urchin.limit20 = replace(urchin.limit20, urchin >20, 1)) %>% 
+        mutate(urchin.limit20 = replace(urchin.limit20, urchin <19.99, 0)) #urchin threshold at 20
+
+
+str(DF)
+summary(DF$urchin.limit10)
+#next create DF.join from DF and ____

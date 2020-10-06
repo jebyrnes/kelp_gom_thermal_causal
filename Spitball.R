@@ -34,8 +34,9 @@ library(lattice) #data exploration
 library(glmmTMB) # General Lineawr Mixed Models & beta regression
 library(lme4) # linear Mixed-effects models using 'Eigen' and S4
 library(DHARMa) # Residual diagnostics for hierarchal regression models
+library(tidyr) # Tools to help to create tidy data
 
-#load dataframes
+#load DF####
 dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
 stenecksg <- read.csv("stenecksg.csv", header=TRUE) #merged datasets of algal % cover from Steneck, Adey and Rasher/Suskiewicz
 
