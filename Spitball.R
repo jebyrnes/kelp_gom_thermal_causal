@@ -16,6 +16,7 @@
 ## See file: github_sg.R for more details.  This file exists solely to keep clutter out of main file until it's "ready".
 
 #Top####
+#This section loads data files.  Changes are downstream
 #clear R brain, set WD
 rm(list=ls())
 
@@ -92,44 +93,11 @@ dmr.join <- dmr.join %>%
 #use full_join to merge two dataframes (stenecksg.join and dmr.join). Create master dataframe 'DF'
 DF <-full_join(dmr.join,stenecksg.join, by=c('year','latitude', 'longitude', 'depth', 'urchin', 'region', 'kelp', 'exposure', 'coastal', 'kelp.perc'))
 
-
-#logit transformation####
-#perform logit transformation on kelp.perc within DF ($logit.kelp)
-DF$logit.kelp <- logit(DF$kelp.perc)
-
-#plot logit transformation of kelp to check if normalcy is better
-qqPlot (DF$logit.kelp)
-qqPlot (DF$kelp.perc)
-
-histogram(~ kelp.perc | region, data = DF,
-          breaks = 20)
-
-#below is for non-transformed kelp data
-densityplot(~ kelp.perc | region, data = DF,
-            group = region,
-            plot.points = FALSE)
-
-#below is for logit transformed kelp data
-densityplot(~ logit.kelp | region, data = DF,
-            group = region,
-            plot.points = FALSE)
-
-xyplot (logit.kelp~year | region, group = region, data=DF,
-        type = c("p", "smooth"),
-        scales = "free")
-
-xyplot (kelp.perc~year | region, group = region, data=DF,
-        type = c("p", "smooth"),
-        scales = "free")
-
-##~~##~~##~~##~~##~~##~~##~~##~~##
-#Note: Logit transformation does not appear any better than non-transformed data.  
-# Try alternative transformation? Guidance of JEB - beta regression!
-##~~##~~##~~##~~##~~##~~##~~##~~##
-
 #Set Urchin values to 0 (< 10) and 1 (> 10) for binary determination.
 # Urchin 1/0 ####
 DF <- transform(DF, urchin.limit=(urchin)) #-- no longer necessary(?)
+
+###START HERE:  This is where I need to introduce different urchin limits (1, 5, 8, 10, 12, and 15)
 
 DF<- DF %>% 
     mutate(urchin.limit = replace(urchin.limit, urchin >10, 1)) %>% 
@@ -139,7 +107,7 @@ DF<- DF %>%
 #take group mean centering approach for both Kelp%Cover and Temperature Degree Days
 #NOTE: Currently kelp uses 'logit.kelp' transformation.  Change if/when better method is found (beta-regression)
 
-GMC.kelp <-gmc(DF, c("urchin.limit", "logit.kelp"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
+GMC.kelp <-gmc(DF, c("urchin.limit"), by =c("year", "region"), FUN = mean, suffix = c("_mn", "_dev"),
                fulldataframe = TRUE)
 
 #ATTEMPT to bring numerous urchin limits into this DF
