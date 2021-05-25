@@ -1,32 +1,29 @@
 # Seagrant-UrchinKelp2018
-SG Rasher Suskiewicz 2018
 
-This is code, data and associated files for the Rasher_Suskiewicz SeaGrant project from 2018-2019. 
-It includes additional data mined from Department of Marine Resources (ME) and Dr. RObert Steneck's long term surveys
-Plus a few years of Walter ADey (Smithsonian) algal biomass sampling
+This is code, data and associated files for the Rasher-Suskiewicz SeaGrant project from 2018-2019. 
 
->>FILE DESCRIPTION>>
-    #github_sg.R
-        CURRENT Rscript I need help with.  Here I am trying to build the kelp-temperature-urchin model (with periodic success and frquent failures)
-    #manuscript_seaweedRoyalB_edit.R
-        larger Rscript which includes all figures for DRAFT version of manuscript to Royal Academy B
-    #dmr.csv
-        data file from DMR-ME urchin/kelp surveys
-    #gom_combined.csv
-        temperature data from NOAA/Neracoos buoys combined into one master file.
-    #stenecksg.csv
-        algal/urchin surveys conducted by Steneck, Adey, Rasher and Suskiewicz (various years)
-    #algal_biomass.csv
-        total algal biomass in quadrats to individual speceis or functional group
+It includes additional data mined from Department of Marine Resources (ME) and Dr. Robert Steneck's long term surveys plus a few years of Walter Adey (Smithsonian) algal biomass sampling.
 
- >>MEMO TO JARRETT
-    Review "github_sg.R" script.  Here's where I need to get un-stuck.  I deleted a bunch of my failed attempts to generate a model but left my comments towards the end.
+## Data Files
 
-Also, environmental data (mostly water temperature) from NOAA buoys downloaded and stiched together, with mild EC
+- dmr_random.csv - DMR random urchin surveys which include algal surveys at the level of kelp and understory, not at the species level, 2001-2018. This includes all depths with strata
+     - Depth strata code is 1,2,3, which corresponds to 5m, 10m, 15m
+
+- dmr.csv - Subset of dmr_random, filtered to only the 5m depth strata 
+  
+- Spitball.R - Thew's testing code. Can be ignored.
+
+- algae_biomass.csv - Quadrat biomass data from 2016-2018 measured to species sampled by the Rasher lab     
+
+- gom_combined.csv - temperature data from NOAA/Neracoos buoys combined into one master file.  
+
+- stenecksg.csv - algal/urchin surveys conducted by Steneck, Adey, Rasher and Suskiewicz (various years). Algae measured as percent cover by species.
+
+## Code Files
+
+- github_sg.R - main analysis script. Models of kelp as predicted by temperature and urchins.
+
+- manuscript_seaweedRoyalB_edit.R - R Script that makes figures for manuscript. Temperature data plotted, kelp and understory data plotted. All figures for DRAFT version of manuscript to Royal Academy B
+
 
 Comments herein are largely from TSS (suskiewicz.thew@gmail.com) with input from DBR and JEB.
-
-Thanks for all the kelp!
-~~##~~##~~##~~##~~##~~##
-This is a test line I wrote on RStudio from my local computer
-A line from my newly repaired, new logic-board computer
