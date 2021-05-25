@@ -2,7 +2,7 @@
 ##~~##~~##~~##~~  RoyalB_Model Generation                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Purpose: Running a model to test if temp and/or urchin influences kelp cover       ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Thew Suskiewicz   - March 10th, 2020                                         ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: Sept 11th, 2020 (The COVID Days)                                 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Last Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 
@@ -19,13 +19,6 @@
 #see notepad for further explanation and train of thought between Brynes, Rasher and myself
 
 #Top####
-#clear R brain, set WD
-#rm(list=ls())
-
-#setwd("~/Desktop/data_depot/gom_seaweed")
-#getwd()
-setwd(here::here())
-
 #load necessary packages
 library(tidyverse) #for datawrangling
 library(rockchalk) #regression functions
@@ -36,6 +29,16 @@ library(lattice) #data exploration
 library(glmmTMB) # General Lineawr Mixed Models & beta regression
 library(lme4) # linear Mixed-effects models using 'Eigen' and S4
 library(DHARMa) # Residual diagnostics for hierarchal regression models
+library(here) # paths to data should 'just work' (though having problems with it)
+
+#clear R brain, set WD
+#rm(list=ls())
+
+#setwd("~/Desktop/Seagrant-UrchinKelp2018") #apparently not...
+#getwd()
+setwd(here::here()) #understand premise of 'here' but can't get it to 'find' appropriate folder.
+
+here()
 
 #load dataframes
 dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
@@ -259,7 +262,7 @@ car::Anova(modzi)
 #urchin limits####
 #Below will create different urchin 'thresholds' to run glmmTMB model for best fit (lowest AIC score)
 
-#set urchin limit to 5
+#set urchin limit to different levels (verify a limit of 10 is appropriate)
 DF <- transform(DF, urchin.limit1=(urchin)) # set urchin threshold at 1
 DF <- transform(DF, urchin.limit5=(urchin)) # set urchin threshold at 5
 DF <- transform(DF, urchin.limit8=(urchin)) # set urchin threshold at 8
@@ -286,5 +289,5 @@ DF<- DF %>%
 
 
 str(DF)
-summary(DF$urchin.limit10)
-#next create DF.join from DF and ____
+summary(DF$urchin.limit10) 
+#next create DF.join from DF and ____ (STUCK)
