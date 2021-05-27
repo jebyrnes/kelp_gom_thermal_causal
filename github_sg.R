@@ -295,17 +295,23 @@ mod <- lmer(logit(kelp.perc) ~ urchin.limit * stress.temp + stress.temp_mn +
 simRes <- simulationOutput <- simulateResiduals(fittedModel = mod)
 plotQQunif(simRes)
 
-#OK, not good - need zero inflation
+#'---------------------------------------
+# Models
+#'---------------------------------------
+
 library(glmmTMB)
 
-mod_urchin <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev * mean_temp_dev +
-                          mean_temp_mn +
+# - Which temperature model to use?
+
+# - Model results of urchins and temperature
+mod_urchin <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev * 
+                          mean_temp_dev + mean_temp_mn +
                           (1|year) + (1|region),
                       family = beta_family(),
                       data = DF.join)
 
-mod_urchin_add <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev + mean_temp_dev +
-                              mean_temp_mn +
+mod_urchin_add <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
+                              mean_temp_dev + mean_temp_mn +
                           (1|year) + (1|region),
                       family = beta_family(),
                       data = DF.join)
@@ -315,9 +321,47 @@ simResUrch <- simulationOutput <- simulateResiduals(fittedModel = mod_urchin)
 plotQQunif(simResUrch) 
 summary(mod_urchin_add)
 Anova(mod_urchin)
+Anova(mod_urchin_add)
 
-visreg::visreg2d(mod_urchin_add, xvar = "urchin_dev", yvar = "mean_temp_dev", scale = "response")
-visreg::visreg(mod_urchin_add, scale = "response")
+
+#values for visreg
+median(DF.join$urchin_mn)
+median(DF.join$mean_temp_mn)
+
+visreg::visreg2d(mod_urchin_add, xvar = "urchin_dev", yvar = "mean_temp_dev", 
+                 scale = "response", plot.type="gg") +
+    scale_fill_gradient2(low = "red", high = "blue", mid = "white", 
+                         midpoint = 0.5, limits = c(0,1)) +
+    labs(fill = "Percent Cover of Kelp",
+         y = "Deviation from Regional Temperature Mean",
+         x = "Deviation from Regional Urchin Mean",
+         subtitle = "Assumes regional mean summer temp of 14C \nand urchin abundance of 1.3 per sq m")
+
+visreg::visreg2d(mod_urchin_add, xvar = "urchin_dev", yvar = "mean_temp_dev", 
+                 scale = "response", plot.type="gg", 
+                 cond = list(urchin_mn = 0,
+                             mean_temp_mn = 15)) +
+    scale_fill_gradient2(low = "red", high = "blue", mid = "white", 
+                         midpoint = 0.5, limits = c(0,1)) +
+    labs(fill = "Percent Cover of Kelp",
+         y = "Deviation from Regional Temperature Mean",
+         x = "Deviation from Regional Urchin Mean",
+         subtitle = "Assumes regional mean summer temp of 16C \nand urchin abundance of 0 per sq m")
+
+
+
+#### What conveys the story in the cleanest way?
+## The overall story is still this idea that we have seen low urchins in GOM 
+## for 2 decades. What are the kelp forests of Maine doing? In the S they are not
+## doing well because of temperature. From Penobscot Bay east, they are doing fine
+
+
+
+
+## summer mean getting worse in the west
+## kelp data says kelp has come back except in the south
+## S has experienced anomolously high temp
+
 
 
 ###
