@@ -180,3 +180,20 @@ ggplot(fit_df %>%
          x = "",
          y = "Percent Cover Kelp") +
     geom_point(aes(y = kelp.perc_raw*100), size = 3)
+
+
+# all
+
+ggplot(fit_df %>% 
+           mutate(region = stringr::str_to_title(region)),
+       aes(x = year,
+           y = kelp.perc*100,
+           group = region)) +
+    geom_line(size = 2) +
+    geom_ribbon(aes(ymin = lwr*100, ymax = upr*100), alpha = 0.2, color = NA, fill = "grey") +
+    theme_bw() +
+    labs(color = "",
+         x = "",
+         y = "Percent Cover Kelp") +
+    geom_point(aes(y = kelp.perc_raw*100), size = 3) +
+    facet_wrap(~region)
