@@ -13,6 +13,8 @@ library(glmmTMB)
 library(DHARMa) # Residual diagnostics for hierarchal regression models
 library(bbmle) #for AICtab
 library(here) # paths to data should 'just work' (though having problems with it)
+library(readr)
+library(modelr)
 
 setwd(here::here())
 
@@ -67,3 +69,4 @@ AICtab(mod_urchin_add, mod_urchin_int)
 ### The two are the same. Parsimony suggests go with the simpler model
 
 saveRDS(mod_urchin_add, "derived_data/mod_urchin_add.RDS")
+saveRDS(mod_urchin_int, "derived_data/mod_urchin_int.RDS")
