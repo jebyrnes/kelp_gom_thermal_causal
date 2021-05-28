@@ -74,7 +74,8 @@ pred_values <- predict(mod_urchin_add,
 pred_frame <- pred_frame %>%
     mutate(kelp.perc = pred_values$fit,
            lwr = kelp.perc - 1*pred_values$se.fit,
-           upr = kelp.perc + 1*pred_values$se.fit)
+           upr = kelp.perc + 1*pred_values$se.fit,
+           lwr = ifelse(lwr < 0, 0, lwr))
 #all sites
 ggplot(pred_frame,
        aes(x = temp,
@@ -105,4 +106,77 @@ ggplot(pred_frame %>%
          y = "Percent Cover Kelp")
 
 
+## scenarios!
 
+scenario <- crossing(region_df, timeseries_df)
+
+
+scenario_values <- predict(mod_urchin_add, 
+                       newdata = scenario, 
+                       re.form = NULL, 
+                       type = "response",
+                       se.fit = TRUE)
+
+scenario <- scenario %>%
+    mutate(kelp.perc = scenario_values$fit,
+           lwr = kelp.perc - 1*scenario_values$se.fit,
+           upr = kelp.perc + 1*scenario_values$se.fit,
+           lwr = ifelse(lwr < 0, 0, lwr))
+
+
+
+
+#york v. downeast
+ggplot(scenario %>% 
+           filter(region %in% c("downeast", "york")) %>%
+           mutate(region = stringr::str_to_title(region)),
+       aes(x = year,
+           y = kelp.perc*100,
+           group = region, 
+           color = region)) +
+    geom_line(size = 2) +
+    geom_ribbon(aes(ymin = lwr*100, ymax = upr*100), alpha = 0.2, color = NA, fill = "grey") +
+    scale_color_manual(values = c("blue", "red")) +
+    theme_bw() +
+    labs(color = "",
+         x = "",
+         y = "Percent Cover Kelp")
+
+## What happened according to the model!
+fit_df <- DF.join %>%
+    filter(!is.na(urchin)) %>%
+    group_by(region, year) %>%
+    summarize_all(mean, na.rm = TRUE) %>%
+    ungroup()
+
+fit_values <- predict(mod_urchin_add, 
+                           newdata = fit_df, 
+                           re.form = NULL, 
+                           type = "response",
+                           se.fit = TRUE)
+
+fit_df <- fit_df %>%
+    mutate(kelp.perc_raw = kelp.perc,
+           kelp.perc = fit_values$fit,
+           lwr = kelp.perc - 1*fit_values$se.fit,
+           upr = kelp.perc + 1*fit_values$se.fit,
+           lwr = ifelse(lwr < 0, 0, lwr))
+
+
+
+#york v. downeast
+ggplot(fit_df %>% 
+           filter(region %in% c("downeast", "york")) %>%
+           mutate(region = stringr::str_to_title(region)),
+       aes(x = year,
+           y = kelp.perc*100,
+           group = region, 
+           color = region)) +
+    geom_line(size = 2) +
+    geom_ribbon(aes(ymin = lwr*100, ymax = upr*100), alpha = 0.2, color = NA, fill = "grey") +
+    scale_color_manual(values = c("blue", "red")) +
+    theme_bw() +
+    labs(color = "",
+         x = "",
+         y = "Percent Cover Kelp") +
+    geom_point(aes(y = kelp.perc_raw*100), size = 3)
