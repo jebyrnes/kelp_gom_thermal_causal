@@ -33,6 +33,8 @@ simulateResiduals(mod_urchin_add) %>% plotQQunif()
 simulateResiduals(mod_urchin_add) %>% testDispersion()
 simulateResiduals(mod_urchin_add) %>% plotResiduals()
 
+performance::check_model(mod_urchin_add)
+
 # Evaluate Model
 Anova(mod_urchin_add)
 
