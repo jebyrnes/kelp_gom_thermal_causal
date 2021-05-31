@@ -26,7 +26,7 @@ DF.join <- read_csv("derived_data/combined_data_for_analysis.csv")
 mod_urchin_add <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
                               mean_temp_dev + mean_temp_mn +
                               (1|year) + (1|region),
-                          family = beta_family(),
+                          family = beta_family("cloglog"),
                           data = DF.join)
 
 # Evaluate Assumptions
@@ -48,12 +48,29 @@ with(DF.join %>% add_predictions(mod_urchin_add, type = "response"),
 
 performance::r2_nakagawa(mod_urchin_add)
 
+### Compare link functions
+
+mod_urchin_add_logit <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
+                              mean_temp_dev + mean_temp_mn +
+                              (1|year) + (1|region),
+                          family = beta_family("logit"),
+                          data = DF.join)
+
+mod_urchin_add_probit <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
+                                    mean_temp_dev + mean_temp_mn +
+                                    (1|year) + (1|region),
+                                family = beta_family("probit"),
+                                data = DF.join)
+# compare - note, cloglog
+AICtab(mod_urchin_add, mod_urchin_add_logit, mod_urchin_add_probit)
+
+
 #### Model with an Interaction
 
 mod_urchin_int <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev * 
                               mean_temp_dev + mean_temp_mn +
                               (1|year) + (1|region),
-                          family = beta_family(),
+                          family = beta_family("cloglog"),
                           data = DF.join)
 # Evaluate Assumptions
 
@@ -68,5 +85,20 @@ AICtab(mod_urchin_add, mod_urchin_int)
 
 ### The two are the same. Parsimony suggests go with the simpler model
 
+### Naieve model
+
+### Additive Model
+
+mod_urchin_naieve <- glmmTMB(kelp.perc ~ urchin+
+                              mean_temp +
+                              (1|year) + (1|region),
+                          family = beta_family("cloglog"),
+                          data = DF.join)
+
+AICtab(mod_urchin_add, mod_urchin_naieve)
+
 saveRDS(mod_urchin_add, "derived_data/mod_urchin_add.RDS")
 saveRDS(mod_urchin_int, "derived_data/mod_urchin_int.RDS")
+saveRDS(mod_urchin_add_logit, "derived_data/mod_urchin_add_logit.Rds")
+saveRDS(mod_urchin_add_probit, "derived_data/mod_urchin_add_probit.Rds")
+saveRDS(mod_urchin_naieve, "derived_data/mod_urchin_naieve.Rds")
