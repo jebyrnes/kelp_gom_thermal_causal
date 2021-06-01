@@ -35,24 +35,7 @@ timeseries_df <- DF.join %>%
 
 
 # heatmap-a-palooza
-make_kelp_heatmap <- function(mean_temp_mn = 15, urchin_mn = 0,
-                              xlim = c(0,80)){
-    visreg::visreg2d(mod_urchin_add, xvar = "urchin_dev", yvar = "mean_temp_dev", 
-                     scale = "response", plot.type="gg", 
-                     cond = list(urchin_mn = urchin_mn,
-                                 mean_temp_mn = mean_temp_mn)) +
-        scale_fill_gradient2(low = "red", high = "blue", mid = "white", 
-                             midpoint = 0.5, limits = c(0,1)) +
-        xlim(xlim) +
-        labs(fill = "Percent Cover of Kelp",
-             y = "Deviation from Regional Temperature Mean",
-             x = "Deviation from Regional Urchin Mean",
-             subtitle = paste0("Assumes regional mean summer temp of ",
-                               mean_temp_mn, "C \nand urchin abundance of ", urchin_mn," per sq m"))
-    
-    
-}
-
+source("scripts/make_kelp_heatmap.R")
 
 # two sites at 0 and 50 urchins
 # note - we start with known urchin density and temp
@@ -182,8 +165,7 @@ ggplot(fit_df %>%
     geom_point(aes(y = kelp.perc_raw*100), size = 3)
 
 
-# all
-
+# all regions
 ggplot(fit_df %>% 
            mutate(region = stringr::str_to_title(region)),
        aes(x = year,
