@@ -2,37 +2,119 @@
 ##~~##~~##~~##~~  Rasher/DMR/Steneck Data Processing                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Purpose: Process and combine DMR, Steneck/Rasher, and buoy temperature data      ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Thew Suskiewicz  & Jarrett Byrnes                                        ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Last Worked On: Sept 21st, 2021 (major rewrite)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Previously Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+
+#--- load libraries and get environment setup
+setwd(here::here()) #understand premise of 'here' but can't get it to 'find' appropriate folder.
+library(tidyverse)
+library(lubridate)
 
 ## Notes on Data set(s)
 ##
 ## These analyses require merging several datasets collected by different groups for different purposes
-## Datasets Used:
-##      dmr.csv - Annual random surveys of kelp and urchin cover by DMR from 2001 thru 2019.  Kelp is % cover. urchins are count
-##      stenecksg.csv  - Fleshy macroalgae surveys (in % cover) by Bob Steneck (1997-present) & Doug Rasher (2016-present)
-##      gom_combined.csv  - Water Temperature derived from NOAA & NERACOOS ocean buoys (2001-present), EC'd and compiled by TSS
+## Datasets Used in raw_data:
+# DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv - DMR surveys of algae and urchins from 2001 - 2018 at 5 and 10m
+#   Sites are chosen randomly. Also, some fixed sites were chosen for urchin fishery, but we have filtered those out of this data
+# NOAA_temperature_allsites_2001_2018.csv - Oceanographic Buoy data from each region with daily means
+# Rasher_Steneck_benthicsurvey_algae_allsites_alldepths_2004.csv - Algae counts for all regions from Rasher/Steneck. No urchin data. DOH!
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2016.csv - Algae counts for a subset of regions and sites from Rasher/Steneck. WITH urchin data. 5m and 10m 
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2017.csv - Algae counts for a subset of regions and sites from Rasher/Steneck. WITH urchin data.  5m and 10m
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv - Algae counts for all regions and sites from Rasher/Steneck. WITH urchin data.  5m and 10m
+# ADD BYRNES exposed site SML DATA 2014 - 2018
+# GET NUMBER OF QUADS FOR DMR DATA OR RAW DATA?
 
-#working model is: Kelp%Cover ~GMC Degree Days * GMC Urchin Threshold + 1|Region + 1|Year
-#where GMC = Group Mean Centering
-#see notepad for further explanation and train of thought between Brynes, Rasher and myself
+# What we want for analysis
+# - filter to 5m depth
+# - where the survey has included urchins (even if they are not present)
+# - need to be filtered by exposure score
+# basically, depth==5, exposure >2, coastal >2
+# - need to be filtered to substrate categorization
+# - nr/NA are missing data - if all urchin samples are nr/NA, do not include
+# - 2004 data is good for species composition analysis only
 
-#Top####
-#load necessary packages
-library(tidyverse) #for datawrangling
-library(rockchalk) #regression functions
-library(gtools) 
-library(lattice) #data exploration
+## Preparing urchin data
+# then, for the urchin analysis, we want a data set like so
+# 1. year, month, day, site, region, lat, long, crust, understory, kelp, urchin, 
+# averaged at the SITE/YEAR level
+# 2. THEN merge all of the data
+# 3. then mean (and other metric) region temp for region/year for june, july, august
+# maybe do the same for march/april/may?
+# 4. THEN mean year-region urchin, deviation from year-region urchin, year-mean temp, temp anomoly
+# will need to do some aggregation steneck data for crust/understory
+##
 
-#clear R brain, set WD
-#rm(list=ls())
 
-#setwd("~/Desktop/Seagrant-UrchinKelp2018") #apparently not...
-#getwd()
-setwd(here::here()) #understand premise of 'here' but can't get it to 'find' appropriate folder.
+#1. load kelp-urchindataframes and process to standard format of 
+# year, month, day, site, region, lat, long, crust, understory, kelp, urchin, 
+# averaged at the SITE/YEAR level
 
-#load dataframes
+dmr <- read_csv("raw_data/DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv") %>%
+    # filter(depth == 5) %>% #filter later
+    # no substrate filter
+    filter(exposure.code > 2) %>%
+    filter(coastal.code > 2) %>%
+    mutate(date = mdy(date),
+           month = month(date), 
+           day = day(date),
+           survey = "dmr") %>%
+    mutate(site = as.character(site.number)) %>%
+    select(-region.code, -depth.stratum.code, -date, -site.number)
+    
+# make a rasher/steneck processing workflow
+
+rasher_steneck_workflow <- . %>%
+    filter(exposure.code > 2) %>%
+    filter(coastal.code > 2) %>%
+    filter((sand + pebble) < 40) %>%
+    filter(!is.na(urchin)) %>%
+    mutate(date = mdy(date),
+           month = month(date), 
+           day = day(date),
+           kelp = sac + alar + agar + ldig,
+           understory = sder + desm + ulva +
+               chaet + codm + poly + rhod + ptilo + porph +
+               palm + phyc + ccrisp + coral,
+           survey = "rasher_steneck") %>%
+    select(year, month, day, region, site,
+           latitude, longitude, 
+           depth, crust, understory, kelp, urchin) %>%
+    #average to site level
+    group_by(year, month, day, region, site,
+             latitude, longitude, 
+             depth) %>%
+    summarize(kelp = mean(kelp, na.rm=TRUE),
+              understory = mean(understory, na.rm=TRUE),
+              crust = mean(crust, na.rm=TRUE),
+              urchin = mean(urchin, na.rm=TRUE),
+    ) %>% ungroup()
+
+rasher_2016 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2016.csv",
+                        na = c("nr", "", "NA")) %>%
+    rasher_steneck_workflow
+
+
+rasher_2017 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2017.csv",
+                        na = c("nr", "", "NA")) %>%
+    rasher_steneck_workflow
+
+rasher_2018 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv",
+                        na = c("nr", "", "NA")) %>%
+    rasher_steneck_workflow
+
+
+##-- create the big kahuna combined data set
+combined_bio_data <- bind_rows(dmr,
+                               rasher_2016, 
+                               rasher_2017, 
+                               rasher_2018)
+
+write_csv(combined_bio_data, "derived_data/combined_bio_data.csv")
+
+
+# Below here is old code. Ignore and use for notes
 dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
 stenecksg <- read.csv("stenecksg.csv", header=TRUE) #merged datasets of algal % cover from Steneck, Adey and Rasher/Suskiewicz
 
