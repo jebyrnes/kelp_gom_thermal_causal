@@ -46,10 +46,11 @@ library(lubridate)
 # will need to do some aggregation steneck data for crust/understory
 ##
 
-
-#1. load kelp-urchindataframes and process to standard format of 
-# year, month, day, site, region, lat, long, crust, understory, kelp, urchin, 
-# averaged at the SITE/YEAR level
+#' ----------------------------------------------------------------------
+#' 1. load kelp-urchindataframes and process to standard format of 
+#' year, month, day, site, region, lat, long, crust, understory, kelp, urchin, 
+#' averaged at the SITE/YEAR level
+#' ----------------------------------------------------------------------
 
 dmr <- read_csv("raw_data/DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv") %>%
     # filter(depth == 5) %>% #filter later
@@ -78,11 +79,13 @@ rasher_steneck_workflow <- . %>%
                chaet + codm + poly + rhod + ptilo + porph +
                palm + phyc + ccrisp + coral,
            survey = "rasher_steneck") %>%
-    select(year, month, day, region, site,
+    select(year, month, day, region, site, 
+           coastal.code, exposure.code,
            latitude, longitude, 
            depth, crust, understory, kelp, urchin) %>%
     #average to site level
     group_by(year, month, day, region, site,
+             coastal.code, exposure.code,
              latitude, longitude, 
              depth) %>%
     summarize(kelp = mean(kelp, na.rm=TRUE),
@@ -104,17 +107,81 @@ rasher_2018 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_alls
                         na = c("nr", "", "NA")) %>%
     rasher_steneck_workflow
 
+#' ----------------------------------------------------------------------
+#' -- 2. create the big kahuna combined data set
+#' ----------------------------------------------------------------------
 
-##-- create the big kahuna combined data set
 combined_bio_data <- bind_rows(dmr,
                                rasher_2016, 
                                rasher_2017, 
-                               rasher_2018)
+                               rasher_2018) %>%
+    mutate(survey = "rasher_steneck")
 
 write_csv(combined_bio_data, "derived_data/combined_bio_data.csv")
 
+#' ----------------------------------------------------------------------
+#' 3. then mean (and other metric) region temp for region/year for june, july, august
+# maybe do the same for march/april/may?
+# question to ponder - should we be using OISST instead?
+#' ----------------------------------------------------------------------
 
-# Below here is old code. Ignore and use for notes
+temp <- read_csv("raw_data/NOAA_temperature_allsites_2001_2018.csv") %>%
+    select(-X1) %>%
+    filter(variable %in% c("B01.1mc", "casco", "E01.1m", "F01.1m", "I01.1m","noaa44027.1m"))
+
+
+# add regions to data
+temp_regional <- temp %>%
+    mutate(region = factor(variable,
+                           levels = c("B01.1mc", "casco", "E01.1m", "F01.1m", "I01.1m","noaa44027.1m"),
+                           labels = c("york", "casco.bay", "midcoast", "penobscot.bay", "mdi", "downeast"))) %>%
+    mutate(region = as.character(region)) 
+
+# do some interpolation for missing data
+source("scripts/1a_interpolate_downeast_temps.R")
+
+# now make an aggregated temperature data set from the interpolated data
+temp_aggregated <- temp_regional_interpolated %>%
+    filter(month %in% 3:8) %>% #month in march:august
+    mutate(season = ifelse(month < 6, "spring", "summer"),
+           stress = as.numeric(value > 17)) %>%
+    group_by(year, region, variable, season) %>%
+    summarize(mean_temp = mean(value, na.rm=TRUE),
+              max_temp = max(value, na.rm=TRUE),
+              min_temp = min(value, na.rm=TRUE),
+              degree_heat_days = sum(stress, na.rm=TRUE)
+    ) %>%
+    ungroup() %>%
+    #fix some missing data errors
+    mutate(degree_heat_days = ifelse(is.na(mean_temp), NA, degree_heat_days),
+           max_temp = ifelse(is.na(mean_temp), NA, max_temp),
+           min_temp = ifelse(is.na(mean_temp), NA, min_temp)
+    ) %>% 
+    pivot_wider(names_from = "season",
+                values_from = c("mean_temp",
+                                "max_temp",
+                                "min_temp",
+                                "degree_heat_days"
+                )) %>%
+    rename(temp_source = variable)
+  
+#' -----------------------------------------
+#' Merge temp and bio data
+#' -----------------------------------------
+
+combined_bio_temp <- left_join(combined_bio_data, temp_aggregated)
+
+
+#' -----------------------------------------
+#' 4. THEN mean year-region urchin, deviation from year-region urchin, year-mean temp, temp anomoly
+# will need to do some aggregation steneck data for crust/understory
+#' -----------------------------------------
+
+
+#' -----------------------         
+#' Below here is old code. Ignore and use for notes
+#' -----------------------
+
 dmr <- read.csv("dmr.csv", header=TRUE) #DMR's randomly surveyed annual urchin/kelp dives
 stenecksg <- read.csv("stenecksg.csv", header=TRUE) #merged datasets of algal % cover from Steneck, Adey and Rasher/Suskiewicz
 
