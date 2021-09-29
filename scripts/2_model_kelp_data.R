@@ -34,6 +34,29 @@ combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv")
                              mean_temp_spring_dev,
                              mean_temp_summer_dev))
   
+### Bob's objections to Krumhansl
+mod_time_only <- lm(logit_kelp ~ year*region, data =  combined_bio_temp_gmc)
+Anova(mod_time_only)
+summary(mod_time_only)
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = logit_kelp, color = region)) +
+    geom_point() +
+    facet_wrap(vars(region)) +
+    stat_smooth(method = "lm", formula = y ~ x) +
+    ylim(c(-5,5))
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = logit_kelp, color = region,
+           group = paste(region, site))) +
+    geom_line(alpha = 0.6) +
+    facet_wrap(vars(region)) +
+    ylim(c(-5,5)) +
+    theme_bw()
+
+mod_time <- lmer(logit_kelp ~ year*region + (1 + year|site:region), 
+                 data =  combined_bio_temp_gmc)
+
 ### Additive Model
 
 mod_urchin_add <- glmmTMB(kelp/100 ~ mean_regional_urchin + 
@@ -100,7 +123,6 @@ AICtab(mod_urchin_add, mod_urchin_int)
 
 ### The two are the same. Parsimony suggests go with the simpler model
 
-### Naieve model
 
 ### Additive Model
 
