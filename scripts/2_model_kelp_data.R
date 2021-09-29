@@ -2,7 +2,8 @@
 ##~~##~~##~~##~~  Model Generation                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Purpose: Running a model to test if temp and/or urchin influences kelp cover       ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~  Thew Suskiewicz   - May 27, 2020                                         ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+##~~##~~##~~##~~  Worked On: Sept 29th, 2021 (major rewrite)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
 
@@ -15,19 +16,33 @@ library(bbmle) #for AICtab
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
 library(modelr)
+library(lme4)
 
 setwd(here::here())
 
-DF.join <- read_csv("derived_data/combined_data_for_analysis.csv")
-
-
+# read in the data
+# make a logit kelp cover variable
+# filter to 5m
+combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv") %>%
+    as_tibble() %>%
+    filter(depth == 5) %>%
+    mutate(logit_kelp = logit(kelp, adjust = 0.01),
+           kelp = ifelse(kelp== 0, 0.01, kelp),
+           kelp = ifelse(kelp == 100, 99, kelp)) %>%
+    # if sampling = spring, use spring, if sampling = summer, use summer
+    mutate(temp_dev = ifelse(month <7,
+                             mean_temp_spring_dev,
+                             mean_temp_summer_dev))
+  
 ### Additive Model
 
-mod_urchin_add <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
-                              mean_temp_dev + mean_temp_mn +
+mod_urchin_add <- glmmTMB(kelp/100 ~ mean_regional_urchin + 
+                              urchin_anom_from_region +
+                              mean_temp_summer_dev +
+                              mean_mean_temp_summer + 
                               (1|year) + (1|region),
-                          family = beta_family("cloglog"),
-                          data = DF.join)
+                          family = beta_family("logit"),
+                          data = combined_bio_temp_gmc)
 
 # Evaluate Assumptions
 
