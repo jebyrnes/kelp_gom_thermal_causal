@@ -11,6 +11,7 @@
 setwd(here::here()) #understand premise of 'here' but can't get it to 'find' appropriate folder.
 library(tidyverse)
 library(lubridate)
+library(glue)
 
 ## Notes on Data set(s)
 ##
@@ -144,7 +145,7 @@ source("scripts/1a_interpolate_downeast_temps.R")
 temp_aggregated <- temp_regional_interpolated %>%
     filter(month %in% 3:8) %>% #month in march:august
     mutate(season = ifelse(month < 6, "spring", "summer"),
-           stress = as.numeric(value > 17)) %>%
+           stress = as.numeric(value > 17)) %>% #degree heat days
     group_by(year, region, variable, season) %>%
     summarize(mean_temp = mean(value, na.rm=TRUE),
               max_temp = max(value, na.rm=TRUE),
@@ -164,6 +165,24 @@ temp_aggregated <- temp_regional_interpolated %>%
                                 "degree_heat_days"
                 )) %>%
     rename(temp_source = variable)
+
+# 
+# #check mdi and downeast
+# ggplot(temp_regional %>% filter(month > 5 & month < 9) %>%
+#          filter(region %in% c("mdi", "downeast")),
+#        aes(x =  value, fill = region)) +
+#   geom_density(alpha = 0.5) #+
+# #  facet_wrap(vars(region))
+# 
+# ggplot(temp_regional %>%# filter(month > 5 & month < 9) %>%
+#          filter(region %in% c("mdi", "downeast")) %>%
+#          select(-variable) %>%
+#          pivot_wider(names_from = region, values_from = value),
+#        aes(x =  downeast, y = mdi, color = factor(month))) +
+#   geom_point() +
+#   geom_abline(slope = 1, intercept = 0, lty = 2)
+
+
   
 #' -----------------------------------------
 #' Merge temp and bio data
@@ -173,10 +192,40 @@ combined_bio_temp <- left_join(combined_bio_data, temp_aggregated)
 
 
 #' -----------------------------------------
-#' 4. THEN mean year-region urchin, deviation from year-region urchin, year-mean temp, temp anomoly
-# will need to do some aggregation steneck data for crust/understory
+#' 4. THEN mean year-region urchin, deviation from year-region urchin, 
+#'     year-mean temp, temp anomoly 
 #' -----------------------------------------
 
+combined_bio_temp_gmc <- combined_bio_temp %>%
+  group_by(region) %>%
+  mutate(across(mean_temp_spring:degree_heat_days_summer, 
+                ~mean(.x, na.rm = TRUE),
+                .names = "mean_{.col}"),
+         mean_regional_urchin = mean(urchin, na.rm = TRUE),
+         urchin_anom_from_region = urchin - mean_regional_urchin) %>%
+  #calculate temp anomolies using black magic with get, glue, and across
+  mutate(across(mean_temp_spring:degree_heat_days_summer, 
+                ~ .x - get(glue("mean_{cur_column()}")),
+                .names = "{.col}_dev")) %>%
+  ungroup() %>%
+  group_by(year) %>%
+  mutate(mean_annual_urchin = mean(urchin, na.rm=TRUE)) %>%
+  ungroup()
+
+write_csv(combined_bio_temp_gmc, "derived_data/combined_data_for_analysis.csv")
+
+# 
+# #what do these correlations look like
+# with(combined_bio_temp_gmc, cor(urchin, mean_regional_urchin))
+# with(combined_bio_temp_gmc, 
+#      cor(mean_temp_summer, mean_mean_temp_summer, use = "pairwise.complete"))
+# 
+# plot(mean_temp_summer ~ mean_mean_temp_summer, data = combined_bio_temp_gmc)
+# library(ggplot2)
+# ggplot(temp_regional %>% filter(month > 5 & month < 9),
+#        aes(x = lubridate::mdy(date), y = value, color = region)) +
+#   geom_line() +
+#   facet_wrap(vars(region))
 
 #' -----------------------         
 #' Below here is old code. Ignore and use for notes
