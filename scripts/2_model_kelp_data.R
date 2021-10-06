@@ -11,7 +11,7 @@ library(car) #for Anova
 library(ggplot2)
 library(dplyr)
 library(glmmTMB)
-library(DHARMa) # Residual diagnostics for hierarchal regression models
+library(DHARMa) # Residual diagnostics for hierarchical regression models
 library(bbmle) #for AICtab
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
@@ -46,6 +46,16 @@ ggplot(combined_bio_temp_gmc,
     stat_smooth(method = "lm", formula = y ~ x) +
     ylim(c(-5,5))
 
+#urchin
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = urchin, color = region,
+           group = paste(region, site))) +
+    geom_line(alpha = 0.6) +
+    facet_wrap(vars(region), scale = "free_y") +
+    theme_bw()
+
+
+#kelp
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region,
            group = paste(region, site))) +
