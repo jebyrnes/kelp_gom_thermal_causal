@@ -17,6 +17,7 @@ library(here) # paths to data should 'just work' (though having problems with it
 library(readr)
 library(modelr)
 library(lme4)
+library(betareg)
 
 setwd(here::here())
 
@@ -28,52 +29,53 @@ combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv")
     filter(depth == 5) %>%
     mutate(logit_kelp = logit(kelp, adjust = 0.01),
            kelp = ifelse(kelp== 0, 0.01, kelp),
-           kelp = ifelse(kelp == 100, 99, kelp)) %>%
+           kelp = ifelse(kelp == 100, 99, kelp),
+           kelp_porp = kelp/100) %>%
     # if sampling = spring, use spring, if sampling = summer, use summer
     mutate(temp_dev = ifelse(month <7,
                              mean_temp_spring_dev,
                              mean_temp_summer_dev))
-  
-### Bob's objections to Krumhansl
-mod_time_only <- lm(logit_kelp ~ year*region, data =  combined_bio_temp_gmc)
-Anova(mod_time_only)
-summary(mod_time_only)
+#add some lags
+lag_var <- combined_bio_temp_gmc %>%
+  group_by(region, year) %>%
+  summarize(degree_heat_days_summer = degree_heat_days_summer[1]) %>%
+  group_by(region) %>%
+  arrange(year) %>%
+  mutate(lag_degree_heat_days_summer = lag(degree_heat_days_summer)) %>%
+  ungroup() %>%
+  select(-degree_heat_days_summer)
 
-ggplot(combined_bio_temp_gmc,
-       aes(x = year, y = logit_kelp, color = region)) +
-    geom_point() +
-    facet_wrap(vars(region)) +
-    stat_smooth(method = "lm", formula = y ~ x) +
-    ylim(c(-5,5))
-
-#urchin
-ggplot(combined_bio_temp_gmc,
-       aes(x = year, y = urchin, color = region,
-           group = paste(region, site))) +
-    geom_line(alpha = 0.6) +
-    facet_wrap(vars(region), scale = "free_y") +
-    theme_bw()
-
-
-#kelp
-ggplot(combined_bio_temp_gmc,
-       aes(x = year, y = logit_kelp, color = region,
-           group = paste(region, site))) +
-    geom_line(alpha = 0.6) +
-    facet_wrap(vars(region)) +
-    ylim(c(-5,5)) +
-    theme_bw()
-
-mod_time <- lmer(logit_kelp ~ year*region + (1 + year|site:region), 
-                 data =  combined_bio_temp_gmc)
+combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
+  left_join(lag_var)
 
 ### Additive Model
+# Our hypothesis is that kelp forests in the GOM are changing
+# in the wake of the urchin decline, but, that those changes
+# are likely to be region specific. We are interested in asking
+# the question of to what degree are regional trends predicted
+# by known drivers - temperature stress and urchin abundance.
+# It really is about STRESS that is experienced in a given region.
+# BUT - if we have declines in places that haven't experienced stress,
+# what is that about? Or is our perception of stress wrong? OR - is there
+# a lagged effect? 
+# % cover in may is net damage from previous year offset by winter growth
+# We cannot know the mechanism, but, both process operate
+# kelp = loss + growth(or further loss)
 
-mod_urchin_add <- glmmTMB(kelp/100 ~ mean_regional_urchin + 
-                              urchin_anom_from_region +
-                              mean_temp_summer_dev +
-                              mean_mean_temp_summer + 
-                              (1|year) + (1|region),
+
+mod_urchin_add <- glmmTMB(kelp_porp ~ 
+                            #drivers
+                            urchin_anom_from_region + #chomp chomp
+                            mean_temp_spring_dev + #current temp = growth
+                            lag_mean_temp_summer_dev + # loss last year
+                            #lag_degree_heat_days_summer + # loss last year
+                            
+                            #causal controls for hierarchical sampling
+                            mean_regional_urchin +
+                            mean_mean_temp_spring +
+
+                            #REs
+                            (1|year) + (1|region),
                           family = beta_family("logit"),
                           data = combined_bio_temp_gmc)
 
@@ -84,6 +86,7 @@ simulateResiduals(mod_urchin_add) %>% testDispersion()
 simulateResiduals(mod_urchin_add) %>% plotResiduals()
 
 performance::check_model(mod_urchin_add)
+performance::check_collinearity(mod_urchin_add)
 
 # Evaluate Model
 Anova(mod_urchin_add)
@@ -96,56 +99,48 @@ with(DF.join %>% add_predictions(mod_urchin_add, type = "response"),
 
 performance::r2_nakagawa(mod_urchin_add)
 
-### Compare link functions
 
-mod_urchin_add_logit <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
-                              mean_temp_dev + mean_temp_mn +
-                              (1|year) + (1|region),
+# Compare to a lag stress model
+
+mod_urchin_lag_dhd <- glmmTMB(kelp_porp ~ 
+                            #drivers
+                            urchin_anom_from_region + #chomp chomp
+                            mean_temp_spring_dev + #current temp = growth
+                            lag_degree_heat_days_summer + # loss last year
+                            
+                            #causal controls for hierarchical sampling
+                            mean_regional_urchin +
+                            mean_mean_temp_spring +
+                            
+                            #REs
+                            (1|year) + (1|region),
                           family = beta_family("logit"),
-                          data = DF.join)
-
-mod_urchin_add_probit <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev +
-                                    mean_temp_dev + mean_temp_mn +
-                                    (1|year) + (1|region),
-                                family = beta_family("probit"),
-                                data = DF.join)
-# compare - note, cloglog
-AICtab(mod_urchin_add, mod_urchin_add_logit, mod_urchin_add_probit)
+                          data = combined_bio_temp_gmc)
 
 
-#### Model with an Interaction
+AIC(mod_urchin_add, mod_urchin_lag_dhd)
 
-mod_urchin_int <- glmmTMB(kelp.perc ~ urchin_mn + urchin_dev * 
-                              mean_temp_dev + mean_temp_mn +
-                              (1|year) + (1|region),
-                          family = beta_family("cloglog"),
-                          data = DF.join)
-# Evaluate Assumptions
+# Compare to a model where last summer interacts with current temp
+# To see if we can drive over a cliff
 
-simulateResiduals(mod_urchin_int) %>% plotQQunif()
+mod_urchin_int <- glmmTMB(kelp_porp ~ 
+                            #drivers
+                            urchin_anom_from_region + #chomp chomp
+                            mean_temp_spring_dev * #current temp = growth
+                            lag_mean_temp_summer_dev + # loss last year
 
-# Evaluate Model
-Anova(mod_urchin_int)
+                            #causal controls for hierarchical sampling
+                            mean_regional_urchin +
+                            mean_mean_temp_spring +
+                            
+                            #REs
+                            (1|year) + (1|region),
+                          family = beta_family("logit"),
+                          data = combined_bio_temp_gmc)
 
 
-#### Compare models with AIC
-AICtab(mod_urchin_add, mod_urchin_int)
-
-### The two are the same. Parsimony suggests go with the simpler model
-
-
-### Additive Model
-
-mod_urchin_naieve <- glmmTMB(kelp.perc ~ urchin+
-                              mean_temp +
-                              (1|year) + (1|region),
-                          family = beta_family("cloglog"),
-                          data = DF.join)
-
-AICtab(mod_urchin_add, mod_urchin_naieve)
-
-saveRDS(mod_urchin_add, "derived_data/mod_urchin_add.RDS")
-saveRDS(mod_urchin_int, "derived_data/mod_urchin_int.RDS")
-saveRDS(mod_urchin_add_logit, "derived_data/mod_urchin_add_logit.Rds")
-saveRDS(mod_urchin_add_probit, "derived_data/mod_urchin_add_probit.Rds")
-saveRDS(mod_urchin_naieve, "derived_data/mod_urchin_naieve.Rds")
+# saveRDS(mod_urchin_add, "derived_data/mod_urchin_add.RDS")
+# saveRDS(mod_urchin_int, "derived_data/mod_urchin_int.RDS")
+# saveRDS(mod_urchin_add_logit, "derived_data/mod_urchin_add_logit.Rds")
+# saveRDS(mod_urchin_add_probit, "derived_data/mod_urchin_add_probit.Rds")
+# saveRDS(mod_urchin_naieve, "derived_data/mod_urchin_naieve.Rds")
