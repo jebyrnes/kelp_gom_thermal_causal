@@ -24,4 +24,18 @@ lag_var <- combined_bio_temp_gmc %>%
     select(-degree_heat_days_summer)
 
 combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
-    left_join(lag_var)
+    left_join(lag_var) %>%
+    mutate(region = gsub("\\.", " ", region),
+           region = stringr::str_to_title(region),
+           region = gsub("Mdi", "MDI", region),
+           region = factor(region,
+                           levels = c("Downeast", "MDI", "Penobscot Bay",
+                                      "Midcoast", "Casco Bay", "York")))
+
+
+
+regional_values <- combined_bio_temp_gmc %>%
+    dplyr::group_by(region) %>%
+    dplyr::select(mean_regional_urchin, mean_mean_temp_spring, mean_mean_temp_summer) %>%
+    dplyr::slice(1L) %>%
+    ungroup() 
