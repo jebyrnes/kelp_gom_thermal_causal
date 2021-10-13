@@ -83,6 +83,21 @@ ggplot(combined_bio_temp_gmc,
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
 
 
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = urchin, color = region)) +
+    geom_point(alpha = 0.4) +
+    facet_wrap(vars(region)) +
+    #stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    #ylim(c(0,100))  +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Urchins per sq. m", color = "") +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "none")
+
+ggsave("figures/urchin_trends.jpg", dpi = 600)
+
+
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
     #  geom_point() +
