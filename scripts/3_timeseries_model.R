@@ -12,6 +12,7 @@ library(ggplot2)
 library(dplyr)
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
+library(betareg)
 
 setwd(here::here())
 
