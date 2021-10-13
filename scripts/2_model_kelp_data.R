@@ -139,6 +139,12 @@ mod_urchin_int <- glmmTMB(kelp_porp ~
                           data = combined_bio_temp_gmc)
 
 
+mod_urchin_add %>%
+  broom.mixed::tidy() %>%
+  filter(grepl("spring", term)) %>%
+  select(-effect, -component, -group) %>%
+  knitr::kable(digits = 3) %>% kableExtra::kable_minimal()
+
 # saveRDS(mod_urchin_add, "derived_data/mod_urchin_add.RDS")
 # saveRDS(mod_urchin_int, "derived_data/mod_urchin_int.RDS")
 # saveRDS(mod_urchin_add_logit, "derived_data/mod_urchin_add_logit.Rds")

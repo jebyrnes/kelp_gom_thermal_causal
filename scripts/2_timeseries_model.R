@@ -31,7 +31,14 @@ combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv")
     # if sampling = spring, use spring, if sampling = summer, use summer
     mutate(temp_dev = ifelse(month <7,
                              mean_temp_spring_dev,
-                             mean_temp_summer_dev))
+                             mean_temp_summer_dev)) %>%
+    mutate(region = gsub("\\.", " ", region),
+        region = stringr::str_to_title(region),
+        region = gsub("Mdi", "MDI", region)) %>%
+    mutate(region = factor(region, 
+                           levels = c("York", "Casco Bay",
+                                      "Midcoast", "Penobscot Bay",
+                                      "MDI", "Downeast")))
 
 # Does month of sampling bias kelp measurements?
 # Does spring or summer sampling matter?
@@ -53,11 +60,24 @@ Anova(mod_time_only)
 summary(mod_time_only)
 
 ggplot(combined_bio_temp_gmc,
-       aes(x = year, y = kelp, color = region)) +
-    geom_point() +
+       aes(x = year, y = logit_kelp, color = region)) +
+    geom_point(alpha = 0.4) +
     facet_wrap(vars(region)) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
-    ylim(c(0,100))
+    #ylim(c(0,100))  +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Logit Kelp % Cover", color = "")
+
+
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = mean_temp_spring, color = region)) +
+    geom_point(alpha = 0.4) +
+    facet_wrap(vars(region)) +
+    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    #ylim(c(0,100))  +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Average Spring\nTemperature C", color = "")
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
@@ -88,9 +108,12 @@ ggplot(data = aug_time, aes(x = .resid)) +
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region,
            group = paste(region, site))) +
-    geom_line(alpha = 0.6) +
-    facet_wrap(vars(region), scale = "free_y") +
-    theme_bw()
+    geom_point(alpha = 0.6) +
+    facet_wrap(vars(region)) +
+    theme_bw() +
+    labs(y = "Urchins per sq. m.", x = "", color = "") +
+    theme_bw(base_size = 18) 
+    
 
 
 #kelp
