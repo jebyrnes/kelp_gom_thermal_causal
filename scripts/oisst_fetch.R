@@ -1,13 +1,13 @@
 library(dplyr)
 library(sf)
-library(oisstr)
+library(oisstr) #https://github.com/jebyrnes/oisstr
 library(lubridate)
 library(ggplot2)
 library(rnaturalearth)
 library(tidyr)
 coast <- ne_coastline(scale = 10, returnclass = "sf")
 
-bio_data <- read.csv("derived_data/combined_bio_data.csv") %>% 
+bio_data <- read.csv("derived_data/combined_data_for_analysis.csv") %>% 
     as_tibble() %>%
     group_by(year, region, latitude, longitude) %>%
     tally %>%
@@ -62,6 +62,18 @@ ggplot() +
 
 ggsave("figures/oisst_summer.jpg", dpi = 600)
 
+ggplot(data = summarized_temp %>% mutate(season = gsub("s", "S", season)),
+       aes(x = year, y = mean_temp, 
+           group = paste(lat, lon), color = lat)) +
+    geom_line() +
+    scale_color_distiller(palette = "BrBG") +
+    facet_wrap(vars(season)) +
+    labs(x="", y = "Mean Temperature (C)", color = "Latitude") +
+    theme_bw(base_size = 12) 
+
+ggsave("figures/oisst_summer_trend.jpg", dpi = 600)
+
+
 # make relevant to data
 summarized_temp_wide <- summarized_temp %>%
     pivot_wider(names_from = season, 
@@ -70,7 +82,7 @@ summarized_temp_wide <- summarized_temp %>%
 
 #add indices for joins
 idx_frame <- summarized_temp_wide %>%
-    select(-year) %>%
+    select(lat, lon) %>%
     group_by(lat, lon) %>%
     slice(1L) %>%
     ungroup() %>%
@@ -85,22 +97,22 @@ bio_data <- bio_data %>%
 
 summarized_temp_wide <- summarized_temp_wide %>%
     left_join(idx_frame%>% select(lon, lat, oisst_id)) %>%
-    select(-geometry)
-
-#merge the data and add group mean centered terms
-joined_dat <- left_join(bio_data, summarized_temp_wide) %>%
-    as_tibble() %>%
-    select(-geometry, -n, -lat, -lon) %>%
-    group_by(latitude, longitude) %>%
+    select(-geometry) %>%
+    group_by(lat, lon) %>%
     mutate(mean_spring_temp_oisst_site = mean(mean_spring_temp_oisst, na.rm=TRUE),
            mean_summer_temp_oisst_site = mean(mean_summer_temp_oisst, na.rm=TRUE),
-           mean_spring_temp_oisst_dev = mean_spring_temp_oisst - mean_spring_temp_oisst,
-           mean_summer_temp_oisst_dev = mean_summer_temp_oisst - mean_summer_temp_oisst
+           mean_spring_temp_oisst_dev = mean_spring_temp_oisst - mean_spring_temp_oisst_site,
+           mean_summer_temp_oisst_dev = mean_summer_temp_oisst - mean_summer_temp_oisst_site
            
     ) %>%
     arrange(year) %>%
     mutate(lag_mean_spring_temp_oisst_dev = lag(mean_spring_temp_oisst_dev),
            lag_mean_summer_temp_oisst_dev = lag(mean_summer_temp_oisst_dev)) %>%
     ungroup()
+
+#merge the data and add group mean centered terms
+joined_dat <- left_join(bio_data, summarized_temp_wide) %>%
+    as_tibble() %>%
+    select(-geometry, -n, -lat, -lon) 
 
 readr::write_csv(joined_dat, "derived_data/oisst_temp_data.csv")

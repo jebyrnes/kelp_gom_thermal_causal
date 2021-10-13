@@ -101,6 +101,32 @@ Anova(mod_urchin_int)
 # compare additive and interaction model
 AIC(mod_urchin_add, mod_urchin_int)
 
+# Work with OISST data
+
+
+mod_urchin_add_oisst <- glmmTMB(kelp_porp ~ 
+                                    #drivers
+                                    urchin_anom_from_region + #chomp chomp
+                                    mean_spring_temp_oisst_dev + #current temp = growth
+                                    lag_mean_summer_temp_oisst_dev + # loss last year
+                                    
+                                    #causal controls for hierarchical sampling
+                                    mean_regional_urchin +
+                                    mean_spring_temp_oisst_site +
+                                    mean_summer_temp_oisst_site +
+                                    
+                                    #REs
+                                    (1|year) + (1|region),
+                                family = beta_family("logit"),
+                                data = combined_bio_temp_gmc)
+
+Anova(mod_urchin_add_oisst)
+summary(mod_urchin_add_oisst)
+
+performance::check_collinearity(mod_urchin_add_oisst)
+
+
 # save the fit models out
 saveRDS(mod_urchin_add, "model_output/mod_urchin_add.RDS")
+saveRDS(mod_urchin_add_oisst, "model_output/mod_urchin_add_oisst.RDS")
 saveRDS(mod_urchin_int, "model_output/mod_urchin_int.RDS")

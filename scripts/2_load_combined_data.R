@@ -1,3 +1,5 @@
+library(car)
+library(dplyr)
 
 # read in the data
 # make a logit kelp cover variable
@@ -24,7 +26,18 @@ lag_var <- combined_bio_temp_gmc %>%
     select(-degree_heat_days_summer)
 
 combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
-    left_join(lag_var) %>%
+    left_join(lag_var)
+
+
+#get some oisst data in here
+oisst_dat <- read.csv("derived_data/oisst_temp_data.csv")
+
+#add oisst data
+combined_bio_temp_gmc <- left_join(combined_bio_temp_gmc, oisst_dat) 
+
+
+#add good region names
+combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
     mutate(region = gsub("\\.", " ", region),
            region = stringr::str_to_title(region),
            region = gsub("Mdi", "MDI", region),
@@ -34,6 +47,7 @@ combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
 
 
 
+#get some regional values for use
 regional_values <- combined_bio_temp_gmc %>%
     dplyr::group_by(region) %>%
     dplyr::select(mean_regional_urchin, mean_mean_temp_spring, mean_mean_temp_summer) %>%
