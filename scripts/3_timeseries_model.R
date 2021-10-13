@@ -10,35 +10,15 @@
 library(car) #for Anova
 library(ggplot2)
 library(dplyr)
-library(DHARMa) # Residual diagnostics for hierarchical regression models
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
-library(modelr)
-library(betareg)
 
 setwd(here::here())
 
 # read in the data
 # make a logit kelp cover variable
 # filter to 5m
-combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv") %>%
-    as_tibble() %>%
-    filter(depth == 5) %>%
-    mutate(logit_kelp = logit(kelp, adjust = 0.01),
-           kelp = ifelse(kelp== 0, 0.01, kelp),
-           kelp = ifelse(kelp == 100, 99, kelp),
-           kelp_porp = kelp/100) %>%
-    # if sampling = spring, use spring, if sampling = summer, use summer
-    mutate(temp_dev = ifelse(month <7,
-                             mean_temp_spring_dev,
-                             mean_temp_summer_dev)) %>%
-    mutate(region = gsub("\\.", " ", region),
-        region = stringr::str_to_title(region),
-        region = gsub("Mdi", "MDI", region)) %>%
-    mutate(region = factor(region, 
-                           levels = c("York", "Casco Bay",
-                                      "Midcoast", "Penobscot Bay",
-                                      "MDI", "Downeast")))
+source("scripts/2_load_combined_data.R")
 
 # Does month of sampling bias kelp measurements?
 # Does spring or summer sampling matter?
@@ -66,18 +46,41 @@ ggplot(combined_bio_temp_gmc,
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
-    labs(x = "", y = "Logit Kelp % Cover", color = "")
+    labs(x = "", y = "Logit Kelp % Cover", color = "") +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "none")
 
-
+ggsave("figures/kelp_over_time.jpg", dpi = 600)
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = mean_temp_spring, color = region)) +
-    geom_point(alpha = 0.4) +
+    geom_point(alpha = 1) +
     facet_wrap(vars(region)) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
-    labs(x = "", y = "Average Spring\nTemperature C", color = "")
+    labs(x = "", y = "Average Spring\nTemperature C", color = "") +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "none")
+
+
+ggsave("figures/spring_temp_trends.jpg", dpi = 600)
+
+
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = mean_temp_summer, color = region)) +
+    geom_point(alpha = 1) +
+    facet_wrap(vars(region)) +
+    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    #ylim(c(0,100))  +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Average Summer\nTemperature C", color = "") +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "none")
+
+ggsave("figures/summer_temp_trends.jpg", dpi = 600)
+
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
