@@ -1818,3 +1818,122 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sac,kelp,6.5
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sder,understory,0
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ulva,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ccrisp,understory,21.25
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,coral,understory,17.5
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,desm,understory,1.25
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,poly,understory,26.25
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,sac,kelp,25
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,chaet,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,rhod,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,agar,kelp,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ccrisp,understory,36.25
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,coral,understory,23.75
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,desm,understory,1.25
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,poly,understory,56.25
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,sac,kelp,15
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,chaet,understory,11.25
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,rhod,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,agar,kelp,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ccrisp,understory,32.5
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,coral,understory,20
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,desm,understory,3.75
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,poly,understory,47.5
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,sac,kelp,20
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,chaet,understory,7.5
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,rhod,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,agar,kelp,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ccrisp,understory,20
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,coral,understory,22.5
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,desm,understory,12.5
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,poly,understory,53.75
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,sac,kelp,27.5
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,chaet,understory,3.75
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,rhod,understory,1.25
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,palm,understory,2.5
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,agar,kelp,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ccrisp,understory,10
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,coral,understory,6.25
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,desm,understory,5
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,poly,understory,63.75
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,sac,kelp,30
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,chaet,understory,1.25
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,rhod,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,agar,kelp,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,ccrisp,understory,11.25
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,coral,understory,8.75
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,desm,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,poly,understory,66.25
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,sac,kelp,17.5
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,chaet,understory,1.25
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,rhod,understory,1.25
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,agar,kelp,6.25
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,29,York,North Head,NA,NA,NA,NA,NA,ptilo,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ccrisp,understory,10
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,coral,understory,1.25
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,desm,understory,2.5
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,poly,understory,67.5
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,sac,kelp,15
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,chaet,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,rhod,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,palm,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,agar,kelp,6.25
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ldig,kelp,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,alar,kelp,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ulva,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,sder,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,porph,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,phyc,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,codm,understory,0
+2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ptilo,understory,0
