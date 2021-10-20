@@ -67,16 +67,16 @@ anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  #
     write_csv("tables/kelp_comp_gllvm_lrchisq.csv")
 
 
-#for individual species
-anova(mod_gllvm, mod_gllvm_noint, 
-      which = "uni",
-      method = "fdr") %>%
-    `$`("data") %>%
-    as_tibble() %>%
-    select(-`Model. 1`) %>%
-    set_names(c("col", "species", "value")) %>%
-    pivot_wider(names_from = col,
-                values_from = value)
+# #for individual species
+# anova(mod_gllvm, mod_gllvm_noint, 
+#       which = "uni",
+#       method = "fdr") %>%
+#     `$`("data") %>%
+#     as_tibble() %>%
+#     select(-`Model. 1`) %>%
+#     set_names(c("col", "species", "value")) %>%
+#     pivot_wider(names_from = col,
+#                 values_from = value)
 
 #### Coefficient plot
 
@@ -141,6 +141,13 @@ anova_gllvm(mod_gllvm_understory,
             mod_gllvm_noint_understory) %>%
     write_csv("tables/understory_gllvm_lrchisq.csv")
 
+
+anova_gllvm_uni(mod_gllvm_understory, 
+                mod_gllvm_year_understory, 
+                mod_gllvm_region_understory, 
+                mod_gllvm_noint_understory,
+                method = "fdr") %>%
+    write_csv("tables/understory_comp_gllvm_lrchisq.csv")
 
 #for individual species
 anova(mod_gllvm_understory, mod_gllvm_noint_understory, 
