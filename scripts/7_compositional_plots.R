@@ -14,8 +14,9 @@ comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
 
 ggplot(comp_data %>% filter(type == "kelp"), 
        aes(x = region, y = cover, color = factor(year))) +
-        geom_point(position = position_dodge(width = 0.5)) +
-    #stat_summary(alpha = 0.8) +
+    geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
+    stat_summary(alpha = 1, position = position_dodge(width = 1),
+                 fun.data = mean_cl_boot) +
     coord_flip() +
     facet_wrap(vars(sp_code)) +
     labs(color = "Year",
@@ -31,8 +32,9 @@ ggsave("figures/kelp_composition_2004_2018.jpg", dpi = 600)
 
 ggplot(comp_data %>% filter(type != "kelp"), 
        aes(x = sp_code, y = cover, color = factor(year))) +
-        geom_point(position = position_dodge(width = 0.5)) +
-    #stat_summary(alpha = 0.9) +
+    geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
+    stat_summary(alpha = 1, position = position_dodge(width = 1),
+                 fun.data = mean_cl_boot) +
     coord_flip() +
     facet_wrap(vars(region)) +
     labs(color = "Year",
