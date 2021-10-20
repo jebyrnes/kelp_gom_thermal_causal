@@ -58,24 +58,30 @@ mod_gllvm_region <- gllvm(y = Y_kelp, X = X_design,
                          num.lv=2,
                          starting.val = 'zero')
 
-#year main effect
-anova(mod_gllvm_noint, mod_gllvm_region)
 
-#region main effect
-anova(mod_gllvm_noint, mod_gllvm_year)
+# must be whole, year, region, no interaction
+anova_gllvm(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  %>%
+    write_csv("tables/kelp_gllvm_lrchisq.csv")
 
-#interaction effect
-anova(mod_gllvm, mod_gllvm_noint)
+anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  #%>%
+    write_csv("tables/kelp_comp_gllvm_lrchisq.csv")
+
 
 #for individual species
 anova(mod_gllvm, mod_gllvm_noint, 
       which = "uni",
-      method = "fdr")
+      method = "fdr") %>%
+    `$`("data") %>%
+    as_tibble() %>%
+    select(-`Model. 1`) %>%
+    set_names(c("col", "species", "value")) %>%
+    pivot_wider(names_from = col,
+                values_from = value)
 
 #### Coefficient plot
 
 #refit with 0 to test are things diff from 0, not York
-mod_gllvm_0 <- update(mod_gllvm, formulate = .~.+0)
+#mod_gllvm_0 <- update(mod_gllvm, formulate = .~.+0)
 
 dats <- summary(mod_gllvm)$Coef.tableX %>%
     as.data.frame() %>%
@@ -127,14 +133,14 @@ mod_gllvm_region_understory <- gllvm(y = Y_understory, X = X_design,
                           num.lv=2,
                           starting.val = 'zero')
 
-#year main effect
-anova(mod_gllvm_noint_understory, mod_gllvm_region_understory)
 
-#region main effect
-anova(mod_gllvm_noint_understory, mod_gllvm_year_understory)
+# must be whole, year, region, no interaction
+anova_gllvm(mod_gllvm_understory, 
+            mod_gllvm_year_understory, 
+            mod_gllvm_region_understory, 
+            mod_gllvm_noint_understory) %>%
+    write_csv("tables/understory_gllvm_lrchisq.csv")
 
-#interaction effect
-anova(mod_gllvm_understory, mod_gllvm_noint_understory)
 
 #for individual species
 anova(mod_gllvm_understory, mod_gllvm_noint_understory, 

@@ -148,3 +148,60 @@ function (object, ..., which = "multi", method = "holm")
         return(invisible(list(table = result, data = result2)))
     }
 }
+
+
+# to pretty print the table
+
+anova_gllvm <- function(allmod, yearmod, regionmod, nointmod){
+    bind_rows(
+        
+        anova(nointmod, regionmod) %>%
+            as_tibble() %>% `[`(2,-1) %>%
+            mutate(term = "year"),
+        
+        anova(nointmod, yearmod) %>%
+            as_tibble() %>% `[`(2,-1) %>%
+            mutate(term = "region"),
+        
+        anova(allmod, nointmod) %>%
+            as_tibble() %>% `[`(2,-1) %>%
+            mutate(term = "year:region")
+    ) %>%
+        select(term, everything())
+    
+}
+
+
+anova_gllvm_uni <- function(allmod, yearmod, regionmod, nointmod,
+                            method = "fdr"){
+    process_anovatab <- . %>%
+        `$`("data") %>%
+        as_tibble() %>%
+        select(-`Model. 1`) %>%
+        set_names(c("col", "species", "value")) %>%
+        pivot_wider(names_from = col,
+                    values_from = value)
+    
+    bind_rows(
+        
+        anova(nointmod, regionmod, 
+              which = "uni",
+              method = method) %>%
+            process_anovatab %>%
+            mutate(term = "year"),
+        
+        anova(nointmod, yearmod, 
+              which = "uni",
+              method = method) %>%
+            process_anovatab %>%
+            mutate(term = "region"),
+        
+        anova(allmod, nointmod, 
+              which = "uni",
+              method = method) %>%
+            process_anovatab %>%
+            mutate(term = "year:region")
+    ) %>%
+        select(term, everything()) 
+    
+}
