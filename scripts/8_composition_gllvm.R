@@ -63,10 +63,11 @@ mod_gllvm_region <- gllvm(y = Y_kelp, X = X_design,
 anova_gllvm(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  %>%
     write_csv("tables/kelp_gllvm_lrchisq.csv")
 
+
 anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  #%>%
     write_csv("tables/kelp_comp_gllvm_lrchisq.csv")
 
-
+# 
 # #for individual species
 # anova(mod_gllvm, mod_gllvm_noint, 
 #       which = "uni",
@@ -141,7 +142,7 @@ anova_gllvm(mod_gllvm_understory,
             mod_gllvm_noint_understory) %>%
     write_csv("tables/understory_gllvm_lrchisq.csv")
 
-
+#for individual species
 anova_gllvm_uni(mod_gllvm_understory, 
                 mod_gllvm_year_understory, 
                 mod_gllvm_region_understory, 
@@ -149,10 +150,9 @@ anova_gllvm_uni(mod_gllvm_understory,
                 method = "fdr") %>%
     write_csv("tables/understory_comp_gllvm_lrchisq.csv")
 
-#for individual species
-anova(mod_gllvm_understory, mod_gllvm_noint_understory, 
-      which = "uni",
-      method = "fdr")
+# anova(mod_gllvm_understory, mod_gllvm_noint_understory, 
+#       which = "uni",
+#       method = "fdr")
 
 ####
 library(DirichletReg)
