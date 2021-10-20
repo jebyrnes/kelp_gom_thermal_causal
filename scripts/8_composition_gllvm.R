@@ -64,7 +64,7 @@ anova_gllvm(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  %>%
     write_csv("tables/kelp_gllvm_lrchisq.csv")
 
 
-anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  #%>%
+anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint) %>%
     write_csv("tables/kelp_comp_gllvm_lrchisq.csv")
 
 # 
