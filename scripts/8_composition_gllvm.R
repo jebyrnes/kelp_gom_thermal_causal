@@ -12,11 +12,11 @@ source("scripts/anova_gllvm_tmp.R")
 comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
     mutate( region = factor(region,
                             levels = rev(c("Downeast", "MDI", "Penobscot Bay",
-                                       "Midcoast", "Casco Bay", "York")))) %>%
-    mutate(id = as.numeric(as.factor(sp_code)))
+                                           "Midcoast", "Casco Bay", "York"))),
+            year = factor(year, levels = c(2018, 2004)))
 
 comp_data_wide <- comp_data %>%
-    select(-type, -id) %>%
+    select(-type) %>%
     pivot_wider(names_from = "sp_code",
                 values_from = "cover") %>%
     mutate(year = as.character(year))
@@ -27,7 +27,7 @@ Y_kelp <- comp_data_wide %>%
     
     
 Y_understory <- comp_data_wide %>%
-        select("sder", "desm", "desm", "ulva",
+        select("desm", "desm", "ulva",
                "chaet", "codm", "poly", "poly", "rhod", "ptilo",
                "porph", "palm", "phyc", "ccrisp", "coral") %>%
     mutate(across(everything(), ~car::logit(.x/100)))
@@ -82,16 +82,51 @@ anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint) %>
 #### Coefficient plot
 
 #refit with 0 to test are things diff from 0, not York
-#mod_gllvm_0 <- update(mod_gllvm, formulate = .~.+0)
+mod_gllvm_0 <- gllvm(y = Y_kelp, X = X_design,
+                    formula = ~region*year+0,
+                    family = gaussian(link = "identity"),
+                    num.lv=2,
+                    starting.val = 'zero')
 
-dats <- summary(mod_gllvm)$Coef.tableX %>%
+dats <- summary(mod_gllvm_0)$Coef.tableX %>%
     as.data.frame() %>%
     mutate(coef = rownames(.)) %>%
     as_tibble() %>%
     mutate(species = str_remove(coef, "^.*:"),
            term = str_remove(coef, paste0(":", species)))
 
+# What we want is change within a region for each species
+# increase or decrease?
+library(modelr)
+X_unique <- X_design %>%
+    group_by(year, region) %>%
+    slice(1L) %>%
+    ungroup()
 
+pred_kelp <- predict(mod_gllvm, newX = X_unique,
+                     level = 0) %>%
+    cbind(X_unique) 
+
+diff_kelp <- pred_kelp %>%
+    pivot_longer(agar:sac,
+                 names_to = "sp_code",
+                 values_to = "prediction") %>%
+    mutate(prediction = boot::inv.logit(prediction)*100) %>%
+    pivot_wider(names_from = year, values_from = prediction) %>%
+    group_by(region, sp_code) %>%
+    summarize(change = `2018` - `2004`)
+
+ggplot(diff_kelp  ,
+       aes(x = region, y = change)) +
+    geom_point( position = position_dodge(width = 1)) +
+    coord_flip() +
+    facet_wrap(vars(sp_code)) +
+    labs(y = "Change in % Cover",
+         x = "") +
+    ggthemes::theme_clean() +
+    geom_hline(yintercept = 0, lty = 1)
+
+###
 ggplot(dats,
        aes(x = species, y = Estimate, color = `Pr(>|z|)`<0.05,
            ymin = Estimate - 2*`Std. Error`,

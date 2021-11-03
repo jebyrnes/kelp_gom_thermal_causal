@@ -1,1 +1,18 @@
-- add in SML data
+X- add in SML data
+X- OISST? https://cran.r-project.org/web/packages/heatwaveR/vignettes/OISST_preparation.html
+- effect sizes for beta models coef * sd(x)/sd(y on link scale?)
+    Observed-empirical approach to standardization.— Menard (1995, 2010
+- jump down small variance rabbit holes for model
+- change for understory composition
+- SE for change in composition with gllvm
+
+```{r}
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = mean_temp_spring, y = logit_kelp, color = region)) +
+    geom_point(alpha = 0.4) +
+    facet_wrap(vars(region)) +
+    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    theme_bw(base_size = 16) +
+    labs(x = "Average Spring Temperature C", y = "Logit Kelp % Cover", color = "")
+```
