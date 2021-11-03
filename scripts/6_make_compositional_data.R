@@ -25,9 +25,9 @@ comp_data_filter <- . %>%
            #    chaet + codm + poly + rhod + ptilo + porph +
             #   palm + phyc + ccrisp + coral,
            survey = "rasher_steneck") %>%
-    select(-c(kelp, sand:ledge, urchin, callo, phyll, bonne:crust)) %>%
+    select(-c(kelp, sand:ledge, urchin, callo, sder, phyll, bonne:crust)) %>%
      pivot_longer(cols = c(sac, alar, agar, ldig,
-                           sder, desm, ulva,
+                           desm, ulva,
                                chaet, codm, poly, rhod, ptilo,
                            porph, palm , phyc, ccrisp, coral),
                   names_to = "sp_code",
@@ -67,12 +67,14 @@ byrnes <- read_csv("https://raw.githubusercontent.com/kelpecosystems/observation
 
 translate <- data.frame(
     sp_code = c("SLJ", "SL", "ALES", "AGCL", "LADI",
-      "SADE", "DEAC", "DEVI", "UV",
+      #"SADE", 
+      "DEAC", "DEVI", "UV",
       "FG", "COF", "POLS", "HJ", "CYPU", "PTSE",
       "PORS", "PAPA", "PHRU", "CHCR", "CO", "BOHA"),
     
     new_sp_code = c("sac", "sac", "alar", "agar", "ldig",
-                    "sder", "desm", "desm", "ulva",
+                    #"sder", 
+                    "desm", "desm", "ulva",
                     "chaet", "codm", "poly", "poly", "rhod", "ptilo",
                     "porph", "palm", "phyc", "ccrisp", "coral", "poly"))
 
@@ -81,7 +83,8 @@ translate <- data.frame(
 byrnes_2018 <- byrnes %>%
     filter(SP_CODE %in%
                c("SLJ", "SL", "ALES", "AGCL", "LADI",
-                 "SADE", "DEAC", "DEVI", "UV",
+                 #"SADE",
+                 "DEAC", "DEVI", "UV",
                  "FG", "COF", "POLS", "HJ", "CYPU", "PTSE",
                  "PORS", "PAPA", "PHRU", "CHCR", "CO")) %>%
     mutate(REGION = "york") %>%
@@ -98,7 +101,8 @@ byrnes_2018 <- byrnes %>%
                 values_fill = list(cover = 0),
                 values_fn = sum) %>%
     mutate(ldig = 0, alar = 0, ulva = 0, 
-           sder = 0, porph = 0, phyc = 0, codm=0,
+           #sder = 0, 
+           porph = 0, phyc = 0, codm=0,
            ptilo = 0) %>% #fill in 0s for missing species
     pivot_longer(-c(year, month, day, region, site, transect),
                  names_to = "sp_code",

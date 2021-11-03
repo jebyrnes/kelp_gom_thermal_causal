@@ -14,7 +14,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,10,Penobscot Bay,large.green.island,5,5,43.9053,-69.0163,5,ptilo,0.13888888888888892,understory
 2004,6,10,Penobscot Bay,large.green.island,5,5,43.9053,-69.0163,5,rhod,0.05555555555555554,understory
 2004,6,10,Penobscot Bay,large.green.island,5,5,43.9053,-69.0163,5,sac,1.0555555555555556,kelp
-2004,6,10,Penobscot Bay,large.green.island,5,5,43.9053,-69.0163,5,sder,0,understory
 2004,6,10,Penobscot Bay,large.green.island,5,5,43.9053,-69.0163,5,ulva,1.3611111111111112,understory
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,agar,1.4444444444444444,kelp
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,alar,0.27777777777777785,kelp
@@ -31,7 +30,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,ptilo,0.75,understory
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,rhod,0,understory
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,sac,22.61111111111111,kelp
-2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,sder,0,understory
 2004,6,10,Penobscot Bay,metinic.island.north,5,4,43.8915,-69.1198,5,ulva,0.11111111111111109,understory
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,agar,0,kelp
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,alar,0,kelp
@@ -48,7 +46,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ptilo,0,understory
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,rhod,0,understory
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sac,0.05882352941176469,kelp
-2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sder,0.0588235294117647,understory
 2004,6,28,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ulva,0.0588235294117647,understory
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,agar,0.6666666666666667,kelp
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,alar,0.08333333333333333,kelp
@@ -65,7 +62,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,ptilo,0,understory
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,rhod,0.08333333333333333,understory
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,sac,83.08333333333333,kelp
-2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,sder,0,understory
 2004,6,28,Midcoast,turnip.island,3,3,43.83258,-69.55455,5,ulva,0.08333333333333334,understory
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,agar,0.25,kelp
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,alar,0,kelp
@@ -82,7 +78,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,ptilo,0,understory
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,rhod,2.1666666666666665,understory
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,sac,53.916666666666664,kelp
-2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,sder,0.7916666666666667,understory
 2004,6,29,Midcoast,damariscove.island.north,4,3,43.7798,-69.6041,5,ulva,0.25,understory
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,agar,2.125,kelp
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,alar,0,kelp
@@ -99,7 +94,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,ptilo,0.02083333333333334,understory
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,rhod,0,understory
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,sac,32.08333333333333,kelp
-2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,sder,17.458333333333332,understory
 2004,6,29,Midcoast,fishermans.island.east,4,4,43.79199,-69.59757,5,ulva,0.2916666666666667,understory
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,agar,0,kelp
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,alar,0,kelp
@@ -116,7 +110,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,ptilo,0,understory
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,rhod,0,understory
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,sac,29.666666666666664,kelp
-2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,sder,0,understory
 2004,6,29,Midcoast,fishermans.island.north,3,3,43.8039,-69.5952,5,ulva,0,understory
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,agar,0.875,kelp
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,alar,0.1666666666666667,kelp
@@ -133,7 +126,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,ptilo,0.20833333333333334,understory
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,rhod,0.4166666666666667,understory
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,sac,89.70833333333333,kelp
-2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,sder,0,understory
 2004,6,29,Midcoast,fishermans.island.south,4,4,43.79,-69.6016,5,ulva,0.04166666666666668,understory
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,agar,0,kelp
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,alar,2.041666666666667,kelp
@@ -150,7 +142,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,ptilo,0,understory
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,rhod,0.041666666666666664,understory
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,sac,34.58333333333333,kelp
-2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,sder,0.625,understory
 2004,6,29,Midcoast,ocean.point.west,3,3,43.8155,-69.6069,5,ulva,0.125,understory
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,agar,0.17391304347826092,kelp
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,alar,0.5652173913043479,kelp
@@ -167,7 +158,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,ptilo,0,understory
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,rhod,0.5652173913043479,understory
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,sac,18.52173913043478,kelp
-2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,sder,0,understory
 2004,6,30,Midcoast,damariscove.island.south,5,5,43.7502,-69.6113,5,ulva,0,understory
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,agar,0.75,kelp
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,alar,0.33333333333333337,kelp
@@ -184,7 +174,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,ptilo,0,understory
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,rhod,1.0416666666666665,understory
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,sac,1,kelp
-2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,sder,0,understory
 2004,6,30,Midcoast,pumpkin.island.south.ledge,5,5,43.7491,-69.5825,5,ulva,0,understory
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,agar,0.08333333333333336,kelp
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,alar,0,kelp
@@ -201,7 +190,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,ptilo,0,understory
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,rhod,1.1666666666666665,understory
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,sac,11.208333333333332,kelp
-2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,sder,2.708333333333333,understory
 2004,7,1,Midcoast,seguin.island.north,4,3,43.7135,-69.7573,5,ulva,0.16666666666666666,understory
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,agar,4.333333333333334,kelp
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,alar,0,kelp
@@ -218,7 +206,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,ptilo,0,understory
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,rhod,4.75,understory
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,sac,4.5,kelp
-2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,sder,0,understory
 2004,7,1,Midcoast,seguin.island.south,5,5,43.7051,-69.7541,5,ulva,0,understory
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,agar,0.3333333333333333,kelp
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,alar,0.5,kelp
@@ -235,7 +222,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ptilo,0,understory
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,rhod,0,understory
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sac,6.625,kelp
-2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sder,0.08333333333333334,understory
 2004,7,7,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ulva,1.6666666666666665,understory
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,agar,0,kelp
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,alar,1.0454545454545456,kelp
@@ -252,7 +238,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,ptilo,0.09090909090909093,understory
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,rhod,0.5454545454545456,understory
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,sac,0,kelp
-2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,sder,0,understory
 2004,7,7,Midcoast,monhegan.island.southeast,5,5,43.76008,-69.3105,5,ulva,0.5909090909090907,understory
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,agar,1,kelp
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,alar,0.45454545454545453,kelp
@@ -269,7 +254,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,ptilo,0,understory
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,rhod,2.6363636363636362,understory
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,sac,2.3181818181818175,kelp
-2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,sder,0.09090909090909093,understory
 2004,7,7,Midcoast,monhegan.island.west,5,4,43.7679,-69.3224,5,ulva,3,understory
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,agar,15.45,kelp
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,alar,0,kelp
@@ -286,7 +270,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,ptilo,0,understory
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,rhod,1.25,understory
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,sac,39.35,kelp
-2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,sder,0.5,understory
 2004,7,20,Penobscot Bay,brewster.point.south,3,3,44.1304,-69.075,5,ulva,14.849999999999998,understory
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,agar,0,kelp
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,alar,0,kelp
@@ -303,7 +286,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,ptilo,0.1875,understory
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,rhod,0,understory
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,sac,3.125,kelp
-2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,sder,0,understory
 2004,7,21,York,bibb.rock.moody.beach,3,4,43.2836,-70.565,5,ulva,0.5625,understory
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,agar,0.5833333333333334,kelp
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,alar,0,kelp
@@ -320,7 +302,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,ptilo,3.75,understory
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,rhod,0,understory
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,sac,51,kelp
-2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,sder,0,understory
 2004,7,21,York,perkins.cove,3,4,43.23666,-70.5825,5,ulva,0.33333333333333337,understory
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,agar,11.8125,kelp
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,alar,0,kelp
@@ -337,7 +318,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,ptilo,6.125,understory
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,rhod,0.125,understory
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,sac,32.8125,kelp
-2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,sder,0,understory
 2004,7,22,York,cutts.island,3,4,43.094,-70.6476,5,ulva,0,understory
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,agar,13.833333333333332,kelp
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,alar,0,kelp
@@ -354,7 +334,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,ptilo,6.833333333333334,understory
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,rhod,0,understory
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,sac,1.25,kelp
-2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,sder,0,understory
 2004,7,22,York,stones.rock,4,5,43.1067,-70.6337,5,ulva,0,understory
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,agar,0.6000000000000001,kelp
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,alar,0,kelp
@@ -371,7 +350,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,ptilo,2.3499999999999996,understory
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,rhod,0.04999999999999999,understory
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,sac,0,kelp
-2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,sder,0,understory
 2004,7,22,York,york.ledge,4,4,43.092,-70.5915,5,ulva,0,understory
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,agar,3,kelp
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,alar,18.75,kelp
@@ -388,7 +366,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,ptilo,1.15,understory
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,rhod,0.44999999999999996,understory
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,sac,16.35,kelp
-2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,sder,0,understory
 2004,7,26,Penobscot Bay,bantam.ledge,5,5,43.82783,-68.95067,5,ulva,0,understory
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,agar,0,kelp
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,alar,13.72222222222222,kelp
@@ -405,7 +382,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,ptilo,3.388888888888889,understory
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,rhod,0,understory
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,sac,0,kelp
-2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,sder,0,understory
 2004,7,26,Penobscot Bay,matinicus.island.east,5,5,43.87,-68.8747,5,ulva,0,understory
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,agar,0.07692307692307694,kelp
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,alar,5.615384615384615,kelp
@@ -422,7 +398,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,ptilo,2.923076923076923,understory
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,rhod,0.5384615384615385,understory
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,sac,0,kelp
-2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,sder,0,understory
 2004,7,26,Penobscot Bay,metinic.island.south,5,5,43.8679,-69.1288,5,ulva,0,understory
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,agar,0.02777777777777777,kelp
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,alar,1.7222222222222223,kelp
@@ -439,7 +414,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,ptilo,0,understory
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,rhod,0.44444444444444436,understory
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,sac,17.666666666666664,kelp
-2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,sder,0,understory
 2004,7,26,Penobscot Bay,ragged.island.east,5,5,43.82483,-68.88383,5,ulva,0,understory
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,agar,4.9375,kelp
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,alar,2.5,kelp
@@ -456,7 +430,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,ptilo,3,understory
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,rhod,0.5625,understory
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,sac,0,kelp
-2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,sder,0,understory
 2004,7,26,Penobscot Bay,ragged.island.south,5,5,43.8157,-68.8897,5,ulva,0,understory
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,agar,0,kelp
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,alar,56.22222222222222,kelp
@@ -473,7 +446,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,ptilo,1.4444444444444444,understory
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,rhod,0,understory
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,sac,0,kelp
-2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,sder,0,understory
 2004,7,26,Penobscot Bay,wooden.ball.island,5,5,43.85983,-68.80833,5,ulva,0,understory
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,agar,0,kelp
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,alar,20.235294117647058,kelp
@@ -490,7 +462,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,ptilo,0,understory
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,rhod,1.4117647058823535,understory
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,sac,46.588235294117645,kelp
-2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,sder,0,understory
 2004,7,29,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,ulva,0,understory
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,agar,3.5555555555555554,kelp
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,alar,0,kelp
@@ -507,7 +478,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,ptilo,2.361111111111111,understory
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,rhod,0.9444444444444443,understory
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,sac,30.38888888888889,kelp
-2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,sder,0,understory
 2004,7,29,Casco Bay,long.island.CB,3,3,43.68,-70.173,5,ulva,0,understory
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,agar,1.4166666666666667,kelp
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,alar,3.625,kelp
@@ -524,7 +494,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,ptilo,4.041666666666666,understory
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,rhod,0,understory
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,sac,39.91666666666667,kelp
-2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,sder,0,understory
 2004,7,29,Casco Bay,whale.rock,4,5,43.7033,-70.0381,5,ulva,0,understory
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,agar,0.7999999999999998,kelp
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,alar,4.174999999999999,kelp
@@ -541,7 +510,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,ptilo,0,understory
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,rhod,0,understory
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,sac,26.9,kelp
-2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,sder,0,understory
 2004,7,30,Penobscot Bay,hurricane.island.south,4,4,44.0304,-68.8893,5,ulva,0.15,understory
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,agar,12.941176470588236,kelp
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,alar,12.764705882352942,kelp
@@ -558,7 +526,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,ptilo,5,understory
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,rhod,0.7058823529411766,understory
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,sac,0,kelp
-2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,sder,0,understory
 2004,7,30,Penobscot Bay,inner.bay.ledges,4,4,44.073,-68.95433,5,ulva,0,understory
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,agar,91.1,kelp
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,alar,0,kelp
@@ -575,7 +542,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,ptilo,0.04999999999999999,understory
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,rhod,0,understory
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,sac,0,kelp
-2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,sder,0,understory
 2004,7,30,Penobscot Bay,north.haven.island.west,3,3,44.1099,-68.94575,5,ulva,0,understory
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,agar,9.1,kelp
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,alar,0,kelp
@@ -592,7 +558,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,ptilo,1.2333333333333334,understory
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,rhod,0,understory
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,sac,54.31666666666667,kelp
-2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,sder,0,understory
 2004,8,3,Midcoast,burnt.island,4,4,43.8652,-69.2817,5,ulva,0.4499999999999999,understory
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,agar,4.473684210526317,kelp
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,alar,1.0526315789473686,kelp
@@ -609,7 +574,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ptilo,0.08421052631578946,understory
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,rhod,0,understory
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sac,8.105263157894736,kelp
-2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sder,0,understory
 2004,8,3,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ulva,0.42105263157894735,understory
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,agar,3.3333333333333326,kelp
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,alar,8.476190476190478,kelp
@@ -626,7 +590,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,ptilo,0.30952380952380965,understory
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,rhod,0,understory
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,sac,5.809523809523809,kelp
-2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,sder,0,understory
 2004,8,3,Penobscot Bay,two.bush.island.PB,4,4,43.96424,-69.0701,5,ulva,0,understory
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,agar,5.764705882352941,kelp
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,alar,0,kelp
@@ -643,7 +606,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,ptilo,20.470588235294116,understory
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,rhod,1.3529411764705883,understory
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,sac,13.117647058823527,kelp
-2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,sder,0,understory
 2004,8,4,Casco Bay,bald.head,3,4,43.70596,-69.85808,5,ulva,0,understory
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,agar,6.136363636363636,kelp
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,alar,0,kelp
@@ -660,7 +622,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ptilo,15.954545454545455,understory
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,rhod,0.2727272727272728,understory
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sac,1.159090909090909,kelp
-2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sder,0,understory
 2004,8,4,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ulva,0.04545454545454545,understory
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,agar,0,kelp
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,alar,0,kelp
@@ -677,7 +638,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,ptilo,0,understory
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,rhod,0.05555555555555554,understory
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,sac,14.277777777777779,kelp
-2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,sder,0,understory
 2004,8,4,Casco Bay,sisters.ledge,4,4,43.7341,-69.9205,5,ulva,0.25555555555555554,understory
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,agar,5.619047619047618,kelp
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,alar,0,kelp
@@ -694,7 +654,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,ptilo,17.38095238095238,understory
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,rhod,1.380952380952381,understory
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,sac,10.619047619047619,kelp
-2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,sder,0,understory
 2004,8,4,Casco Bay,small.point,3,4,43.7004,-69.8319,5,ulva,0,understory
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,agar,12.654054054054052,kelp
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,alar,0.18918918918918923,kelp
@@ -711,7 +670,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,ptilo,4.6756756756756745,understory
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,rhod,0,understory
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,sac,50.513513513513495,kelp
-2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,sder,0,understory
 2004,8,4,Casco Bay,two.bush.island.CB,3,3,43.75202,-69.9376,5,ulva,0.29729729729729726,understory
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,agar,4,kelp
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,alar,0,kelp
@@ -728,7 +686,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,ptilo,0.2,understory
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,rhod,0,understory
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,sac,31.1,kelp
-2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,sder,0,understory
 2004,8,4,Casco Bay,wood.island,3,4,43.7323,-69.8738,5,ulva,0,understory
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,agar,1.8636363636363638,kelp
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,alar,0.9545454545454545,kelp
@@ -745,7 +702,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,ptilo,2,understory
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,rhod,0,understory
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,sac,75.68181818181819,kelp
-2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,sder,0,understory
 2004,8,7,Midcoast,little.island.south,3,3,43.8683,-69.485,5,ulva,0.13636363636363638,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,agar,1.8695652173913042,kelp
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,alar,0.21739130434782608,kelp
@@ -762,7 +718,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,ptilo,0,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,rhod,0.08695652173913046,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,sac,22.913043478260867,kelp
-2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,sder,0,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.north,3,3,43.8666,-69.4805,5,ulva,0,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,agar,0,kelp
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,alar,0.16666666666666666,kelp
@@ -779,7 +734,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,ptilo,0,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,rhod,0.33333333333333337,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,sac,47.45833333333333,kelp
-2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,sder,0,understory
 2004,8,7,Midcoast,new.harbor.dry.ledges.south,3,3,43.861,-69.485,5,ulva,0.125,understory
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,agar,0.021739130434782615,kelp
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,alar,0.08695652173913045,kelp
@@ -796,7 +750,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,ptilo,0,understory
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,rhod,0,understory
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,sac,1.7391304347826086,kelp
-2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,sder,0,understory
 2004,8,7,Midcoast,pumpkin.cove,3,3,43.8475,-69.4973,5,ulva,0.15217391304347824,understory
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,agar,43.8,kelp
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,alar,0,kelp
@@ -813,7 +766,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,ptilo,1.9079999999999997,understory
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,rhod,0,understory
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,sac,34,kelp
-2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,sder,0,understory
 2004,8,9,MDI,east.barge.island,3,3,44.23088,-68.4404,5,ulva,0.34400000000000003,understory
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,agar,0.8965517241379313,kelp
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,alar,3.896551724137931,kelp
@@ -830,7 +782,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,ptilo,0.08620689655172412,understory
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,rhod,1.2068965517241375,understory
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,sac,24.724137931034488,kelp
-2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,sder,1.4137931034482758,understory
 2004,8,10,MDI,baker.island,4,4,44.2371,-68.2048,5,ulva,0.4724137931034483,understory
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,agar,17.56,kelp
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,alar,11.36,kelp
@@ -847,7 +798,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,ptilo,0.9639999999999999,understory
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,rhod,0.47999999999999976,understory
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,sac,16.64,kelp
-2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,sder,0,understory
 2004,8,10,MDI,black.island,4,4,44.1688,-68.3445,5,ulva,0,understory
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,agar,24.842105263157897,kelp
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,alar,6.315789473684211,kelp
@@ -864,7 +814,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,ptilo,0.34210526315789475,understory
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,rhod,0,understory
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,sac,10.631578947368421,kelp
-2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,sder,0,understory
 2004,8,10,MDI,east.bunker.ledge,4,3,44.2788,-68.2212,5,ulva,1.236842105263158,understory
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,agar,0,kelp
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,alar,12.736842105263158,kelp
@@ -881,7 +830,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,ptilo,0,understory
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,rhod,0.4736842105263157,understory
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,sac,1.8947368421052628,kelp
-2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,sder,0,understory
 2004,8,10,MDI,great.cranberry.island,4,4,44.2376,-68.2452,5,ulva,0.15789473684210525,understory
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,agar,0,kelp
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,alar,16.3,kelp
@@ -898,7 +846,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,ptilo,0,understory
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,rhod,0.09999999999999999,understory
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,sac,31.8,kelp
-2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,sder,0,understory
 2004,8,10,MDI,great.duck.island,5,5,44.146,-68.253,5,ulva,3.0499999999999994,understory
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,agar,1.7142857142857144,kelp
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,alar,0,kelp
@@ -915,7 +862,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,ptilo,1.5785714285714283,understory
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,rhod,0,understory
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,sac,86.07142857142857,kelp
-2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,sder,0,understory
 2004,8,16,Casco Bay,orrs.island.east,3,3,43.7627,-69.9617,5,ulva,0,understory
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,agar,1.8,kelp
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,alar,5.5,kelp
@@ -932,7 +878,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,ptilo,0,understory
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,rhod,0,understory
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,sac,5,kelp
-2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,sder,0,understory
 2004,8,16,Casco Bay,round.rock,5,5,43.7198,-69.9603,5,ulva,0.2,understory
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,agar,0.368421052631579,kelp
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,alar,0,kelp
@@ -949,7 +894,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,ptilo,0.026315789473684213,understory
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,rhod,0,understory
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,sac,1.631578947368421,kelp
-2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,sder,0,understory
 2004,8,16,York,prouts.neck,3,4,43.5262,-70.3192,5,ulva,0.2894736842105263,understory
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,agar,0.052631578947368425,kelp
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,alar,0.07894736842105261,kelp
@@ -966,7 +910,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,ptilo,0.2105263157894737,understory
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,rhod,0,understory
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,sac,14.052631578947368,kelp
-2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,sder,0,understory
 2004,8,16,York,ram.island.CE,3,4,43.5492,-70.262200000000007,5,ulva,0,understory
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,agar,0,kelp
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,alar,0,kelp
@@ -983,7 +926,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,ptilo,0,understory
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,rhod,0,understory
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,sac,32.1578947368421,kelp
-2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,sder,0,understory
 2004,8,16,York,seal.rocks,3,4,43.5555,-70.2293,5,ulva,0,understory
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,agar,0.8999999999999998,kelp
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,alar,0,kelp
@@ -1000,7 +942,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,ptilo,0,understory
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,rhod,0,understory
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,sac,28.25,kelp
-2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,sder,0,understory
 2004,8,16,York,stratton.island,4,4,43.4995,-70.311,5,ulva,0.40999999999999986,understory
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,agar,3.45,kelp
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,alar,0,kelp
@@ -1017,7 +958,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,ptilo,0.05,understory
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,rhod,0,understory
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,sac,47.5,kelp
-2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,sder,0,understory
 2004,8,18,Midcoast,barter.island,3,4,43.9052,-69.3078,5,ulva,0,understory
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,agar,2.4736842105263164,kelp
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,alar,0,kelp
@@ -1034,7 +974,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,ptilo,0.01578947368421053,understory
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,rhod,0,understory
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,sac,74.89473684210526,kelp
-2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,sder,0,understory
 2004,8,18,Midcoast,goose.rock.ledge,3,3,43.936,-69.3123,5,ulva,0,understory
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,agar,14.325,kelp
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,alar,0,kelp
@@ -1051,7 +990,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,ptilo,0.8500000000000002,understory
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,rhod,0,understory
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,sac,43.4,kelp
-2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,sder,0,understory
 2004,8,18,Midcoast,marshall.point,3,3,43.9183,-69.255,5,ulva,0.8249999999999998,understory
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,agar,0,kelp
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,alar,0.10526315789473685,kelp
@@ -1068,7 +1006,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,ptilo,0,understory
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,rhod,0,understory
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,sac,0.9789473684210527,kelp
-2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,sder,0,understory
 2004,8,18,Midcoast,new.harbor.sunken.ledges,3,3,43.8605,-69.4473,5,ulva,0,understory
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,agar,1.8499999999999996,kelp
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,alar,4.25,kelp
@@ -1085,7 +1022,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,ptilo,0,understory
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,rhod,0,understory
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,sac,7.7,kelp
-2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,sder,0.65,understory
 2004,8,18,Midcoast,old.cilley.ledge,4,5,43.885,-69.2573,5,ulva,0,understory
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,agar,2.25,kelp
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,alar,2.45,kelp
@@ -1102,7 +1038,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,ptilo,0.025,understory
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,rhod,0,understory
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,sac,48.1,kelp
-2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,sder,0.25,understory
 2004,8,19,Penobscot Bay,roberts.island,4,3,44.0113,-68.8108,5,ulva,0.125,understory
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,agar,2.2,kelp
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,alar,0.9,kelp
@@ -1119,7 +1054,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,ptilo,0.1,understory
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,rhod,0.2,understory
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,sac,56.25,kelp
-2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,sder,0,understory
 2004,8,19,Penobscot Bay,wreck.ledge,4,4,44.0293,-68.8113,5,ulva,0,understory
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,agar,0,kelp
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,alar,0,kelp
@@ -1136,7 +1070,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,ptilo,0,understory
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,rhod,0.25,understory
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,sac,5.1,kelp
-2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,sder,0.15000000000000002,understory
 2004,8,25,York,ram.island.OOB,4,3,43.4685,-70.3568,5,ulva,0.58,understory
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,agar,3.8800000000000003,kelp
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,alar,0,kelp
@@ -1153,7 +1086,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,ptilo,0.9599999999999995,understory
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,rhod,0,understory
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,sac,40.64,kelp
-2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,sder,0,understory
 2004,8,25,York,timber.island,3,5,43.394,-70.3939,5,ulva,0.03999999999999999,understory
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,agar,0.25,kelp
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,alar,0,kelp
@@ -1170,7 +1102,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,ptilo,1.4,understory
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,rhod,0,understory
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,sac,0.45000000000000007,kelp
-2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,sder,0,understory
 2004,8,25,York,washman.rock,3,4,43.445,-70.3277,5,ulva,0,understory
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,agar,0,kelp
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,alar,1.2,kelp
@@ -1187,7 +1118,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,ptilo,0,understory
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,rhod,0,understory
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,sac,0,kelp
-2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,sder,0,understory
 2004,8,25,York,wood.island.biddeford,3,4,43.456,-70.3273,5,ulva,0,understory
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,agar,5.5,kelp
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,alar,0,kelp
@@ -1204,7 +1134,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,ptilo,0.48,understory
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,rhod,0.04999999999999999,understory
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,sac,0,kelp
-2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,sder,0,understory
 2004,8,26,Penobscot Bay,black.ledges.IAH,5,4,44.0075,-68.6577,5,ulva,0,understory
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,agar,0,kelp
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,alar,35.45,kelp
@@ -1221,7 +1150,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,ptilo,0.25,understory
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,rhod,0,understory
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,sac,0,kelp
-2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,sder,0,understory
 2004,8,26,Penobscot Bay,eastern.ear.ledge.IAH,5,5,44.0072,-68.5957,5,ulva,0,understory
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,agar,1.5,kelp
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,alar,7.25,kelp
@@ -1238,7 +1166,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,ptilo,1,understory
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,rhod,0,understory
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,sac,0,kelp
-2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,sder,0,understory
 2004,8,26,Penobscot Bay,moores.head.IAH,4,3,44.0451,-68.6559,5,ulva,0,understory
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,agar,0.44444444444444425,kelp
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,alar,55.27777777777778,kelp
@@ -1255,7 +1182,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,ptilo,0,understory
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,rhod,0,understory
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,sac,0,kelp
-2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,sder,0,understory
 2004,9,2,Downeast,bonny.chess.ledge,3,4,44.4065,-67.926,5,ulva,0,understory
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,agar,9.882352941176475,kelp
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,alar,0,kelp
@@ -1272,7 +1198,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,ptilo,0.2352941176470588,understory
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,rhod,0,understory
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,sac,0,kelp
-2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,sder,0,understory
 2004,9,2,Downeast,flint.island,4,4,44.4718,-67.7859,5,ulva,0,understory
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,agar,3.400000000000001,kelp
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,alar,0,kelp
@@ -1289,7 +1214,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,ptilo,0,understory
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,rhod,0,understory
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,sac,80.95,kelp
-2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,sder,0,understory
 2004,9,2,Downeast,little.bois.bubert.island,3,3,44.4215,-67.8727,5,ulva,0,understory
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,agar,5.5555555555555545,kelp
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,alar,1.7222222222222228,kelp
@@ -1306,7 +1230,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,ptilo,4.111111111111112,understory
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,rhod,0,understory
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,sac,11.166666666666668,kelp
-2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,sder,0,understory
 2004,9,2,Downeast,petit.manan.island,5,5,44.3663,-67.8696,5,ulva,0,understory
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,agar,9.238095238095237,kelp
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,alar,0,kelp
@@ -1323,7 +1246,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,ptilo,0.07142857142857145,understory
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,rhod,0,understory
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,sac,59.04761904761905,kelp
-2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,sder,0,understory
 2004,9,6,Penobscot Bay,garden.island,3,3,44.0097,-69.1022,5,ulva,1.0476190476190477,understory
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,agar,3.5897435897435894,kelp
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,alar,0.6923076923076926,kelp
@@ -1340,7 +1262,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,ptilo,0.16666666666666666,understory
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,rhod,0.025641025641025633,understory
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,sac,32,kelp
-2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,sder,0,understory
 2004,9,6,Penobscot Bay,southern.triangles,5,5,43.9012,-69.0703,5,ulva,0.5641025641025643,understory
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,agar,0.7222222222222222,kelp
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,alar,0,kelp
@@ -1357,7 +1278,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,ptilo,0,understory
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,rhod,0.05555555555555554,understory
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,sac,20.944444444444443,kelp
-2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,sder,0,understory
 2004,9,14,York,bald.head.cliff,3,5,43.2113,-70.5827,5,ulva,0.06111111111111111,understory
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,agar,0,kelp
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,alar,0,kelp
@@ -1374,7 +1294,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,ptilo,0.16666666666666669,understory
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,rhod,0.05555555555555554,understory
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,sac,2.666666666666667,kelp
-2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,sder,0,understory
 2004,9,14,York,east.point,3,4,43.1318,-70.6217,5,ulva,0.005555555555555557,understory
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,agar,0,kelp
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,alar,0,kelp
@@ -1391,7 +1310,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,ptilo,0,understory
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,rhod,0,understory
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,sac,0.11111111111111108,kelp
-2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,sder,0,understory
 2004,9,14,York,york.cliffs,3,5,43.192,-70.5905,5,ulva,0.16111111111111112,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,agar,0,kelp
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,alar,0,kelp
@@ -1408,7 +1326,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,ptilo,0,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,rhod,1.5125,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,sac,0,kelp
-2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,sder,0,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,ulva,0,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,agar,0,kelp
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,alar,0,kelp
@@ -1425,7 +1342,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ptilo,0,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,rhod,4.1625,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sac,11.875,kelp
-2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sder,0,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ulva,0,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,agar,2.5,kelp
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,alar,0,kelp
@@ -1442,7 +1358,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,ptilo,0,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,rhod,0.7625000000000001,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,sac,0.012500000000000002,kelp
-2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,sder,0,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,ulva,0,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,agar,0,kelp
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,alar,0,kelp
@@ -1459,7 +1374,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,ptilo,0,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,rhod,1,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,sac,15.625,kelp
-2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,sder,0,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,ulva,0.175,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,agar,0.625,kelp
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,alar,3.125,kelp
@@ -1476,7 +1390,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,ptilo,0,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,rhod,9.375,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,sac,15,kelp
-2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,sder,0,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,ulva,0.375,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,agar,5,kelp
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,alar,0,kelp
@@ -1493,7 +1406,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,ptilo,0,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,rhod,2.1625,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,sac,70.625,kelp
-2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,sder,0,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,ulva,0.012500000000000002,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,agar,5.5,kelp
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,alar,0.875,kelp
@@ -1510,7 +1422,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ptilo,0,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,rhod,3.125,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sac,2.5,kelp
-2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sder,0,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ulva,0.125,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,agar,1.875,kelp
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,alar,0,kelp
@@ -1527,7 +1438,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,ptilo,0,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,rhod,0.05,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,sac,0,kelp
-2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,sder,0,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,ulva,0,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,agar,0,kelp
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,alar,0,kelp
@@ -1544,7 +1454,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ptilo,0.025,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,rhod,0.8750000000000001,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sac,58.75,kelp
-2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sder,0,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ulva,0.037500000000000006,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,agar,0,kelp
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,alar,0,kelp
@@ -1561,7 +1470,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,ptilo,0,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,rhod,14,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,sac,24.375,kelp
-2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,sder,0,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,ulva,1,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,agar,0.2625,kelp
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,alar,0,kelp
@@ -1578,7 +1486,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,ptilo,0.1,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,rhod,0.7875,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,sac,11.25,kelp
-2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,sder,0,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,ulva,0.0125,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,agar,0,kelp
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,alar,0.625,kelp
@@ -1595,7 +1502,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,ptilo,0.2875,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,rhod,4,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,sac,0,kelp
-2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,sder,0,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,ulva,0,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,agar,3.1624999999999996,kelp
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,alar,0,kelp
@@ -1612,7 +1518,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,ptilo,0.0125,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,rhod,1.425,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,sac,0.037500000000000006,kelp
-2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,sder,0,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,ulva,0.4125,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,agar,1.5,kelp
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,alar,0,kelp
@@ -1629,7 +1534,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,ptilo,0,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,rhod,0.2375,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,sac,0.037500000000000006,kelp
-2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,sder,0,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,ulva,0.3125,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,agar,0,kelp
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,alar,0,kelp
@@ -1646,7 +1550,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,ptilo,0,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,rhod,2.875,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,sac,45.625,kelp
-2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,sder,0,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,ulva,0.3875,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,agar,3.75,kelp
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,alar,0,kelp
@@ -1663,7 +1566,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,ptilo,0.0125,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,rhod,1.925,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,sac,3.125,kelp
-2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,sder,0,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,ulva,0.025000000000000005,understory
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,agar,0,kelp
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,alar,0,kelp
@@ -1680,7 +1582,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,ptilo,0,understory
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,rhod,0,understory
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,sac,0,kelp
-2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,sder,0,understory
 2018,7,20,Casco Bay,halfway.rock,5,5,43.65483,-70.036,5,ulva,0,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,agar,0,kelp
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,alar,0,kelp
@@ -1697,7 +1598,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,ptilo,0,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,rhod,7.5,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,sac,0.125,kelp
-2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,sder,0,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,ulva,0,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,agar,0.25,kelp
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,alar,0,kelp
@@ -1714,7 +1614,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,ptilo,0,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,rhod,13.75,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,sac,0,kelp
-2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,sder,0,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,ulva,0,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,agar,0,kelp
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,alar,0.625,kelp
@@ -1731,7 +1630,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,ptilo,0,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,rhod,0.3375,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,sac,49.375,kelp
-2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,sder,0,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,ulva,0,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,agar,0,kelp
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,alar,6.5,kelp
@@ -1748,7 +1646,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,ptilo,0,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,rhod,1.375,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,sac,0,kelp
-2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,sder,0,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,ulva,0,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,agar,0.25,kelp
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,alar,2.375,kelp
@@ -1765,7 +1662,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,ptilo,0,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,rhod,4.75,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,sac,0,kelp
-2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,sder,0,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,ulva,28.375,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,agar,1.375,kelp
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,alar,0,kelp
@@ -1782,7 +1678,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,ptilo,0,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,rhod,1.2625,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,sac,0,kelp
-2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,sder,0,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,ulva,0,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,agar,0,kelp
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,alar,0,kelp
@@ -1799,7 +1694,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ptilo,0,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,rhod,0.3375,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sac,0,kelp
-2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sder,0,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ulva,0,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,agar,0.75,kelp
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,alar,0.012500000000000002,kelp
@@ -1816,7 +1710,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ptilo,0,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,rhod,1,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sac,6.5,kelp
-2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sder,0,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ulva,0,understory
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ccrisp,21.25,understory
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,coral,17.5,understory
@@ -1830,7 +1723,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,28,York,Broad Cove,NA,NA,NA,NA,NA,codm,0,understory
@@ -1847,7 +1739,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,28,York,Broadway and 42nd,NA,NA,NA,NA,NA,codm,0,understory
@@ -1864,7 +1755,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,28,York,Devil's Dance Floor,NA,NA,NA,NA,NA,codm,0,understory
@@ -1881,7 +1771,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,28,York,Norwegian Cove,NA,NA,NA,NA,NA,codm,0,understory
@@ -1898,7 +1787,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,29,York,8 Ball,NA,NA,NA,NA,NA,codm,0,understory
@@ -1915,7 +1803,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,29,York,North Head,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,29,York,North Head,NA,NA,NA,NA,NA,codm,0,understory
@@ -1932,7 +1819,6 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ldig,0,kelp
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,alar,0,kelp
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,ulva,0,understory
-2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,sder,0,understory
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,porph,0,understory
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,phyc,0,understory
 2018,8,30,York,Larus Ledge,NA,NA,NA,NA,NA,codm,0,understory
