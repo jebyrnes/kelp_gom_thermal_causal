@@ -127,7 +127,7 @@ write_csv(combined_bio_data, "derived_data/combined_bio_data.csv")
 #' ----------------------------------------------------------------------
 
 temp <- read_csv("raw_data/NOAA_temperature_allsites_2001_2018.csv") %>%
-    select(-X1) %>%
+    select(-`...1`) %>%
     filter(variable %in% c("B01.1mc", "casco", "E01.1m", "F01.1m", "I01.1m","noaa44027.1m"))
 
 
