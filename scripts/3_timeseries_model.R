@@ -45,13 +45,51 @@ ggplot(combined_bio_temp_gmc,
     geom_point(alpha = 0.4) +
     facet_wrap(vars(region)) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
-    #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Logit Kelp % Cover", color = "") +
     scale_color_brewer(type = "div") +
     theme(legend.position = "none")
 
 ggsave("figures/kelp_over_time.jpg", dpi = 600)
+
+
+###
+library(modelr)
+kelp_time_pred <- data_grid(combined_bio_temp_gmc,
+                            year = 2001:2018,
+                            region = levels(combined_bio_temp_gmc$region) %>% 
+                                as.factor) %>%
+    mutate(kelp_perc_pred = 100*predict(mod_time_only_beta,
+                                        newdata = .,
+                                        type = "response"),
+           kelp_perc_pred_var = 100*predict(mod_time_only_beta,
+                                            newdata = .,
+                                            type = "variance")
+    )
+
+
+ggplot(combined_bio_temp_gmc,
+       aes(x = year, y = 100*kelp_porp, color = region)) +
+    geom_point(alpha = 0.4) +
+    facet_wrap(vars(region)) +
+    geom_line(data = kelp_time_pred, 
+              mapping = aes(y = kelp_perc_pred),
+              color = "black",
+              size = 1.5) +
+    geom_ribbon(data = kelp_time_pred, 
+                mapping = aes(y = kelp_perc_pred,
+                              ymin = kelp_perc_pred-2*sqrt(kelp_perc_pred_var),
+                              ymax = kelp_perc_pred+2*sqrt(kelp_perc_pred_var)),
+                color = "lightgrey",
+                alpha = 0.5)+
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Kelp % Cover", color = "") +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "none")
+
+ggsave("figures/kelp_pred_over_time.jpg", dpi = 600)
+
+###
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = mean_temp_spring, color = region)) +
