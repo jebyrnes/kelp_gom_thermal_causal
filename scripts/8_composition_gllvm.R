@@ -126,6 +126,8 @@ ggplot(diff_kelp  ,
     ggthemes::theme_clean() +
     geom_hline(yintercept = 0, lty = 1)
 
+ggsave("figures/kelp_change_model_2004_2018.jpg", dpi = 600)
+
 ###
 ggplot(dats,
        aes(x = species, y = Estimate, color = `Pr(>|z|)`<0.05,
