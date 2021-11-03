@@ -1403,10 +1403,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,ldig,43.125,kelp
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,palm,0,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,phyc,0,understory
-2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,poly,32.5,understory
+2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,poly,34.875,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,porph,4.5,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,ptilo,0,understory
-2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,rhod,0.2625,understory
+2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,rhod,1.5125,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,sac,0,kelp
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,sder,0,understory
 2018,6,21,Midcoast,damariscove.island,5,5,43.7502,-69.6113,5,ulva,0,understory
@@ -1420,10 +1420,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ldig,23.75,kelp
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,palm,0,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,phyc,0,understory
-2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,poly,65,understory
+2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,poly,65.3875,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,porph,5.3875,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ptilo,0,understory
-2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,rhod,3.625,understory
+2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,rhod,4.1625,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sac,11.875,kelp
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,sder,0,understory
 2018,6,21,Midcoast,pemaquid.point,3,4,43.839,-69.502,5,ulva,0,understory
@@ -1437,10 +1437,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,ldig,18.7625,kelp
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,palm,0,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,phyc,0.0125,understory
-2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,poly,3.7625,understory
+2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,poly,5.6875,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,porph,0.07500000000000001,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,ptilo,0,understory
-2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,rhod,0,understory
+2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,rhod,0.7625000000000001,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,sac,0.012500000000000002,kelp
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,sder,0,understory
 2018,6,24,Penobscot Bay,greens.island,5,5,44.02460002,-68.86120004,5,ulva,0,understory
@@ -1454,10 +1454,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,ldig,31.875,kelp
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,palm,0.25,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,phyc,0,understory
-2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,poly,41.875,understory
+2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,poly,42.875,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,porph,5.25,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,ptilo,0,understory
-2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,rhod,0,understory
+2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,rhod,1,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,sac,15.625,kelp
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,sder,0,understory
 2018,6,24,Penobscot Bay,hurricane.island,4,4,44.0304,-68.8893,5,ulva,0.175,understory
@@ -1471,10 +1471,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,ldig,53.75,kelp
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,palm,0,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,phyc,0,understory
-2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,poly,24.375,understory
+2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,poly,27.75,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,porph,7.375,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,ptilo,0,understory
-2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,rhod,5,understory
+2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,rhod,9.375,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,sac,15,kelp
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,sder,0,understory
 2018,6,25,Penobscot Bay,kimball.island,4,4,44.0731,-68.6709,5,ulva,0.375,understory
@@ -1488,10 +1488,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,ldig,15.625,kelp
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,palm,2.7875000000000005,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,phyc,0.07500000000000001,understory
-2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,poly,23.125,understory
+2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,poly,26.925,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,porph,0.05,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,ptilo,0,understory
-2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,rhod,1.9000000000000001,understory
+2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,rhod,2.1625,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,sac,70.625,kelp
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,sder,0,understory
 2018,6,25,Penobscot Bay,merchant.island,4,4,44.1057,-68.6536,5,ulva,0.012500000000000002,understory
@@ -1505,10 +1505,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ldig,22.5,kelp
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,palm,0.5,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,phyc,0,understory
-2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,poly,32.125,understory
+2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,poly,34.25,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,porph,0.375,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ptilo,0,understory
-2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,rhod,2.125,understory
+2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,rhod,3.125,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sac,2.5,kelp
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,sder,0,understory
 2018,6,26,Penobscot Bay,andrews.island,4,3,43.99546,-69.05211,5,ulva,0.125,understory
@@ -1522,10 +1522,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,ldig,60,kelp
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,palm,0.0625,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,phyc,0.0625,understory
-2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,poly,2.8875,understory
+2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,poly,5.6625,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,porph,1.2875,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,ptilo,0,understory
-2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,rhod,0,understory
+2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,rhod,0.05,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,sac,0,kelp
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,sder,0,understory
 2018,6,26,Penobscot Bay,metinic.island,5,5,43.8679,-69.1288,5,ulva,0,understory
@@ -1539,10 +1539,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ldig,19.625,kelp
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,palm,2.625,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,phyc,0.09,understory
-2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,poly,21.25,understory
+2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,poly,22.6625,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,porph,0,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ptilo,0.025,understory
-2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,rhod,0.7875,understory
+2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,rhod,0.8750000000000001,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sac,58.75,kelp
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,sder,0,understory
 2018,7,2,Midcoast,allen.island,4,4,43.8672,-69.3191,5,ulva,0.037500000000000006,understory
@@ -1556,10 +1556,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,ldig,0,kelp
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,palm,1.25,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,phyc,0,understory
-2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,poly,61.875,understory
+2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,poly,62.3875,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,porph,0.1375,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,ptilo,0,understory
-2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,rhod,1.5,understory
+2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,rhod,14,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,sac,24.375,kelp
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,sder,0,understory
 2018,7,2,Midcoast,monhegan.island,5,4,43.7679,-69.3224,5,ulva,1,understory
@@ -1573,10 +1573,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,ldig,73.125,kelp
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,palm,1.5500000000000003,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,phyc,5.375,understory
-2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,poly,3.75,understory
+2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,poly,8.0125,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,porph,0,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,ptilo,0.1,understory
-2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,rhod,0.625,understory
+2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,rhod,0.7875,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,sac,11.25,kelp
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,sder,0,understory
 2018,7,8,Downeast,steele.harbor.island,4,4,44.4822,-67.5276,5,ulva,0.0125,understory
@@ -1590,10 +1590,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,ldig,77.5,kelp
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,palm,0.75,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,phyc,4.875,understory
-2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,poly,0.125,understory
+2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,poly,13.25,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,porph,1.3875000000000002,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,ptilo,0.2875,understory
-2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,rhod,0,understory
+2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,rhod,4,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,sac,0,kelp
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,sder,0,understory
 2018,7,9,Downeast,crumple.island,5,5,44.441816,-67.59903,5,ulva,0,understory
@@ -1607,10 +1607,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,ldig,52.5,kelp
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,palm,0.3125,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,phyc,1.5125,understory
-2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,poly,6.75,understory
+2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,poly,11.15,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,porph,2.3875,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,ptilo,0.0125,understory
-2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,rhod,0.5125,understory
+2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,rhod,1.425,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,sac,0.037500000000000006,kelp
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,sder,0,understory
 2018,7,9,Downeast,great.spruce.island,5,5,44.55623,-67.49115,5,ulva,0.4125,understory
@@ -1624,10 +1624,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,ldig,43.125,kelp
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,palm,0.1,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,phyc,0.16249999999999998,understory
-2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,poly,5.3875,understory
+2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,poly,6.1875,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,porph,0.525,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,ptilo,0,understory
-2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,rhod,0.18750000000000003,understory
+2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,rhod,0.2375,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,sac,0.037500000000000006,kelp
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,sder,0,understory
 2018,7,10,Downeast,flint.island,4,4,44.4718,-67.7859,5,ulva,0.3125,understory
@@ -1641,10 +1641,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,ldig,40,kelp
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,palm,1.625,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,phyc,0,understory
-2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,poly,7.125,understory
+2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,poly,8.1375,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,porph,1.375,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,ptilo,0,understory
-2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,rhod,1.375,understory
+2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,rhod,2.875,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,sac,45.625,kelp
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,sder,0,understory
 2018,7,10,MDI,little.moose.island,3,4,44.3345,-68.0525,5,ulva,0.3875,understory
@@ -1658,10 +1658,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,ldig,80.625,kelp
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,palm,0.6625,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,phyc,15.625,understory
-2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,poly,18.75,understory
+2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,poly,41.25,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,porph,0.8874999999999998,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,ptilo,0.0125,understory
-2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,rhod,1.9,understory
+2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,rhod,1.925,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,sac,3.125,kelp
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,sder,0,understory
 2018,7,11,Downeast,ram.island.DE,4,5,44.5739,-67.3962,5,ulva,0.025000000000000005,understory
@@ -1692,10 +1692,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,ldig,0.875,kelp
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,palm,0,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,phyc,0,understory
-2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,poly,21.25,understory
+2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,poly,22.25,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,porph,0.25,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,ptilo,0,understory
-2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,rhod,7.375,understory
+2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,rhod,7.5,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,sac,0.125,kelp
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,sder,0,understory
 2018,7,30,Casco Bay,cape.small,3,5,43.7004,-69.8319,5,ulva,0,understory
@@ -1709,10 +1709,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,ldig,15.625,kelp
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,palm,0.625,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,phyc,1.25,understory
-2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,poly,4,understory
+2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,poly,4.3875,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,porph,1.125,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,ptilo,0,understory
-2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,rhod,0,understory
+2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,rhod,13.75,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,sac,0,kelp
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,sder,0,understory
 2018,7,30,Midcoast,seguin.island,5,5,43.7051,-69.7541,5,ulva,0,understory
@@ -1726,10 +1726,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,ldig,43.125,kelp
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,palm,0.025000000000000005,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,phyc,0.025,understory
-2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,poly,5.025,understory
+2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,poly,5.1875,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,porph,0.0625,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,ptilo,0,understory
-2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,rhod,0,understory
+2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,rhod,0.3375,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,sac,49.375,kelp
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,sder,0,understory
 2018,8,6,MDI,little.duck.island,5,4,44.171,-68.2494,5,ulva,0,understory
@@ -1743,10 +1743,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,ldig,81.25,kelp
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,palm,3.125,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,phyc,0,understory
-2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,poly,4.875,understory
+2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,poly,5.7625,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,porph,1.125,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,ptilo,0,understory
-2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,rhod,0.75,understory
+2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,rhod,1.375,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,sac,0,kelp
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,sder,0,understory
 2018,8,6,MDI,long.island,5,5,44.1006,-68.339,5,ulva,0,understory
@@ -1760,10 +1760,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,ldig,30.625,kelp
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,palm,0.25,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,phyc,0,understory
-2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,poly,0.8875,understory
+2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,poly,1.2625,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,porph,8,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,ptilo,0,understory
-2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,rhod,0.875,understory
+2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,rhod,4.75,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,sac,0,kelp
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,sder,0,understory
 2018,8,7,Penobscot Bay,western.ear.island.IAH,5,5,44.005,-68.65243,5,ulva,28.375,understory
@@ -1780,7 +1780,7 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,poly,0.125,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,porph,0,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,ptilo,0,understory
-2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,rhod,0.875,understory
+2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,rhod,1.2625,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,sac,0,kelp
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,sder,0,understory
 2018,8,21,Casco Bay,cape.elizabeth,5,3,43.56444,-70.19542,5,ulva,0,understory
@@ -1797,7 +1797,7 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,poly,51.25,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,porph,0,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ptilo,0,understory
-2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,rhod,0.2875,understory
+2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,rhod,0.3375,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sac,0,kelp
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,sder,0,understory
 2018,9,5,Casco Bay,bold.dick.rock,5,5,43.71212,-69.9402,5,ulva,0,understory
@@ -1811,10 +1811,10 @@ year,month,day,region,site,coastal.code,exposure.code,latitude,longitude,depth,s
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ldig,3.375,kelp
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,palm,0.75,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,phyc,0,understory
-2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,poly,8.75,understory
+2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,poly,9.375,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,porph,0,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ptilo,0,understory
-2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,rhod,0.125,understory
+2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,rhod,1,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sac,6.5,kelp
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,sder,0,understory
 2018,9,5,Casco Bay,jewell.island,3,4,43.68669,-70.08436,5,ulva,0,understory

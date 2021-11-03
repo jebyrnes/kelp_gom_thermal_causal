@@ -36,7 +36,7 @@ comp_data_filter <- . %>%
      group_by(year, month, day, region, site,
               coastal.code, exposure.code,
               latitude, longitude, 
-              depth, sp_code, type) %>%
+              depth, sp_code) %>%
      summarize(cover = mean(cover, na.rm=TRUE)) %>% 
          ungroup()
 
@@ -47,12 +47,16 @@ rasher_2004 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_allsites_al
     comp_data_filter
 
 # Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv - Algae counts for all regions and sites from Rasher/Steneck. WITH urchin data.  5m and 10m
-
+# in 2004 poly had more things in it?
+# poly in 2004 is poly + callo + bonne
 rasher_2018 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv",
                         na = c("nr", "", "NA")) %>%
+  #fix for 2004 to 2018 taxonomy differences
+  mutate(poly = poly+callo+bonne,
+         rhod = rhod + cystoc) %>%
     comp_data_filter
 
-# Get Byrnes KEEN data
+# Get Byrnes KEEN data ####
 byrnes <- read_csv("https://raw.githubusercontent.com/kelpecosystems/observational_data/master/cleaned_data/keen_cover.csv") %>%
     filter(SITE %in% c("NE Appledore", "NW Appledore"),
            YEAR == 2018)
@@ -65,12 +69,12 @@ translate <- data.frame(
     sp_code = c("SLJ", "SL", "ALES", "AGCL", "LADI",
       "SADE", "DEAC", "DEVI", "UV",
       "FG", "COF", "POLS", "HJ", "CYPU", "PTSE",
-      "PORS", "PAPA", "PHRU", "CHCR", "CO"),
+      "PORS", "PAPA", "PHRU", "CHCR", "CO", "BOHA"),
     
     new_sp_code = c("sac", "sac", "alar", "agar", "ldig",
                     "sder", "desm", "desm", "ulva",
                     "chaet", "codm", "poly", "poly", "rhod", "ptilo",
-                    "porph", "palm", "phyc", "ccrisp", "coral"))
+                    "porph", "palm", "phyc", "ccrisp", "coral", "poly"))
 
 
 
