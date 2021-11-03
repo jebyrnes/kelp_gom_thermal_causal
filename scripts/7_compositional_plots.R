@@ -1,5 +1,5 @@
 #' -------------------------------------------
-#' Plot compositional data
+#' Plot composition data
 #' 
 #' -------------------------------------------
 
@@ -10,7 +10,8 @@ library(tidyverse)
 comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
     mutate( region = factor(region,
                             levels = rev(c("Downeast", "MDI", "Penobscot Bay",
-                                       "Midcoast", "Casco Bay", "York"))))
+                                       "Midcoast", "Casco Bay", "York"))),
+            year = factor(year, levels = c(2018, 2004)))
 
 ggplot(comp_data %>% filter(type == "kelp"), 
        aes(x = region, y = cover, color = factor(year))) +
@@ -27,16 +28,13 @@ ggplot(comp_data %>% filter(type == "kelp"),
 ggsave("figures/kelp_composition_2004_2018.jpg", dpi = 600)
 
 
-
-
-
 ggplot(comp_data %>% filter(type != "kelp"), 
-       aes(x = sp_code, y = cover, color = factor(year))) +
+       aes(x = region, y = cover, color = factor(year))) +
     geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
     stat_summary(alpha = 1, position = position_dodge(width = 1),
                  fun.data = mean_cl_boot) +
     coord_flip() +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(sp_code)) +
     labs(color = "Year",
          y = "% Cover",
          x = "") +
