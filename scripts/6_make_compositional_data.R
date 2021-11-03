@@ -72,7 +72,7 @@ translate <- data.frame(
                     "chaet", "codm", "poly", "poly", "rhod", "ptilo",
                     "porph", "palm", "phyc", "ccrisp", "coral"))
 
-)
+
 
 byrnes_2018 <- byrnes %>%
     filter(SP_CODE %in%
