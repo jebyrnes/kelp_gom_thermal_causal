@@ -2,9 +2,14 @@ X- add in SML data
 X- OISST? https://cran.r-project.org/web/packages/heatwaveR/vignettes/OISST_preparation.html
 - effect sizes for beta models coef * sd(x)/sd(y on link scale?)
     Observed-empirical approach to standardization.— Menard (1995, 2010
-- jump down small variance rabbit holes for model
+X - jump down small variance rabbit holes for model NOT NEEDED
 - change for understory composition
 - SE for change in composition with gllvm
+
+# What is needed
+- KEEN in kelp analysis?
+X- look at order of 2004 and 2008 in key versus plot for compisition
+
 
 ```{r}
 
