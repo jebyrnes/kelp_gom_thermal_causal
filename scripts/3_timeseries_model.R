@@ -52,6 +52,15 @@ ggplot(combined_bio_temp_gmc,
 
 ggsave("figures/kelp_over_time.jpg", dpi = 600)
 
+# compare slopes
+library(emmeans)
+timeseries_trend <- emtrends(mod_time_only_beta,
+                             ~region,
+                             var = "year")
+slope_cont <- contrast(timeseries_trend, "pairwise")
+
+plot(slope_cont) +
+    geom_vline(xintercept = 0, lty=2)
 
 ###
 library(modelr)
