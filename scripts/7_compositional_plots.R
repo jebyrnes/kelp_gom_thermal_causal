@@ -24,7 +24,8 @@ ggplot(comp_data %>% filter(type == "kelp"),
          y = "% Cover",
          x = "") +
     ggthemes::theme_clean() +
-    scale_color_brewer(palette = "Accent")
+    scale_color_brewer(palette = "Accent")+
+    guides(colour = guide_legend(reverse=TRUE)) #for the legend flip
 ggsave("figures/kelp_composition_2004_2018.jpg", dpi = 600)
 
 
@@ -39,7 +40,8 @@ ggplot(comp_data %>% filter(type != "kelp"),
          y = "% Cover",
          x = "") +
     ggthemes::theme_clean() +
-    scale_color_brewer(palette = "Accent")
+    scale_color_brewer(palette = "Accent")+
+    guides(colour = guide_legend(reverse=TRUE))
 
 ggsave("figures/kelp_understory_2004_2018.jpg", dpi = 600)
 
