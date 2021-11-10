@@ -62,6 +62,7 @@ slope_cont <- contrast(timeseries_trend, "pairwise")
 plot(slope_cont) +
     geom_vline(xintercept = 0, lty=2)
 
+
 ###
 library(modelr)
 kelp_time_pred <- data_grid(combined_bio_temp_gmc,
