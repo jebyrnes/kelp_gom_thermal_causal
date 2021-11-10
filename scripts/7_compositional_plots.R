@@ -14,7 +14,7 @@ comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
             year = factor(year, levels = c(2018, 2004)))
 
 ggplot(comp_data %>% filter(type == "kelp"), 
-       aes(x = region, y = cover, color = factor(year))) +
+       aes(x = region, y = cover, color = year)) +
     geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
     stat_summary(alpha = 1, position = position_dodge(width = 1),
                  fun.data = mean_cl_boot) +
