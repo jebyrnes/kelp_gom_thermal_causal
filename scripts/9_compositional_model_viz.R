@@ -59,6 +59,8 @@ posthoc_frame <- . %>%
 kelp_change <- kelp_pred %>%
     posthoc_frame
 
+write_csv(kelp_change, "tables/kelp_change_posthoc_2004_2018.csv")
+
 ggplot(kelp_change,
        aes(x = region, y = mean_diff_2004_to_2018, 
            ymin = lq, ymax = uq, color = name)) +
@@ -70,12 +72,16 @@ ggplot(kelp_change,
     labs(color = "Species", 
          x = "", 
          y = "Change in % Cover from 2004 to 2018")
-    
+ggsave("figures/kelp_change_posthoc_2004_2018.jpg", dpi = 600)
+
 
 #understory
 
 understory_change <- understory_pred %>%
     posthoc_frame
+
+write_csv(understory_change, "tables/understory_change_posthoc_2004_2018.csv")
+
 
 library(randomcoloR)
 set.seed(2021)
@@ -91,3 +97,5 @@ ggplot(understory_change,
     labs(color = "Species", 
          x = "", 
          y = "Change in % Cover from 2004 to 2018")
+
+ggsave("figures/understory_change_posthoc_2004_2018.jpg", dpi = 600)
