@@ -2,6 +2,7 @@
 #' Get simulated posterior fits from a gllvm
 #' based on code from Francis KC Hui
 #' with some light modifications by Jarrett Byrnes
+#' See https://github.com/JenniNiku/gllvm/issues/24
 #' ----------------------------------
 
 
