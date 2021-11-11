@@ -67,6 +67,8 @@ anova_gllvm(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint)  %>%
 anova_gllvm_uni(mod_gllvm, mod_gllvm_year, mod_gllvm_region, mod_gllvm_noint) %>%
     write_csv("tables/kelp_comp_gllvm_lrchisq.csv")
 
+saveRDS(mod_gllvm, "model_output/kelp_composition_gllvm.rds")
+
 # 
 # #for individual species
 # anova(mod_gllvm, mod_gllvm_noint, 
@@ -187,36 +189,9 @@ anova_gllvm_uni(mod_gllvm_understory,
                 method = "fdr") %>%
     write_csv("tables/understory_comp_gllvm_lrchisq.csv")
 
+saveRDS(mod_gllvm_understory, "model_output/understory_composition_gllvm.rds")
+
 # anova(mod_gllvm_understory, mod_gllvm_noint_understory, 
 #       which = "uni",
 #       method = "fdr")
-
-####
-library(DirichletReg)
-library(lmtest)
-library(ggtern)
-
-comp_data_wide <- comp_data_wide %>%
-    mutate(kelp_dir = DR_data(cbind(agar, alar, ldig, sac)/100), base = 1)
-
-##### ANOVA
-
-analysis <- comp_data %>%
-    group_by(sp_code) %>%
-    mutate(logit_cover = car::logit(cover/100)) %>%
-    nest() %>%
-    mutate(mod = purrr::map(data, ~lm(logit_cover ~ year*region, data = .x)),
-           atab = purrr::map(mod, ~broom::tidy(car::Anova(.x)))) %>%
-    unnest(atab) %>%
-    filter(term != "Residuals")
-
-
-ggplot(analysis,
-       aes(x = sp_code, y = p.value, color = p.value <=0.05)) +
-    geom_point() +
-    geom_hline(yintercept = 0.05, lty=2) +
-    facet_wrap(vars(term)) +
-    scale_y_log10(breaks = c(1e-09, 1e-04, 1))+
-    coord_flip() +
-    theme_bw()
 
