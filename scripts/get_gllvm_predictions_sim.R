@@ -1,3 +1,10 @@
+#' ----------------------------------
+#' Get simulated posterior fits from a gllvm
+#' based on code from Francis KC Hui
+#' with some light modifications by Jarrett Byrnes
+#' ----------------------------------
+
+
 require(mvtnorm)
 require(tidyr)
 require(dplyr)
