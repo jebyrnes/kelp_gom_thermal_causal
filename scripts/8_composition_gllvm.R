@@ -33,14 +33,6 @@ Y_understory <- comp_data_wide %>%
     mutate(across(everything(), ~car::logit(.x/100)))
   
 
-
-Y_algae <- comp_data_wide %>%
-    select("agar", "alar", "ldig", "sac", 
-           "desm", "desm", "ulva",
-           "chaet", "codm", "poly", "poly", "rhod", "ptilo",
-           "porph", "palm", "phyc", "ccrisp", "coral") %>%
-    mutate(across(everything(), ~car::logit(.x/100)))
-
 X_design <- comp_data_wide %>% select(year, region)
 
 mod_gllvm <- gllvm(y = Y_kelp, X = X_design,
