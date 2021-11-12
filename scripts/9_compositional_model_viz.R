@@ -36,8 +36,8 @@ X_unique <- X_design %>%
     ungroup()
 
 #get predictions for each model
-kelp_pred <- get_sim_fit_gllvm(kelp_gllvm, X_unique)
-understory_pred <- get_sim_fit_gllvm(understory_gllvm, X_unique)
+kelp_pred <- get_sim_fit_gllvm(kelp_gllvm, X_unique, n = 1e5)
+understory_pred <- get_sim_fit_gllvm(understory_gllvm, X_unique, n = 1e5)
 
 
 #posthoc workflow
