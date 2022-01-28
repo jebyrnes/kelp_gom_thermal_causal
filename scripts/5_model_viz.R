@@ -105,6 +105,43 @@ ggplot(temp_by_urchin_effect %>% mutate(urchin_anom_from_region = paste0("Urchin
 ggsave("figures/urchin_temperature_effect_on_kelp.jpg", dpi = 600)
 
 
+# Look at how temperature affects urchin effects
+
+# Look at the spring temperature effect
+urchin_by_temp_effect <-
+    emmeans(
+        mod_urchin_add,
+        ~  urchin_anom_from_region | mean_temp_spring_dev +
+            mean_regional_urchin + mean_mean_temp_spring + mean_mean_temp_summer,
+        at = list(
+            mean_temp_spring_dev = c(-2.5, 0, 2.5),
+            urchin_anom_from_region = -10:80,
+            lag_mean_temp_summer_dev = 0,
+            mean_regional_urchin = regional_values$mean_regional_urchin,
+            mean_mean_temp_spring = regional_values$mean_mean_temp_spring,
+            mean_mean_temp_summer = regional_values$mean_mean_temp_summer
+        ),
+        type = "response"
+    ) %>%
+    as_tibble() %>%
+    right_join(regional_values) 
+
+
+ggplot(urchin_by_temp_effect %>% mutate(mean_temp_spring_dev = paste0("Spring Temp. Anomaly: ", mean_temp_spring_dev)),
+       aes(x = urchin_anom_from_region, y = 100*response, color = region)) +
+    geom_line(size = 1) +
+    facet_wrap(vars(mean_temp_spring_dev)) +
+    theme_bw(base_size = 12) +
+    #scale_y_continuous(labels = function(x) paste0(x, "%")) +
+    scale_color_brewer(type = "div") +
+    theme(legend.position = "bottom") +
+    labs(color = "", 
+         x = "Regional Urchin Anomaly (# per sq. m.)",
+         y = "Kelp Percent Cover",
+         subtitle = "Lag Summer Temp anomaly held at 0")
+
+ggsave("figures/temperature_changing_urchin_effect.jpg", dpi = 600)
+
 ### Below here is old code
 # DF.join <- read_csv("derived_data/combined_data_for_analysis.csv")
 # mod_urchin_add <- readRDS("derived_data/mod_urchin_add.RDS")
