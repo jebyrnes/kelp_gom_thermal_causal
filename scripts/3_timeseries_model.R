@@ -13,6 +13,9 @@ library(dplyr)
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
 library(betareg)
+library(glmmTMB)
+library(broom)
+library(broom.mixed)
 
 setwd(here::here())
 
@@ -171,7 +174,35 @@ ggplot(data = aug_time, aes(x = .resid)) +
     geom_histogram() + 
     facet_wrap(~region)
 
-#urchin
+# urchin timeseries ####
+library(glmmTMB)
+combined_bio_temp_gmc$cent_year <- combined_bio_temp_gmc$year - 2010
+urchin_mod <- glmmTMB(urchin ~ cent_year*region, 
+                      zi = ~ cent_year*region,
+                      data = combined_bio_temp_gmc,
+                      family =ziGamma(link = "log"))
+
+#residuals
+u_res <- DHARMa::simulateResiduals(urchin_mod)
+DHARMa::plotQQunif(u_res)
+
+#temporal problems?
+urchin_out <- augment(urchin_mod,type.predict = "response")
+Anova(lm(.resid ~ cent_year*region, data = urchin_out))
+
+ggplot(urchin_out, aes(x = cent_year, color = region, y = .resid)) +
+    geom_point() +
+    facet_wrap(vars(region))
+
+ggplot(urchin_out, aes(x = cent_year, color = region, y = .fitted)) +
+    geom_point() +
+    facet_wrap(vars(region))
+
+
+#tests
+Anova(urchin_mod)
+Anova(urchin_mod, component = c("zi"))
+
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region,
            group = paste(region, site))) +
