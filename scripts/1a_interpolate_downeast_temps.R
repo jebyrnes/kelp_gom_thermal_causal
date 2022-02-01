@@ -3,6 +3,7 @@
 #' ---------------------------------------
 
  #when downeast has no data, interpolate from MDI
+#sum(is.na(mdi_down$downeast))/nrow(mdi_down) #how much is missing
 mdi_down <- temp_regional %>%
     select(-variable) %>%
     filter(as.character(region) %in% c("mdi", "downeast")) %>%
