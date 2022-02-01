@@ -166,6 +166,13 @@ temp_aggregated <- temp_regional_interpolated %>%
                 )) %>%
     rename(temp_source = variable)
 
+#check missing
+temp_regional_interpolated %>%
+  filter(month %in% 3:8) %>% #month in march:august
+  mutate(season = ifelse(month < 6, "spring", "summer")) %>%
+  group_by(region, season) %>%
+  summarize(missing = sum(is.na(value))/n())
+
 # 
 # #check mdi and downeast
 # ggplot(temp_regional %>% filter(month > 5 & month < 9) %>%
@@ -182,7 +189,11 @@ temp_aggregated <- temp_regional_interpolated %>%
 #   geom_point() +
 #   geom_abline(slope = 1, intercept = 0, lty = 2)
 
-
+temp_aggregated %>% 
+  group_by(region) %>%
+  summarize(missing_spring = sum(is.na(mean_temp_spring)),
+            missing_summer = sum(is.na(mean_temp_summer))
+  )
   
 #' -----------------------------------------
 #' Merge temp and bio data

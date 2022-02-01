@@ -76,3 +76,22 @@ rasher_2004 %>% n_sites
 rasher_2016 %>% n_sites
 rasher_2017 %>% n_sites
 rasher_2018 %>% n_sites
+
+
+## How many species did we get in composition?
+
+comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
+    mutate( region = factor(region,
+                            levels = rev(c("Downeast", "MDI", "Penobscot Bay",
+                                           "Midcoast", "Casco Bay", "York"))),
+            year = factor(year, levels = c(2018, 2004)))
+
+
+comp_data %>%
+    pull(sp_code) %>% 
+    unique() %>% length
+
+
+# missing data checks
+source("scripts/2_load_combined_data.R")
+
