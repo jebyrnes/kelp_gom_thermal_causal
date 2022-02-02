@@ -43,5 +43,5 @@ ggplot(comp_data %>% filter(type != "kelp"),
     scale_color_brewer(palette = "Accent")+
     guides(colour = guide_legend(reverse=TRUE))
 
-ggsave("figures/kelp_understory_2004_2018.jpg", dpi = 600)
+ggsave("figures/understory_composition_2004_2018.jpg", dpi = 600)
 
