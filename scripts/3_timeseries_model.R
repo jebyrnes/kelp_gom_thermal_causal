@@ -40,6 +40,8 @@ mod_time_only_linear <- lm(kelp ~ year*region, data =  combined_bio_temp_gmc)
 
 mod_time_only_beta <- betareg(kelp_porp ~ year*region, 
                               data =  combined_bio_temp_gmc)
+saveRDS(mod_time_only_beta, "model_output/kelp_timeseries_mod.rds")
+
 Anova(mod_time_only)
 summary(mod_time_only)
 
@@ -134,6 +136,28 @@ ggplot(combined_bio_temp_gmc,
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
 
 
+# temperature models ####
+temp_dat <- combined_bio_temp_gmc %>%
+    group_by(region, year) %>%
+    slice(1L) %>%
+    ungroup() %>%
+    select(region, year, mean_temp_spring, mean_temp_summer)
+
+
+temp_dat %>%
+    group_by(region) %>%
+    nest() %>%
+    summarize(spring_mod = 
+                  map(data, ~ lm(mean_temp_spring ~ year, data = .)),
+              summer_mod = 
+                  map(data, ~ lm(mean_temp_summer ~ year, data = .)),
+              spring_slope = map_dbl(spring_mod, ~coef(.)[2]),
+              summer_slope = map_dbl(summer_mod, ~coef(.)[2])) %>%
+    select(-spring_mod, -summer_mod)
+
+#whole shebang
+lm(mean_temp_spring ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
+lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region)) +
@@ -181,6 +205,8 @@ urchin_mod <- glmmTMB(urchin ~ cent_year*region,
                       zi = ~ cent_year*region,
                       data = combined_bio_temp_gmc,
                       family =ziGamma(link = "log"))
+saveRDS(urchin_mod, "model_output/urchin_timeseries_mod.rds")
+
 
 #residuals
 u_res <- DHARMa::simulateResiduals(urchin_mod)
