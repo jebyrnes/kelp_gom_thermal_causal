@@ -105,8 +105,10 @@ ggplot(combined_bio_temp_gmc,
 ggsave("figures/kelp_pred_over_time.jpg", dpi = 600)
 
 ###
+temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
+    filter(year >= 2001)
 
-ggplot(combined_bio_temp_gmc,
+ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_spring, color = region)) +
     geom_point(alpha = 1) +
     facet_wrap(vars(region)) +
@@ -122,7 +124,7 @@ ggsave("figures/spring_temp_trends.jpg", dpi = 600)
 
 
 
-ggplot(combined_bio_temp_gmc,
+ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_summer, color = region)) +
     geom_point(alpha = 1) +
     facet_wrap(vars(region)) +
@@ -137,7 +139,7 @@ ggsave("figures/summer_temp_trends.jpg", dpi = 600)
 
 
 # temperature models ####
-temp_dat <- combined_bio_temp_gmc %>%
+temp_dat <- temp_timeseries %>%
     group_by(region, year) %>%
     slice(1L) %>%
     ungroup() %>%

@@ -195,6 +195,8 @@ temp_aggregated %>%
             missing_summer = sum(is.na(mean_temp_summer))
   )
   
+write_csv(temp_aggregated, "derived_data/temp_timeseries.csv")
+
 #' -----------------------------------------
 #' Merge temp and bio data
 #' -----------------------------------------
