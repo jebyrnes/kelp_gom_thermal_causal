@@ -106,7 +106,13 @@ ggsave("figures/kelp_pred_over_time.jpg", dpi = 600)
 
 ###
 temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
-    filter(year >= 2001)
+    filter(year >= 2001)%>%
+    mutate(region = gsub("\\.", " ", region),
+           region = stringr::str_to_title(region),
+           region = gsub("Mdi", "MDI", region),
+           region = factor(region,
+                           levels = c("Downeast", "MDI", "Penobscot Bay",
+                                      "Midcoast", "Casco Bay", "York")))
 
 ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_spring, color = region)) +
