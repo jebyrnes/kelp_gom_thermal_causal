@@ -13,13 +13,23 @@ comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
                                        "Midcoast", "Casco Bay", "York"))),
             year = factor(year, levels = c(2018, 2004)))
 
+#labeller function
+make_kelp_name <- function(string){
+    string <- gsub("agar", "Agarum", string)
+    string <- gsub("ldig", "Laminaria", string)
+    string <- gsub("alar", "Alaria", string)
+    string <- gsub("sac", "Saccharina", string)
+    string
+}
+
 ggplot(comp_data %>% filter(type == "kelp"), 
        aes(x = region, y = cover, color = year)) +
     geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
     stat_summary(alpha = 1, position = position_dodge(width = 1),
                  fun.data = mean_cl_boot) +
     coord_flip() +
-    facet_wrap(vars(sp_code)) +
+    facet_wrap(vars(sp_code),
+               labeller = labeller(sp_code = make_kelp_name)) +
     labs(color = "Year",
          y = "% Cover",
          x = "") +
@@ -29,13 +39,45 @@ ggplot(comp_data %>% filter(type == "kelp"),
 ggsave("figures/kelp_composition_2004_2018.jpg", dpi = 600)
 
 
+
+#labeller function
+make_algae_name <- function(string){
+    stringi::stri_replace_all_fixed(string,
+                                   pattern = c("ccrisp",
+                                     "chaet",
+                                     "codm",
+                                     "coral",
+                                     "desm",
+                                     "palm",
+                                     "phyc",
+                                     "poly",
+                                     "porph",
+                                     "ptilo",
+                                     "rhod",
+                                     "ulva"),
+                                   replacement = c("Chondrus",
+                                     "Chaetomorpha",
+                                     "Codium",
+                                     "Corralina",
+                                     "Desmerestia",
+                                     "Palmaria",
+                                     "Phycodrys",
+                                     "Polysiphonia",
+                                     "Porphyra",
+                                     "Ptiloda",
+                                     "Rhodymenia",
+                                     "Ulva"),
+                                   vectorize_all = FALSE)
+    
+}
 ggplot(comp_data %>% filter(type != "kelp"), 
        aes(x = region, y = cover, color = factor(year))) +
     geom_point(alpha = 0.2, position = position_dodge(width = 1)) +
     stat_summary(alpha = 1, position = position_dodge(width = 1),
                  fun.data = mean_cl_boot) +
     coord_flip() +
-    facet_wrap(vars(sp_code)) +
+    facet_wrap(vars(sp_code),
+               labeller = labeller(sp_code = make_algae_name)) +
     labs(color = "Year",
          y = "% Cover",
          x = "") +
