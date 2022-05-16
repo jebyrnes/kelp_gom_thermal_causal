@@ -63,7 +63,7 @@ make_algae_name <- function(string){
                                      "Desmerestia",
                                      "Palmaria",
                                      "Phycodrys",
-                                     "Polysiphonia",
+                                     "Filamentous Reds",
                                      "Porphyra",
                                      "Ptiloda",
                                      "Rhodymenia",
