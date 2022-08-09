@@ -169,14 +169,17 @@ lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region)) +
-    geom_point(alpha = 0.4) +
+    geom_point(alpha = 0.7) +
     facet_wrap(vars(region)) +
     #stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Urchins per sq. m", color = "") +
     scale_color_brewer(type = "div") +
-    theme(legend.position = "none")
+    theme(legend.position = "none") +
+    geom_hline(yintercept = 30, lty = 2)# +
+    # geom_text(x = 2001, y = 49, label = "Urchin barren\nconditions",
+    #            color = "black", hjust = 0, alpha = 0.5)
 
 ggsave("figures/urchin_trends.jpg", dpi = 600)
 
