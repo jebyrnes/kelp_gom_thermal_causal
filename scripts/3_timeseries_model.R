@@ -152,7 +152,7 @@ temp_dat <- temp_timeseries %>%
     select(region, year, mean_temp_spring, mean_temp_summer)
 
 
-temp_dat %>%
+temp_mods <- temp_dat %>%
     group_by(region) %>%
     nest() %>%
     summarize(spring_mod = 
@@ -160,8 +160,15 @@ temp_dat %>%
               summer_mod = 
                   map(data, ~ lm(mean_temp_summer ~ year, data = .)),
               spring_slope = map_dbl(spring_mod, ~coef(.)[2]),
-              summer_slope = map_dbl(summer_mod, ~coef(.)[2])) %>%
+              summer_slope = map_dbl(summer_mod, ~coef(.)[2]))
+
+temp_mods %>%
     select(-spring_mod, -summer_mod)
+
+lm(mean_temp_summer~ year*region, data = temp_timeseries) %>%
+    saveRDS("model_output/summer_temp_timeseries.rds")
+lm(mean_temp_spring~ year*region, data = temp_timeseries) %>%
+    saveRDS("model_output/summer_temp_timeseries.rds")
 
 #whole shebang
 lm(mean_temp_spring ~ year + region, data = temp_dat) %>% coef %>% `[`(2)

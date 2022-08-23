@@ -29,6 +29,19 @@ chisq_anova_tab <- . %>%
         part = "header", j = "c2",
          value = as_paragraph("𝛘", as_sup("2")))
 
+f_anova_tab <- . %>%
+    rename(p = p.value, f = statistic) %>%
+    mutate(p = formatC(p, format = "e", digits = 3),
+           `f` = round(`f`, 3)) %>%
+    qflextable() 
+    
+coef_t_tab <- . %>%
+    rename(p = p.value, `t` = statistic,
+           `std. error` = std.error) %>%
+    mutate(p = formatC(p, format = "e", digits = 3),
+           `t` = round(`t`, 3)) %>%
+    qflextable() 
+
 gllvm_chisq_anova_tab <- . %>%
     rename(p = P.value, `c2` = D, df = Df.diff) %>%
     mutate(p = formatC(p, format = "e", digits = 3),
@@ -239,3 +252,33 @@ comp_data %>%
 ```
 
 Supplementary Table S3. Sample size per region per year for use in the 5m understory community composition.
+
+
+# Temperature
+```{r}
+summer_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
+
+Anova(summer_ts_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S5. F Table results from summer temperature trend linear regression model.
+
+```{r}
+summary(summer_ts_mod) %>% tidy %>% coef_t_tab
+```
+Supplementary Table S6. Coefficient Table results from summer temperature trend linear regression model.
+
+```{r}
+spring_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
+
+Anova(spring_ts_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S7. F Table results from spring temperature trend linear regression model.
+
+```{r}
+
+summary(spring_ts_mod) %>% tidy %>% coef_t_tab
+```
+
+Supplementary Table S8. Coefficient Table results from spring temperature trend linear regression model.
