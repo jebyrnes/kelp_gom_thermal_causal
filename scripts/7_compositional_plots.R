@@ -59,7 +59,7 @@ make_algae_name <- function(string){
                                    replacement = c("Chondrus",
                                      "Chaetomorpha",
                                      "Codium",
-                                     "Corralina",
+                                     "Corallina",
                                      "Desmerestia",
                                      "Palmaria",
                                      "Phycodrys",
