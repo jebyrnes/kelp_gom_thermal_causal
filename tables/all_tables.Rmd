@@ -193,3 +193,49 @@ read_csv("tables/understory_change_posthoc_2004_2018.csv") %>%
 ```
 
 Table 10. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+
+
+## Supplementary Tables
+
+# Kelp Timeseries Model at 10m
+```{r}
+kelp_ts_mod <- readRDS("model_output/kelp_timeseries_mod_10m.rds")
+
+Anova(kelp_ts_mod) %>% tidy %>% chisq_anova_tab
+```
+
+Supplementary Table 1. $\chi^2$ likelihood ratio tests for trend analysis of kelp over time in model with an interaction. Note the interaction is not well supported. The logit coefficient of the relationship across all of Maine is `r round(coef(kelp_ts_mod)[2], 3)`.
+
+
+# Sample Sizes
+
+```{r}
+source("scripts/2_load_combined_data.R")
+combined_bio_temp_gmc %>%
+    rename(Year = year, Region = region) %>%
+    group_by(Year, Region) %>%
+    summarize(`Sample Size` = length(unique(site))) %>%
+    ungroup() %>%
+    arrange(Region, Year)
+```
+
+Supplementary Table S2. Sample size per region per year for use in the 5m kelp timeseries and driver models.
+
+
+```{r}
+
+comp_data <- read_csv("derived_data/compositional_change_data.csv") %>%
+    mutate( region = factor(region,
+                            levels = rev(c("Downeast", "MDI", "Penobscot Bay",
+                                       "Midcoast", "Casco Bay", "York"))),
+            year = factor(year, levels = c(2018, 2004)))
+
+comp_data %>%
+    rename(Year = year, Region = region) %>%
+    group_by(Year, Region) %>%
+    summarize(`Sample Size` = length(unique(site))) %>%
+    ungroup() %>%
+    arrange(Region, Year)
+```
+
+Supplementary Table S3. Sample size per region per year for use in the 5m understory community composition.
