@@ -1,7 +1,6 @@
 ---
 title: "Tables"
 author: "Jarrett Byrnes"
-date: "2/2/2022"
 output: officedown::rdocx_document
 ---
 
@@ -77,37 +76,9 @@ gllvm_posthoc_tab <- . %>%
   qflextable()
 ```
 
-# Kelp Timeseries Model
-```{r}
-kelp_ts_mod <- readRDS("model_output/kelp_timeseries_mod.rds")
+# Main Paper Tables
 
-Anova(kelp_ts_mod) %>% tidy %>% chisq_anova_tab
-```
-
-Table 1. $\chi^2$ likelihood ratio tests for trend analysis of kelp over time.
-
-# Urchin Timseries Model
-
-```{r}
-urchin_ts_mod <- readRDS("model_output/urchin_timeseries_mod.rds")
-
-Anova(urchin_ts_mod) %>%  tidy %>% 
-    mutate(term = str_replace(term, "cent_", ""))  %>%
-    mutate(` ` = c("A) Non-Zero Urchins", "", "")) %>% 
-    rbind(
-
-Anova(urchin_ts_mod, component = "zi") %>%  tidy %>% 
-        mutate(term = str_replace(term, "cent_", "")) %>%
-    mutate(` ` = c("B) Zero Inflation", "", ""))) %>%
-    select(` `, everything()) %>%
-    chisq_anova_tab
-
-```
-
-
-Table 2. $\chi^2$ likelihood ratio tests for trend analysis of kelp over time. A) Trend analysis if urchins are not zero. B) Tests of predictors of zero inflation.
-
-# Kelp Drivers Model
+## Kelp Drivers Model
 ```{r}
 kelp_drivers_mod <- readRDS("model_output/mod_urchin_add.RDS")
 
@@ -126,7 +97,7 @@ Anova(kelp_drivers_mod) %>%
 ```
 
 
-Table 3. $\chi^2$ likelihood ratio tests of drivers of kelp abundance in the northern Gulf of Maine.
+Table 1. $\chi^2$ likelihood ratio tests of drivers of kelp abundance across the outer coast of Maine.
 
 
 ```{r}
@@ -156,71 +127,14 @@ kelp_drivers_mod %>%
          term = gsub("[()]", "", term)) %>%
       qflextable() 
 ```
-Table 4. Coefficient estimates, SE, and z tests for the kelp drivers model.
-
-# Kelp Composition Model
-```{r}
-read_csv("tables/kelp_gllvm_lrchisq.csv") %>%
-  gllvm_chisq_anova_tab
-
-```
-
-Table 5. $\chi^2$ likelihood ratio tests for trend analysis of kelp species composition over time.
+Table 2. Coefficient estimates, SE, and z tests for the kelp drivers model.
 
 
-```{r}
-read_csv("tables/kelp_comp_gllvm_lrchisq.csv") %>%
-  gllvm_chisq_anova_uni_tab
 
-```
-
-Table 6. $\chi^2$ likelihood ratio tests for changes in individual kelp species  over time with p-values corrected for false discovery rate.
-
-```{r}
-read_csv("tables/kelp_change_posthoc_2004_2018.csv") %>%
-  gllvm_posthoc_tab
-```
-
-Table 7. Posthoc comparisons of differences in kelp species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
-
-# Understory Composition Model
-
-```{r}
-read_csv("tables/understory_gllvm_lrchisq.csv") %>%
-  gllvm_chisq_anova_tab
-
-```
-
-Table 8. $\chi^2$ likelihood ratio tests for trend analysis of understory species composition over time.
-
-```{r}
-read_csv("tables/understory_comp_gllvm_lrchisq.csv") %>%
-  gllvm_chisq_anova_uni_tab
-
-```
-Table 9. $\chi^2$ likelihood ratio tests for changes in individual understory species  over time with p-values corrected for false discovery rate.
-
-```{r}
-read_csv("tables/understory_change_posthoc_2004_2018.csv") %>%
-  gllvm_posthoc_tab
-```
-
-Table 10. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+# Supplementary Tables
 
 
-## Supplementary Tables
-
-# Kelp Timeseries Model at 10m
-```{r}
-kelp_ts_mod <- readRDS("model_output/kelp_timeseries_mod_10m.rds")
-
-Anova(kelp_ts_mod) %>% tidy %>% chisq_anova_tab
-```
-
-Supplementary Table 1. $\chi^2$ likelihood ratio tests for trend analysis of kelp over time in model with an interaction. Note the interaction is not well supported. The logit coefficient of the relationship across all of Maine is `r round(coef(kelp_ts_mod)[2], 3)`.
-
-
-# Sample Sizes
+## Sample Sizes for Kelp Analysis
 
 ```{r}
 source("scripts/2_load_combined_data.R")
@@ -229,11 +143,23 @@ combined_bio_temp_gmc %>%
     group_by(Year, Region) %>%
     summarize(`Sample Size` = length(unique(site))) %>%
     ungroup() %>%
-    arrange(Region, Year)
+    arrange(Region, Year) %>%
+    qflextable() %>%
+    colformat_num(big.mark = "")
 ```
 
-Supplementary Table S2. Sample size per region per year for use in the 5m kelp timeseries and driver models.
+Supplementary Table S1. Sample sizes of sites per region per year for use in the 5m kelp timeseries analysis and associated driver models.
 
+## Kelp Timeseries Model at 10m
+```{r}
+kelp_ts_mod <- readRDS("model_output/kelp_timeseries_mod_10m.rds")
+
+Anova(kelp_ts_mod) %>% tidy %>% chisq_anova_tab
+```
+
+Supplementary Table S2. $\chi^2$ likelihood ratio tests for trend analysis of kelp change over time at 10 m depth, in a model with an interaction. Note the interaction is not well supported. The logit coefficient of the relationship across all of Maine is `r round(coef(kelp_ts_mod)[2], 3)`.
+
+## Sample Sizes for Composition Analysis
 
 ```{r}
 
@@ -248,25 +174,23 @@ comp_data %>%
     group_by(Year, Region) %>%
     summarize(`Sample Size` = length(unique(site))) %>%
     ungroup() %>%
-    arrange(Region, Year)
+    arrange(Region, Year)%>%
+    qflextable() %>%
+    colformat_num(big.mark = "")
 ```
 
-Supplementary Table S3. Sample size per region per year for use in the 5m understory community composition.
+Supplementary Table S3. Sample sizes of sites per region per year for use in assessing changes in macroalgal community composition between 2004 and 2018.
 
-
-# Temperature
+## Kelp Timeseries Model
 ```{r}
-summer_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
+kelp_ts_mod <- readRDS("model_output/kelp_timeseries_mod.rds")
 
-Anova(summer_ts_mod) %>% tidy %>% f_anova_tab
+Anova(kelp_ts_mod) %>% tidy %>% chisq_anova_tab
 ```
 
-Supplementary Table S5. F Table results from summer temperature trend linear regression model.
+Supplementary Table S4. $\chi^2$ likelihood ratio tests for trend analysis of kelp change over time at 5 m depth.
 
-```{r}
-summary(summer_ts_mod) %>% tidy %>% coef_t_tab
-```
-Supplementary Table S6. Coefficient Table results from summer temperature trend linear regression model.
+## Temperature
 
 ```{r}
 spring_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
@@ -274,11 +198,73 @@ spring_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
 Anova(spring_ts_mod) %>% tidy %>% f_anova_tab
 ```
 
-Supplementary Table S7. F Table results from spring temperature trend linear regression model.
+Supplementary Table S5. F Table results from spring temperature trend linear regression model.
 
 ```{r}
 
 summary(spring_ts_mod) %>% tidy %>% coef_t_tab
 ```
 
-Supplementary Table S8. Coefficient Table results from spring temperature trend linear regression model.
+Supplementary Table S6. Coefficient Table results from spring temperature trend linear regression model.
+
+```{r}
+summer_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
+
+Anova(summer_ts_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S7. F Table results from summer temperature trend linear regression model.
+
+```{r}
+summary(summer_ts_mod) %>% tidy %>% coef_t_tab
+```
+Supplementary Table S8. Coefficient Table results from summer temperature trend linear regression model.
+
+## Kelp Composition Model
+```{r}
+read_csv("tables/kelp_gllvm_lrchisq.csv") %>%
+  gllvm_chisq_anova_tab
+
+```
+
+Supplementary Table S9. $\chi^2$ likelihood ratio tests for trend analysis of kelp species composition over time.
+
+
+```{r}
+read_csv("tables/kelp_comp_gllvm_lrchisq.csv") %>%
+  gllvm_chisq_anova_uni_tab
+
+```
+
+Supplementary Table S10. $\chi^2$ likelihood ratio tests for changes in individual kelp species  over time with p-values corrected for false discovery rate.
+
+```{r}
+read_csv("tables/kelp_change_posthoc_2004_2018.csv") %>%
+  gllvm_posthoc_tab
+```
+
+Supplementary Table S11. Posthoc comparisons of differences in kelp species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+
+## Understory Composition Model
+
+```{r}
+read_csv("tables/understory_gllvm_lrchisq.csv") %>%
+  gllvm_chisq_anova_tab
+
+```
+
+Supplementary Table S12. $\chi^2$ likelihood ratio tests for trend analysis of understory species composition over time.
+
+```{r}
+read_csv("tables/understory_comp_gllvm_lrchisq.csv") %>%
+  gllvm_chisq_anova_uni_tab
+
+```
+Supplementary Table S13. $\chi^2$ likelihood ratio tests for changes in individual understory species  over time with p-values corrected for false discovery rate.
+
+```{r}
+read_csv("tables/understory_change_posthoc_2004_2018.csv") %>%
+  gllvm_posthoc_tab
+```
+
+Supplementary Table S14. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
