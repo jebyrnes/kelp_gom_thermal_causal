@@ -76,6 +76,7 @@ rasher_steneck_workflow <- . %>%
            month = month(date), 
            day = day(date),
            kelp = sac + alar + agar + ldig,
+           desm = desm,
            understory = sder + desm + ulva +
                chaet + codm + poly + rhod + ptilo + porph +
                palm + phyc + ccrisp + coral,
@@ -83,13 +84,14 @@ rasher_steneck_workflow <- . %>%
     select(year, month, day, region, site, 
            coastal.code, exposure.code,
            latitude, longitude, 
-           depth, crust, understory, kelp, urchin) %>%
+           depth, crust, understory, kelp, desm, urchin) %>%
     #average to site level
     group_by(year, month, day, region, site,
              coastal.code, exposure.code,
              latitude, longitude, 
              depth) %>%
     summarize(kelp = mean(kelp, na.rm=TRUE),
+              desm = mean(desm, na.rm = TRUE),
               understory = mean(understory, na.rm=TRUE),
               crust = mean(crust, na.rm=TRUE),
               urchin = mean(urchin, na.rm=TRUE),
@@ -117,6 +119,20 @@ combined_bio_data <- bind_rows(dmr,
                                rasher_2017, 
                                rasher_2018) %>%
     mutate(survey = "rasher_steneck")
+
+#how much desmerestia was there relative to kelp
+rasher_steneck_combined <- bind_rows(rasher_2016, 
+                                     rasher_2017, 
+                                     rasher_2018) |>
+    mutate(desm_to_desm_plus_kelp = desm / (desm + kelp)*100)
+
+
+mean(rasher_steneck_combined$desm)
+range(rasher_steneck_combined$desm)
+sd(rasher_steneck_combined$desm)
+
+
+write_csv(rasher_steneck_combined, "derived_data/rasher_steneck_combined.csv")
 
 write_csv(combined_bio_data, "derived_data/combined_bio_data.csv")
 
