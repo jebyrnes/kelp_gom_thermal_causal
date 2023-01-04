@@ -193,7 +193,7 @@ Supplementary Table S4. $\chi^2$ likelihood ratio tests for trend analysis of ke
 ## Temperature
 
 ```{r}
-spring_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
+spring_ts_mod <- readRDS("model_output/spring_temp_timeseries.rds")
 
 Anova(spring_ts_mod) %>% tidy %>% f_anova_tab
 ```
