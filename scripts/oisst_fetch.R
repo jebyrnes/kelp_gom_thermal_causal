@@ -26,8 +26,7 @@ temp <- OISST_sub_dl(
     longitude_ext = st_bbox(bio_data)[c(1,3)]
 )
 
-
-
+saveRDS(temp, "derived_data/oisst_all.rds")
 
 #spring mean, summer mean
 summarized_temp <- temp %>%
