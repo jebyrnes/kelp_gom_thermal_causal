@@ -168,7 +168,7 @@ temp_mods %>%
 lm(mean_temp_summer~ year*region, data = temp_timeseries) %>%
     saveRDS("model_output/summer_temp_timeseries.rds")
 lm(mean_temp_spring~ year*region, data = temp_timeseries) %>%
-    saveRDS("model_output/summer_temp_timeseries.rds")
+    saveRDS("model_output/spring_temp_timeseries.rds")
 
 #whole shebang
 lm(mean_temp_spring ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
