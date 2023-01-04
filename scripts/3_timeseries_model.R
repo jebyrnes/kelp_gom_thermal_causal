@@ -48,7 +48,7 @@ summary(mod_time_only)
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
     geom_point(alpha = 0.4) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Logit Kelp % Cover", color = "") +
@@ -86,7 +86,7 @@ kelp_time_pred <- data_grid(combined_bio_temp_gmc,
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = 100*kelp_porp, color = region)) +
     geom_point(alpha = 0.4) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     geom_line(data = kelp_time_pred, 
               mapping = aes(y = kelp_perc_pred),
               color = "black",
@@ -117,7 +117,7 @@ temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
 ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_spring, color = region)) +
     geom_point(alpha = 1) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
@@ -133,7 +133,7 @@ ggsave("figures/spring_temp_trends.jpg", dpi = 600)
 ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_summer, color = region)) +
     geom_point(alpha = 1) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
@@ -177,7 +177,7 @@ lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region)) +
     geom_point(alpha = 0.7) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     #stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
@@ -195,7 +195,7 @@ ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
     #  geom_point() +
     stat_summary() +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     ylim(c(-5,5))
 
@@ -236,11 +236,11 @@ Anova(lm(.resid ~ cent_year*region, data = urchin_out))
 
 ggplot(urchin_out, aes(x = cent_year, color = region, y = .resid)) +
     geom_point() +
-    facet_wrap(vars(region))
+    facet_wrap(vars(region), ncol = 2)
 
 ggplot(urchin_out, aes(x = cent_year, color = region, y = .fitted)) +
     geom_point() +
-    facet_wrap(vars(region))
+    facet_wrap(vars(region), ncol = 2)
 
 
 #tests
@@ -251,7 +251,7 @@ ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region,
            group = paste(region, site))) +
     geom_point(alpha = 0.6) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     theme_bw() +
     labs(y = "Urchins per sq. m.", x = "", color = "") +
     theme_bw(base_size = 18) 
@@ -263,7 +263,7 @@ ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region,
            group = paste(region, site))) +
     geom_line(alpha = 0.6) +
-    facet_wrap(vars(region)) +
+    facet_wrap(vars(region), ncol = 2) +
     ylim(c(-5,5)) +
     theme_bw()
 
