@@ -66,7 +66,7 @@ make_algae_name <- function(string){
                                      "Filamentous Reds",
                                      "Porphyra",
                                      "Ptiloda",
-                                     "Rhodymenia",
+                                     "Rhodomela",
                                      "Ulva"),
                                    vectorize_all = FALSE)
     
@@ -87,5 +87,8 @@ ggplot(comp_data %>% filter(type != "kelp"),
     guides(colour = guide_legend(reverse=TRUE)) + 
     theme(strip.text = element_text(face = "italic"))
 
-ggsave("figures/understory_composition_2004_2018.jpg", dpi = 600)
+ggsave("figures/understory_composition_2004_2018.jpg", 
+       height = 5.2,
+       width = 6.8,
+       dpi = 600)
 
