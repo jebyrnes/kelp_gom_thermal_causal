@@ -120,36 +120,41 @@ temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
                            levels = c("Downeast", "MDI", "Penobscot Bay",
                                       "Midcoast", "Casco Bay", "York")))
 
-ggplot(temp_timeseries,
+spring_temp <- ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_spring, color = region)) +
-    geom_point(alpha = 1) +
-    facet_wrap(vars(region), ncol = 2) +
-    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    geom_point(alpha = 1, size = 2) +
+  #  facet_wrap(vars(region), ncol = 2) +
+    #    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+        stat_smooth(method = "lm", formula = y ~ x,fill = NA) +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Average Spring\nTemperature C", color = "") +
 #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
-
+spring_temp
 
 ggsave("figures/spring_temp_trends.jpg", dpi = 600)
 
 
 
-ggplot(temp_timeseries,
+summer_temp <- ggplot(temp_timeseries,
        aes(x = year, y = mean_temp_summer, color = region)) +
-    geom_point(alpha = 1) +
-    facet_wrap(vars(region), ncol = 2) +
-    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
+    geom_point(alpha = 1, size = 2) +
+   # facet_wrap(vars(region), ncol = 2) +
+    stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Average Summer\nTemperature C", color = "") +
 #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
-
+summer_temp
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
+
+library(patchwork)
+summer_temp + spring_temp
+ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 10, height = 5)
 
 
 # temperature models ####
