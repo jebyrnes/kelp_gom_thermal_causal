@@ -2,6 +2,8 @@ library(car)
 library(dplyr)
 library(ggplot2)
 library(betareg)
+library(wesanderson)
+pal <- wes_palette("Zissou1", 6, type = "continuous")
 
 # read in the data
 # make a logit kelp cover variable
@@ -98,7 +100,8 @@ ggplot(combined_bio_temp_gmc,
                 alpha = 0.5)+
     theme_bw(base_size = 16) +
     labs(x = "", y = "Kelp % Cover", color = "") +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
 ggsave("figures/kelp_pred_over_time_10m.jpg", dpi = 600)
