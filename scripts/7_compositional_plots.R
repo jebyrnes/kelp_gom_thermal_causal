@@ -29,7 +29,8 @@ ggplot(comp_data %>% filter(type == "kelp"),
                  fun.data = mean_cl_boot) +
     coord_flip() +
     facet_wrap(vars(sp_code),
-               labeller = labeller(sp_code = make_kelp_name)) +
+               labeller = labeller(sp_code = make_kelp_name),
+               nrow = 1) +
     labs(color = "Year",
          y = "% Cover",
          x = "") +
