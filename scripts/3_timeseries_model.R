@@ -17,6 +17,9 @@ library(glmmTMB)
 library(broom)
 library(broom.mixed)
 
+library(wesanderson)
+pal <- wes_palette("Zissou1", 6, type = "continuous")
+
 setwd(here::here())
 
 # read in the data
@@ -45,14 +48,16 @@ saveRDS(mod_time_only_beta, "model_output/kelp_timeseries_mod.rds")
 Anova(mod_time_only)
 summary(mod_time_only)
 
+
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = logit_kelp, color = region)) +
-    geom_point(alpha = 0.4) +
+    geom_point(alpha = 0.8) +
     facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Logit Kelp % Cover", color = "") +
-    scale_color_brewer(type = "div") +
+   # scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
 ggsave("figures/kelp_over_time.jpg", dpi = 600)
@@ -85,7 +90,7 @@ kelp_time_pred <- data_grid(combined_bio_temp_gmc,
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = 100*kelp_porp, color = region)) +
-    geom_point(alpha = 0.4) +
+    geom_point(alpha = 0.8) +
     facet_wrap(vars(region), ncol = 2) +
     geom_line(data = kelp_time_pred, 
               mapping = aes(y = kelp_perc_pred),
@@ -99,7 +104,8 @@ ggplot(combined_bio_temp_gmc,
                 alpha = 0.5)+
     theme_bw(base_size = 16) +
     labs(x = "", y = "Kelp % Cover", color = "") +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
 ggsave("figures/kelp_pred_over_time.jpg", dpi = 600)
@@ -122,7 +128,8 @@ ggplot(temp_timeseries,
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Average Spring\nTemperature C", color = "") +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
 
@@ -138,7 +145,8 @@ ggplot(temp_timeseries,
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Average Summer\nTemperature C", color = "") +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
@@ -176,13 +184,14 @@ lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region)) +
-    geom_point(alpha = 0.7) +
+    geom_point(alpha = 0.8) +
     facet_wrap(vars(region), ncol = 2) +
     #stat_smooth(method = "lm", formula = y ~ x, color = "black") +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
     labs(x = "", y = "Urchins per sq. m", color = "") +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "none") +
     geom_hline(yintercept = 30, lty = 2)# +
     # geom_text(x = 2001, y = 49, label = "Urchin barren\nconditions",
@@ -197,7 +206,9 @@ ggplot(combined_bio_temp_gmc,
     stat_summary() +
     facet_wrap(vars(region), ncol = 2) +
     stat_smooth(method = "lm", formula = y ~ x, color = "black") +
-    ylim(c(-5,5))
+    scale_color_manual(values = pal) +
+    ylim(c(-5,5)) +
+    theme_bw()
 
 library(emmeans)
 slopes <- emtrends(mod_time_only,
@@ -264,6 +275,7 @@ ggplot(combined_bio_temp_gmc,
            group = paste(region, site))) +
     geom_line(alpha = 0.6) +
     facet_wrap(vars(region), ncol = 2) +
+    scale_color_manual(values = pal) +
     ylim(c(-5,5)) +
     theme_bw()
 
