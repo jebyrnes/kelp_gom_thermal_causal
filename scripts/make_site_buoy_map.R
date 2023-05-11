@@ -2,9 +2,14 @@ library(rnaturalearth)
 library(rnaturalearthdata)
 library(sf)
 library(scales)
+library(wesanderson)
+pal <- wes_palette("Zissou1", 6, type = "continuous")
+
+
+coastline <- ne_states(country = "United States of America", returnclass = "sf")
 
 #get map and check
-new_england <- st_as_sf(states50) %>%
+new_england <-coastline %>%
     filter(name %in% c("Maine", "New Hampshire", "Massachusetts", "Rhode Island",
                        "Vermont", "Connecticut"))
 
@@ -43,7 +48,7 @@ buoy_ids <- read_csv("raw_data/buoyID.csv") %>%
 # The plot
 ggplot() +
     geom_sf(data = new_england %>% st_crop(mbox) , fill = "#AAd1AC") +
-    geom_sf(data = sites, aes(color = region)) +
+    geom_sf(data = sites, aes(color = region), alpha = 0.4) +
     geom_sf(data = buoy_ids, color = "red", shape = 17, size = 5, alpha = 0.7) +
     theme_bw(base_size = 14) +
     theme(axis.text.x = element_text(size = 12, color = "black"),
@@ -53,8 +58,10 @@ ggplot() +
           panel.background = element_rect(fill = "white"),
           legend.title.align = 0.5,
           legend.position = "bottom") +
-    scale_color_brewer(type = "div") +
-    scale_fill_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+#    scale_fill_brewer(type = "div") +
+    scale_color_manual(values = pal) +
+    scale_fill_manual(values = pal) +
     labs(color = "Sites Sampled", fill = "Sites Sampled") +
     guides(colour = guide_legend(title.position = "top",
                                  override.aes = list(shape = 15, size = 5))
