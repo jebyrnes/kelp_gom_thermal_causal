@@ -13,6 +13,8 @@ library(dplyr)
 library(tidyr)
 library(glmmTMB)
 library(here) # paths to data should 'just work' (though having problems with it)
+library(wesanderson)
+pal <- wes_palette("Zissou1", 6, type = "continuous")
 
 setwd(here::here())
 source("scripts/2_load_combined_data.R")
@@ -34,7 +36,7 @@ regional_values <- combined_bio_temp_gmc %>%
 spring_temp_effect <-
     emmeans(
         mod_urchin_add,
-        ~ mean_temp_spring_dev +lag_mean_temp_summer_dev|
+        ~ mean_temp_spring_dev + lag_mean_temp_summer_dev|
             mean_regional_urchin + mean_mean_temp_spring + mean_mean_temp_summer,
         at = list(
             mean_temp_spring_dev = seq(-2.5, 2.5, length.out=100),
@@ -44,7 +46,7 @@ spring_temp_effect <-
             mean_mean_temp_spring = regional_values$mean_mean_temp_spring,
             mean_mean_temp_summer = regional_values$mean_mean_temp_summer
         ),
-        type = "response"
+        type = "response", rg.limit = 324000
     ) %>%
     as_tibble() %>%
     right_join(regional_values) 
@@ -57,7 +59,8 @@ ggplot(spring_temp_effect%>% mutate(lag_mean_temp_summer_dev = paste0("Lag Temp.
     facet_wrap(vars(lag_mean_temp_summer_dev)) +
     theme_bw(base_size = 12) +
     #scale_y_continuous(labels = function(x) paste0(x, "%")) +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
          x = "Regional Spring Temperature Anomaly (C)",
@@ -83,7 +86,7 @@ temp_by_urchin_effect <-
             mean_mean_temp_spring = regional_values$mean_mean_temp_spring,
             mean_mean_temp_summer = regional_values$mean_mean_temp_summer
         ),
-        type = "response"
+        type = "response", rg.limit = 1e10
     ) %>%
     as_tibble() %>%
     right_join(regional_values) 
@@ -95,7 +98,8 @@ ggplot(temp_by_urchin_effect %>% mutate(urchin_anom_from_region = paste0("Urchin
     facet_wrap(vars(urchin_anom_from_region)) +
     theme_bw(base_size = 12) +
     #scale_y_continuous(labels = function(x) paste0(x, "%")) +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
          x = "Regional Spring Temperature Anomaly (C)",
@@ -121,7 +125,7 @@ urchin_by_temp_effect <-
             mean_mean_temp_spring = regional_values$mean_mean_temp_spring,
             mean_mean_temp_summer = regional_values$mean_mean_temp_summer
         ),
-        type = "response"
+        type = "response", rg.limit = 1e10
     ) %>%
     as_tibble() %>%
     right_join(regional_values) 
@@ -133,7 +137,8 @@ ggplot(urchin_by_temp_effect %>% mutate(mean_temp_spring_dev = paste0("Spring Te
     facet_wrap(vars(mean_temp_spring_dev)) +
     theme_bw(base_size = 12) +
     #scale_y_continuous(labels = function(x) paste0(x, "%")) +
-    scale_color_brewer(type = "div") +
+#    scale_color_brewer(type = "div") +
+    scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
          x = "Regional Urchin Anomaly (# per sq. m.)",
