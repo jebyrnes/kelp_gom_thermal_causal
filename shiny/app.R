@@ -11,6 +11,10 @@ library(leaflet)
 library(sf)
 library(dplyr)
 library(glue)
+library(wesanderson)
+colors_for_pal <- wes_palette("Zissou1", 6, type = "continuous")
+
+
 
 if(!require(shinythemes)) install.packages("shinythemes", repos = "http://cran.us.r-project.org")
 if(!require(shinyWidgets)) install.packages("shinyWidgets", repos = "http://cran.us.r-project.org")
@@ -28,9 +32,9 @@ geodata <- geodata %>%
                                       "Midcoast", "Casco Bay", "York")))
 
 
-colors_for_pal <- RColorBrewer::brewer.pal(length(levels(geodata$region)), name = "BrBG")
+#colors_for_pal <- RColorBrewer::brewer.pal(length(levels(geodata$region)), name = "BrBG")
 
-pal <- colorFactor(palette = colors_for_pal, 
+pal <- colorFactor(palette = as.character(colors_for_pal), 
                          ordered = TRUE,
                          levels = levels(geodata$region))
 
