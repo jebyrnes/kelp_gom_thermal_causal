@@ -111,81 +111,8 @@ ggplot(combined_bio_temp_gmc,
 ggsave("figures/kelp_pred_over_time.jpg", dpi = 600)
 
 ###
-temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
-    filter(year >= 2001)%>%
-    mutate(region = gsub("\\.", " ", region),
-           region = stringr::str_to_title(region),
-           region = gsub("Mdi", "MDI", region),
-           region = factor(region,
-                           levels = c("Downeast", "MDI", "Penobscot Bay",
-                                      "Midcoast", "Casco Bay", "York")))
-
-spring_temp <- ggplot(temp_timeseries,
-       aes(x = year, y = mean_temp_spring, color = region)) +
-    geom_point(alpha = 1, size = 2) +
-  #  facet_wrap(vars(region), ncol = 2) +
-    #    stat_smooth(method = "lm", formula = y ~ x, color = "black") +
-        stat_smooth(method = "lm", formula = y ~ x,fill = NA) +
-    #ylim(c(0,100))  +
-    theme_bw(base_size = 16) +
-    labs(x = "", y = "Average Spring\nTemperature C", color = "") +
-#    scale_color_brewer(type = "div") +
-    scale_color_manual(values = pal) +
-    theme(legend.position = "none")
-spring_temp
-
-ggsave("figures/spring_temp_trends.jpg", dpi = 600)
-
-
-
-summer_temp <- ggplot(temp_timeseries,
-       aes(x = year, y = mean_temp_summer, color = region)) +
-    geom_point(alpha = 1, size = 2) +
-   # facet_wrap(vars(region), ncol = 2) +
-    stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
-    #ylim(c(0,100))  +
-    theme_bw(base_size = 16) +
-    labs(x = "", y = "Average Summer\nTemperature C", color = "") +
-#    scale_color_brewer(type = "div") +
-    scale_color_manual(values = pal) +
-    theme(legend.position = "none")
-summer_temp
-ggsave("figures/summer_temp_trends.jpg", dpi = 600)
-
-library(patchwork)
-summer_temp + spring_temp
-ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 10, height = 5)
-
-
-# temperature models ####
-temp_dat <- temp_timeseries %>%
-    group_by(region, year) %>%
-    slice(1L) %>%
-    ungroup() %>%
-    select(region, year, mean_temp_spring, mean_temp_summer)
-
-
-temp_mods <- temp_dat %>%
-    group_by(region) %>%
-    nest() %>%
-    summarize(spring_mod = 
-                  map(data, ~ lm(mean_temp_spring ~ year, data = .)),
-              summer_mod = 
-                  map(data, ~ lm(mean_temp_summer ~ year, data = .)),
-              spring_slope = map_dbl(spring_mod, ~coef(.)[2]),
-              summer_slope = map_dbl(summer_mod, ~coef(.)[2]))
-
-temp_mods %>%
-    select(-spring_mod, -summer_mod)
-
-lm(mean_temp_summer~ year*region, data = temp_timeseries) %>%
-    saveRDS("model_output/summer_temp_timeseries.rds")
-lm(mean_temp_spring~ year*region, data = temp_timeseries) %>%
-    saveRDS("model_output/spring_temp_timeseries.rds")
-
-#whole shebang
-lm(mean_temp_spring ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
-lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
+# Urchin Timeseries
+###
 
 ggplot(combined_bio_temp_gmc,
        aes(x = year, y = urchin, color = region)) +
