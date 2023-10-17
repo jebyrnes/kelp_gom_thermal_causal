@@ -130,3 +130,27 @@ performance::check_collinearity(mod_urchin_add_oisst)
 saveRDS(mod_urchin_add, "model_output/mod_urchin_add.RDS")
 saveRDS(mod_urchin_add_oisst, "model_output/mod_urchin_add_oisst.RDS")
 saveRDS(mod_urchin_int, "model_output/mod_urchin_int.RDS")
+
+
+# Test of causal robustness using OISST data with year as a FE
+
+combined_bio_temp_gmc$year_c <- as.character(combined_bio_temp_gmc$year)
+
+mod_urchin_add_oisst_year <- glmmTMB(kelp_porp ~ 
+                                         #drivers
+                                         urchin_anom_from_region + #chomp chomp
+                                         mean_spring_temp_oisst_dev + #current temp = growth
+                                         lag_mean_summer_temp_oisst_dev + # loss last year
+                                         
+                                         #causal controls for hierarchical sampling
+                                         mean_regional_urchin +
+                                         mean_spring_temp_oisst_site +
+                                         mean_summer_temp_oisst_site +
+                                         
+                                         #REs
+                                         year_c + (1|region),
+                                     family = beta_family("logit"),
+                                     data = combined_bio_temp_gmc)
+
+Anova(mod_urchin_add_oisst)
+Anova(mod_urchin_add_oisst_year)
