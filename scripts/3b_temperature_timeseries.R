@@ -35,6 +35,9 @@ temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
 # Nutrients
 ##
 
+# we need to get instrument corrected data to do this
+# no response yet from folk with instrument
+
 ##
 # Spring
 ##
@@ -51,6 +54,7 @@ spring_temp <- ggplot(temp_timeseries,
     #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
+
 spring_temp
 
 ggsave("figures/spring_temp_trends.jpg", dpi = 600)
@@ -70,9 +74,14 @@ summer_temp <- ggplot(temp_timeseries,
     labs(x = "", y = "Average Summer\nTemperature C", color = "") +
     #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
-    theme(legend.position = "none")+
+    theme(legend.position = "none") +
     geom_hline(yintercept = 20, color = "black", lty = 2)+
-    geom_hline(yintercept = 15, color = "brown", lty = 2)
+    annotate("label", x = 2014.5, y = 20.8, label = "thermal threshold", label.size = 0) +
+    geom_hline(yintercept = 15, color = "brown", lty = 2) +
+    annotate("label", x = 2014.5, y = 15.8, 
+             label = "nutrient threshold", color = "brown", label.size = 0)+
+    scale_y_continuous(breaks = seq(9,22, by = 2), limits = c(9,22)) 
+    
 
 summer_temp
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
@@ -95,7 +104,11 @@ summer_temp_max <- ggplot(temp_timeseries,
     scale_color_manual(values = pal) +
     theme(legend.position = "none")+
     geom_hline(yintercept = 20, color = "black", lty = 2)+
-    geom_hline(yintercept = 15, color = "brown", lty = 2)
+    annotate("label", x = 2014.5, y = 20.8, label = "thermal threshold", label.size = 0) +
+    geom_hline(yintercept = 15, color = "brown", lty = 2) +
+    annotate("label", x = 2014.5, y = 15.8, 
+             label = "nutrient threshold", color = "brown", label.size = 0) +
+    scale_y_continuous(breaks = seq(9,22, by = 2), limits = c(9,22))
 
 summer_temp_max
 ggsave("figures/summer_temp_trends.jpg", dpi = 600)
@@ -113,9 +126,22 @@ temp_timeseries |>
 # Put it all together
 ##
 
+##
+# The combined plot
+##
+
 library(patchwork)
-summer_temp + spring_temp
-ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 10, height = 5)
+
+layout <- 
+    "A#
+    BC"
+
+spring_temp + 
+    summer_temp + summer_temp_max +
+    plot_layout(design = layout) +
+    plot_annotation(tag_levels = 'A')   
+
+ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 8, height = 7) 
 
 ##
 # temperature models ####
