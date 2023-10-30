@@ -268,3 +268,19 @@ read_csv("tables/understory_change_posthoc_2004_2018.csv") %>%
 ```
 
 Supplementary Table S14. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+
+## Urchin Size Analysis
+
+```{r}
+read_csv("tables/urchin_size_trends.csv") |>
+    qflextable()
+```
+Supplementary Table S15. Trends in urchin size by region over time.   
+  
+  
+  
+```{r}
+read_csv("tables/urchin_size_trends_contrast.csv") |>
+    qflextable()
+```
+Supplementary Table S16. Differences in trends in urchin sizes over time between regions. Only midcoast differs from any other regions. 
