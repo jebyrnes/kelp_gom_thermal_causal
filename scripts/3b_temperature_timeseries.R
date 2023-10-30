@@ -78,8 +78,9 @@ summer_temp <- ggplot(temp_timeseries,
     geom_hline(yintercept = 20, color = "black", lty = 2)+
     annotate("label", x = 2014.5, y = 20.8, label = "thermal threshold", label.size = 0) +
     geom_hline(yintercept = 15, color = "brown", lty = 2) +
-    annotate("label", x = 2014.5, y = 15.8, 
-             label = "nutrient threshold", color = "brown", label.size = 0)+
+    annotate("label", x = 2014.5, y = 15.5, 
+             label = "nutrient threshold", color = "brown", label.size = 0,
+             alpha = 0.5)+
     scale_y_continuous(breaks = seq(9,22, by = 2), limits = c(9,22)) 
     
 
@@ -106,8 +107,9 @@ summer_temp_max <- ggplot(temp_timeseries,
     geom_hline(yintercept = 20, color = "black", lty = 2)+
     annotate("label", x = 2014.5, y = 20.8, label = "thermal threshold", label.size = 0) +
     geom_hline(yintercept = 15, color = "brown", lty = 2) +
-    annotate("label", x = 2014.5, y = 15.8, 
-             label = "nutrient threshold", color = "brown", label.size = 0) +
+    annotate("label", x = 2014.5, y = 15.5, 
+             label = "nutrient threshold", color = "brown", label.size = 0,
+             alpha = 0.5) +
     scale_y_continuous(breaks = seq(9,22, by = 2), limits = c(9,22))
 
 summer_temp_max
