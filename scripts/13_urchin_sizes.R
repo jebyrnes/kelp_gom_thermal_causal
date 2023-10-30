@@ -71,6 +71,8 @@ ggplot(urchin_size,
     labs(y = "")
 
 
+ggsave("figures/urchin_size_over_time.jpg", dpi = 600,
+       height = 8)
 
 size_mod <- glmmTMB(Diameter ~ Year*region + (1|sample), data = urchin_size)
 
@@ -84,7 +86,20 @@ car::Anova(size_mod)
 size_trends <- emtrends(size_mod, "Year", specs =~ region)
 
 
-size_trends
+size_trends |>
+    broom.mixed::tidy() %>%
+    rename(Region = region,
+           `Trend over Time` = Year.trend,
+           SE = `std.error`,
+           Z = statistic,
+           p = p.value) |>
+    write_csv("tables/urchin_size_trends.csv")
 
 size_trends |>
-    contrast(method = "pairwise")
+    contrast(method = "pairwise") %>%
+    as.data.frame() |>
+    rename(Contrast = contrast,
+           Estimate = estimate,
+           t = t.ratio,
+           p = p.value) |>
+    write_csv("tables/urchin_size_trends_contrast.csv")
