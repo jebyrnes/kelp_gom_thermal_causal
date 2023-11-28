@@ -36,8 +36,30 @@ temp_timeseries <- read_csv("derived_data/temp_timeseries.csv") %>%
 ##
 
 # we need to get instrument corrected data to do this
-# no response yet from folk with instrument
+# so far, no corrected data
 
+nuts <- readxl::read_excel("raw_data/nutrients/LOBO_Bombazine_CB03_NO3.xlsx",
+                           skip = 2) |>
+    mutate(temp = `temperature [C]`,
+           nitrate = `nitrate [uM]`,
+           cdom =  `CDOM [QSDE]`)
+
+ggplot(nuts,
+       aes(x = `temperature [C]`,
+           y = `nitrate [uM]`)) +
+    geom_point() +
+    stat_smooth(method = "gam",
+                formula = y~s(x, bs = "cr"))
+
+library(mgcv)
+nut_mod <- gam(nitrate ~ s(temp,cdom), data = nuts)
+
+
+
+augment(nut_mod, interval = "confidence") |>
+    mutate(.lower = .fitted - 2*.se.fit) |>
+    filter(.lower <= 0) |>
+    arrange(temp)
 ##
 # Spring
 ##
