@@ -250,7 +250,7 @@ dhd_15_plot + dhd_20_plot+
 
 ggsave("figures/summer_dhd_plots.jpg", dpi = 600, width = 8, height = 4) 
 
-
-
-lm(degree_heat_days_summer~ year*region, data = dhd) #%>%
-    saveRDS("model_output/spring_temp_timeseries.rds")
+lm(degree_heat_days_15_summer~ year*region, data = dhd) %>%
+    saveRDS("model_output/summer_dhd_15_timeseries.rds")
+lm(degree_heat_days_20_summer~ year*region, data = dhd) %>%
+    saveRDS("model_output/summer_dhd_20_timeseries.rds")
