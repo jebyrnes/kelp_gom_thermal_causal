@@ -7,7 +7,10 @@
 
 library(car) #for Anova
 library(ggplot2)
+library(patchwork)
 library(dplyr)
+library(purrr)
+library(tidyr)
 library(here) # paths to data should 'just work' (though having problems with it)
 library(readr)
 library(betareg)
@@ -154,7 +157,6 @@ temp_timeseries |>
 # The combined plot
 ##
 
-library(patchwork)
 
 layout <- 
     "A#
@@ -162,10 +164,10 @@ layout <-
 
 spring_temp + 
     summer_temp + summer_temp_max +
-    plot_layout(design = layout) +
+   # plot_layout(design = layout) +
     plot_annotation(tag_levels = 'A')   
 
-ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 8, height = 7) 
+ggsave("figures/temp_both_trends.jpg", dpi = 600, width = 12, height = 4) 
 
 ##
 # temperature models ####
@@ -180,7 +182,7 @@ temp_dat <- temp_timeseries %>%
 
 temp_mods <- temp_dat %>%
     group_by(region) %>%
-    nest() %>%
+    tidyr::nest() %>%
     summarize(spring_mod =
                   map(data, ~ lm(mean_temp_spring ~ year, data = .)),
               summer_mod =
@@ -205,3 +207,50 @@ lm(mean_temp_spring~ year*region, data = temp_timeseries) %>%
 lm(mean_temp_spring ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 lm(mean_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
 lm(max_temp_summer ~ year + region, data = temp_dat) %>% coef %>% `[`(2)
+
+
+### Produce a figure depicting annual degree heating days greater 
+### than or equal to 20 degrees C for each sub-region 
+### (which will be Appendix S1: Figure S5) and associated table 
+### outputs (if applicable).
+
+
+dhd <- temp_timeseries %>%
+    group_by(region, year) %>%
+    slice(1L) %>%
+    ungroup() %>%
+    dplyr::select(region, year, degree_heat_days_15_summer, degree_heat_days_20_summer)
+
+
+dhd_15_plot <- ggplot(dhd,
+       aes(x = year, y = degree_heat_days_15_summer, color = region)) +
+    geom_point(alpha = 1, size = 2) +
+    stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Days in Summer > 15 C)", color = "") +
+    scale_color_manual(values = pal) +
+    theme(legend.position = "none")
+
+dhd_20_plot <- ggplot(dhd,
+                      aes(x = year, y = degree_heat_days_20_summer, color = region)) +
+    geom_point(alpha = 1, size = 2) +
+    stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
+    theme_bw(base_size = 16) +
+    labs(x = "", y = "Days in Summer > 20 C", color = "") +
+    scale_color_manual(values = pal) +
+    theme(legend.position = "none")
+
+
+##
+# The combined plot
+##
+
+dhd_15_plot + dhd_20_plot+
+    plot_annotation(tag_levels = 'A')   
+
+ggsave("figures/summer_dhd_plots.jpg", dpi = 600, width = 8, height = 4) 
+
+
+
+lm(degree_heat_days_summer~ year*region, data = dhd) #%>%
+    saveRDS("model_output/spring_temp_timeseries.rds")
