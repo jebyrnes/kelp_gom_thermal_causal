@@ -161,16 +161,20 @@ source("scripts/1a_interpolate_downeast_temps.R")
 temp_aggregated <- temp_regional_interpolated %>%
     filter(month %in% 3:8) %>% #month in march:august
     mutate(season = ifelse(month < 6, "spring", "summer"),
-           stress = as.numeric(value > 17)) %>% #degree heat days
+           stress_15 = as.numeric(value > 15),
+           stress_20 = as.numeric(value > 20),
+    ) %>% #degree heat days
     group_by(year, region, variable, season) %>%
     summarize(mean_temp = mean(value, na.rm=TRUE),
               max_temp = max(value, na.rm=TRUE),
               min_temp = min(value, na.rm=TRUE),
-              degree_heat_days = sum(stress, na.rm=TRUE)
+              degree_heat_days_15 = sum(stress_15, na.rm=TRUE),
+              degree_heat_days_20 = sum(stress_20, na.rm=TRUE)
     ) %>%
     ungroup() %>%
     #fix some missing data errors
-    mutate(degree_heat_days = ifelse(is.na(mean_temp), NA, degree_heat_days),
+    mutate(degree_heat_days_15 = ifelse(is.na(mean_temp), NA, degree_heat_days_15),
+           degree_heat_days_20 = ifelse(is.na(mean_temp), NA, degree_heat_days_20),
            max_temp = ifelse(is.na(mean_temp), NA, max_temp),
            min_temp = ifelse(is.na(mean_temp), NA, min_temp)
     ) %>% 
@@ -178,7 +182,9 @@ temp_aggregated <- temp_regional_interpolated %>%
                 values_from = c("mean_temp",
                                 "max_temp",
                                 "min_temp",
-                                "degree_heat_days"
+                                "degree_heat_days_15",
+                                "degree_heat_days_20"
+                                
                 )) %>%
     rename(temp_source = variable)
 
@@ -227,13 +233,13 @@ combined_bio_temp <- left_join(combined_bio_data, temp_aggregated)
 
 combined_bio_temp_gmc <- combined_bio_temp %>%
   group_by(region) %>%
-  mutate(across(mean_temp_spring:degree_heat_days_summer, 
+  mutate(across(mean_temp_spring:degree_heat_days_20_summer, 
                 ~mean(.x, na.rm = TRUE),
                 .names = "mean_{.col}"),
          mean_regional_urchin = mean(urchin, na.rm = TRUE),
          urchin_anom_from_region = urchin - mean_regional_urchin) %>%
   #calculate temp anomolies using black magic with get, glue, and across
-  mutate(across(mean_temp_spring:degree_heat_days_summer, 
+  mutate(across(mean_temp_spring:degree_heat_days_20_summer, 
                 ~ .x - get(glue("mean_{cur_column()}")),
                 .names = "{.col}_dev")) %>%
   ungroup() %>%
@@ -246,17 +252,17 @@ combined_bio_temp_gmc <- combined_bio_temp %>%
 
 lagged_vars <- combined_bio_temp_gmc %>%
   group_by(region, year) %>%
-  summarize(across(mean_temp_spring_dev:degree_heat_days_summer_dev,
+  summarize(across(mean_temp_spring_dev:degree_heat_days_20_summer_dev,
                    ~ max(.x, na.rm=TRUE))) %>%
   group_by(region) %>%
   arrange(year) %>%
-  mutate(across(mean_temp_spring_dev:degree_heat_days_summer_dev,
+  mutate(across(mean_temp_spring_dev:degree_heat_days_20_summer_dev,
                 lag)) %>%
-  mutate(across(mean_temp_spring_dev:degree_heat_days_summer_dev,
+  mutate(across(mean_temp_spring_dev:degree_heat_days_20_summer_dev,
                 ~ifelse(!is.finite(.x), NA, .x))) %>%
   ungroup() %>%
   rename_with(~paste0("lag_", .x), 
-              mean_temp_spring_dev:degree_heat_days_summer_dev)
+              mean_temp_spring_dev:degree_heat_days_20_summer_dev)
 
 combined_bio_temp_gmc <- left_join(combined_bio_temp_gmc, lagged_vars)  
 
