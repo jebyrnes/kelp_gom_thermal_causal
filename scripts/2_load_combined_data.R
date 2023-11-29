@@ -18,12 +18,16 @@ combined_bio_temp_gmc <- read.csv("derived_data/combined_data_for_analysis.csv")
 #add some lags
 lag_var <- combined_bio_temp_gmc %>%
     group_by(region, year) %>%
-    summarize(degree_heat_days_summer = degree_heat_days_summer[1]) %>%
+    summarize(degree_heat_days_15_summer = degree_heat_days_15_summer[1],
+              degree_heat_days_20_summer = degree_heat_days_20_summer[1]
+              ) %>%
     group_by(region) %>%
     arrange(year) %>%
-    mutate(lag_degree_heat_days_summer = lag(degree_heat_days_summer)) %>%
+    mutate(lag_degree_heat_days_15_summer = lag(degree_heat_days_15_summer),
+           lag_degree_heat_days_20_summer = lag(degree_heat_days_20_summer)
+           ) %>%
     ungroup() %>%
-    select(-degree_heat_days_summer)
+    select(-degree_heat_days_15_summer, -degree_heat_days_20_summer)
 
 combined_bio_temp_gmc <- combined_bio_temp_gmc %>%
     left_join(lag_var)
