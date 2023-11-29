@@ -37,7 +37,8 @@ f_anova_tab <- . %>%
 coef_t_tab <- . %>%
     rename(p = p.value, `t` = statistic,
            `std. error` = std.error) %>%
-    mutate(p = formatC(p, format = "e", digits = 3),
+    mutate(`estimate` = round(`estimate`, 3),
+           p = formatC(p, format = "e", digits = 3),
            `t` = round(`t`, 3)) %>%
     qflextable() 
 
@@ -213,12 +214,59 @@ summer_ts_mod <- readRDS("model_output/summer_temp_timeseries.rds")
 Anova(summer_ts_mod) %>% tidy %>% f_anova_tab
 ```
 
-Supplementary Table S7. F Table results from summer temperature trend linear regression model.
+Supplementary Table S7. F Table results from summer mean temperature trend linear regression model.
 
 ```{r}
 summary(summer_ts_mod) %>% tidy %>% coef_t_tab
 ```
-Supplementary Table S8. Coefficient Table results from summer temperature trend linear regression model.
+
+Supplementary Table S8. Coefficient Table results from summer mean temperature trend linear regression model.
+
+
+```{r}
+summer_ts_max_mod <- readRDS("model_output/summer_max_temp_timeseries.rds")
+
+Anova(summer_ts_max_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S9. F Table results from summer maximum temperature trend linear regression model.
+
+```{r}
+summary(summer_ts_max_mod) %>% tidy %>% coef_t_tab
+```
+
+Supplementary Table S10. Coefficient Table results from summer maximum temperature trend linear regression model.
+
+
+```{r}
+summer_dhd15_mod <- readRDS("model_output/summer_dhd_15_timeseries.rds")
+
+Anova(summer_dhd15_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S11. F Table results from summer degree heating day above 15C regression model.
+
+```{r}
+summary(summer_dhd15_mod) %>% tidy %>% coef_t_tab
+```
+
+Supplementary Table S12. Coefficient Table results from summer degree heating day above 15C trend linear regression model.
+
+
+```{r}
+summer_dhd20_mod <- readRDS("model_output/summer_dhd_20_timeseries.rds")
+
+Anova(summer_dhd20_mod) %>% tidy %>% f_anova_tab
+```
+
+Supplementary Table S13. F Table results from summer degree heating day above 20C linear regression model.
+
+```{r}
+summary(summer_dhd20_mod) %>% tidy %>% coef_t_tab
+```
+
+Supplementary Table S14. Coefficient Table results from summer degree heating day above 20C trend linear regression model.
+
 
 ## Kelp Composition Model
 ```{r}
@@ -227,7 +275,7 @@ read_csv("tables/kelp_gllvm_lrchisq.csv") %>%
 
 ```
 
-Supplementary Table S9. $\chi^2$ likelihood ratio tests for trend analysis of kelp species composition over time.
+Supplementary Table S15. $\chi^2$ likelihood ratio tests for trend analysis of kelp species composition over time.
 
 
 ```{r}
@@ -236,14 +284,14 @@ read_csv("tables/kelp_comp_gllvm_lrchisq.csv") %>%
 
 ```
 
-Supplementary Table S10. $\chi^2$ likelihood ratio tests for changes in individual kelp species  over time with p-values corrected for false discovery rate.
+Supplementary Table S16. $\chi^2$ likelihood ratio tests for changes in individual kelp species  over time with p-values corrected for false discovery rate.
 
 ```{r}
 read_csv("tables/kelp_change_posthoc_2004_2018.csv") %>%
   gllvm_posthoc_tab
 ```
 
-Supplementary Table S11. Posthoc comparisons of differences in kelp species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+Supplementary Table S17. Posthoc comparisons of differences in kelp species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
 
 ## Understory Composition Model
 
@@ -253,21 +301,21 @@ read_csv("tables/understory_gllvm_lrchisq.csv") %>%
 
 ```
 
-Supplementary Table S12. $\chi^2$ likelihood ratio tests for trend analysis of understory species composition over time.
+Supplementary Table S18. $\chi^2$ likelihood ratio tests for trend analysis of understory species composition over time.
 
 ```{r}
 read_csv("tables/understory_comp_gllvm_lrchisq.csv") %>%
   gllvm_chisq_anova_uni_tab
 
 ```
-Supplementary Table S13. $\chi^2$ likelihood ratio tests for changes in individual understory species  over time with p-values corrected for false discovery rate.
+Supplementary Table S19. $\chi^2$ likelihood ratio tests for changes in individual understory species  over time with p-values corrected for false discovery rate.
 
 ```{r}
 read_csv("tables/understory_change_posthoc_2004_2018.csv") %>%
   gllvm_posthoc_tab
 ```
 
-Supplementary Table S14. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
+Supplementary Table S20. Posthoc comparisons of differences in understory species within each subregion between 2004 and 2018. Differences derived via simulation, and as such we include the 95% CI for each.
 
 ## Urchin Size Analysis
 
@@ -275,7 +323,7 @@ Supplementary Table S14. Posthoc comparisons of differences in understory specie
 read_csv("tables/urchin_size_trends.csv") |>
     qflextable()
 ```
-Supplementary Table S15. Trends in urchin size by region over time.   
+Supplementary Table S21. Trends in urchin size by region over time.   
   
   
   
@@ -283,4 +331,4 @@ Supplementary Table S15. Trends in urchin size by region over time.
 read_csv("tables/urchin_size_trends_contrast.csv") |>
     qflextable()
 ```
-Supplementary Table S16. Differences in trends in urchin sizes over time between regions. Only midcoast differs from any other regions. 
+Supplementary Table S22. Differences in trends in urchin sizes over time between regions. Only midcoast differs from any other regions. 
