@@ -227,7 +227,7 @@ dhd_15_plot <- ggplot(dhd,
     geom_point(alpha = 1, size = 2) +
     stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
     theme_bw(base_size = 16) +
-    labs(x = "", y = "Days in Summer > 15 C)", color = "") +
+    labs(x = "", y = "Days in Summer > 15 C", color = "") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
 
