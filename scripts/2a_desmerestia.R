@@ -30,7 +30,7 @@ all <- ggplot(rasher_steneck_combined,
 
 
 all + regional 
-ggsave("figures/desmerestia_supplement.jpg", dpi = 600,
+ggsave("figures/desmarestia_supplement.jpg", dpi = 600,
        width = 12)
 
 
