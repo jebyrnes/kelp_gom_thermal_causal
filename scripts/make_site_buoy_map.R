@@ -48,7 +48,7 @@ buoy_ids <- read_csv("raw_data/buoyID.csv") %>%
 # The plot
 ggplot() +
     geom_sf(data = new_england %>% st_crop(mbox) , fill = "#AAd1AC") +
-    geom_sf(data = sites, aes(color = region), alpha = 0.4) +
+    geom_sf(data = sites, aes(color = region), alpha = 0.8) +
     geom_sf(data = buoy_ids, color = "red", shape = 17, size = 5, alpha = 0.7) +
     theme_bw(base_size = 14) +
     theme(axis.text.x = element_text(size = 12, color = "black"),
