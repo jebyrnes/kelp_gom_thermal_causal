@@ -1,5 +1,6 @@
 #' ---------------------------------------
 #' Add interpolated values for  Downeast using the MDI Buoy
+#' so that we don't have gaps in the data
 #' ---------------------------------------
 
  #when downeast has no data, interpolate from MDI

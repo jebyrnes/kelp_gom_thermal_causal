@@ -1,11 +1,9 @@
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Rasher/DMR/Steneck Data Processing                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Purpose: Process and combine DMR, Steneck/Rasher, and buoy temperature data      ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Thew Suskiewicz  & Jarrett Byrnes                                        ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Last Worked On: Sept 21st, 2021 (major rewrite)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Previously Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+#' -----------------------------------------------------------------------------
+#' Rasher/DMR/Steneck Data Processing                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+#' Purpose: Process and combine DMR, Steneck/Rasher, and buoy temperature data  
+#' Adapted from and rewritten from code by Thew Suskiewicz    
+#' @author: Jarrett Byrnes     
+#' -----------------------------------------------------------------------------
 
 #--- load libraries and get environment setup
 setwd(here::here()) #understand premise of 'here' but can't get it to 'find' appropriate folder.
@@ -15,19 +13,28 @@ library(glue)
 
 ## Notes on Data set(s)
 ##
-## These analyses require merging several datasets collected by different groups for different purposes
-## Datasets Used in raw_data:
-# DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv - DMR surveys of algae and urchins from 2001 - 2018 at 5 and 10m
-#   Sites are chosen randomly. Also, some fixed sites were chosen for urchin fishery, but we have filtered those out of this data
-# NOAA_temperature_allsites_2001_2018.csv - Oceanographic Buoy data from each region with daily means
-# Rasher_Steneck_benthicsurvey_algae_allsites_alldepths_2004.csv - Algae counts for all regions from Rasher/Steneck. No urchin data. DOH!
-# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2016.csv - Algae counts for a subset of regions and sites from Rasher/Steneck. WITH urchin data. 5m and 10m 
-# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2017.csv - Algae counts for a subset of regions and sites from Rasher/Steneck. WITH urchin data.  5m and 10m
-# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv - Algae counts for all regions and sites from Rasher/Steneck. WITH urchin data.  5m and 10m
-# ADD BYRNES exposed site SML DATA 2014 - 2018
-# GET NUMBER OF QUADS FOR DMR DATA OR RAW DATA?
+## These analyses require merging several datasets collected by different groups
+## for different purposes Datasets Used in raw_data:
+# DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv - DMR
+#    surveys of algae and urchins from 2001 - 2018 at 5 and 10m Sites are chosen
+#    randomly. Also, some fixed sites were chosen for urchin fishery, but we have
+#    filtered those out of this data 
+# NOAA_temperature_allsites_2001_2018.csv -
+#    Oceanographic Buoy data from each region with daily means
+# Rasher_Steneck_benthicsurvey_algae_allsites_alldepths_2004.csv - Algae counts
+#    for all regions from Rasher/Steneck. No urchin data. DOH!
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2016.csv - Algae
+#    counts for a subset of regions and sites from Rasher/Steneck. WITH urchin
+#    data. 5m and 10m
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2017.csv - Algae
+#    counts for a subset of regions and sites from Rasher/Steneck. WITH urchin
+#    data.  5m and 10m
+# Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv - Algae
+#    counts for all regions and sites from Rasher/Steneck. WITH urchin data.  5m
+#    and 10m
 
-# What we want for analysis
+
+# What we want for data subsetting:
 # - filter to 5m depth
 # - where the survey has included urchins (even if they are not present)
 # - need to be filtered by exposure score
@@ -36,13 +43,12 @@ library(glue)
 # - nr/NA are missing data - if all urchin samples are nr/NA, do not include
 # - 2004 data is good for species composition analysis only
 
-## Preparing urchin data
-# then, for the urchin analysis, we want a data set like so
+## Preparing urchin data:
+# For the urchin analysis, we want a data set like so
 # 1. year, month, day, site, region, lat, long, crust, understory, kelp, urchin, 
 # averaged at the SITE/YEAR level
 # 2. THEN merge all of the data
-# 3. then mean (and other metric) region temp for region/year for june, july, august
-# maybe do the same for march/april/may?
+# 3. then mean (and other metric) region temp for region/year by season
 # 4. THEN mean year-region urchin, deviation from year-region urchin, year-mean temp, temp anomoly
 # will need to do some aggregation steneck data for crust/understory
 ##
