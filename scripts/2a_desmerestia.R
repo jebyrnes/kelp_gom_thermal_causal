@@ -1,3 +1,11 @@
+#' ---------------------------------------------------------
+#' Quick script to check and see how much of the Rasher/Steneck
+#' data is composed of Desmarestia in response to questions regarding
+#' differing methodology between DMR and Rasher/Steneck surveys
+#' 
+#' @author Jarrett Byrnes
+#'-----------------------------------------------------------
+
 library(ggplot2)
 library(ggridges)
 library(dplyr)
@@ -20,13 +28,13 @@ regional <- ggplot(rasher_steneck_combined,
        aes(x = desm,
            y = region)) +
     stat_density_ridges(from = 0) +
-    labs(x = "Percent Desmerestia", title = "B", y = "") 
+    labs(x = "Percent Desmarestia", title = "B", y = "") 
 
 
 all <- ggplot(rasher_steneck_combined,
        aes(x = desm)) +
     stat_density(fill = "lightgrey", color = "black") +
-    labs(x = "Percent Desmerestia", title = "A", y = "")
+    labs(x = "Percent Desmarestia", title = "A", y = "")
 
 
 all + regional 
