@@ -65,8 +65,8 @@ ggplot(spring_temp_effect%>% mutate(lag_mean_temp_summer_dev = paste0("Lag Temp.
     labs(color = "", 
          x = "Regional Spring Temperature Anomaly (C)",
          y = "Kelp Percent Cover",
-         subtitle = "Urchin anomaly held at 0",
-         title ="Effect of spring temperature and lagged summer\ntemperature on kelp cover")
+         subtitle = "Urchin anomaly held at 0")#, edited for publication
+         #title ="Effect of spring temperature and lagged summer\ntemperature on kelp cover")
 
 ggsave("figures/temperature_effect_on_kelp.jpg", dpi = 600)
 
