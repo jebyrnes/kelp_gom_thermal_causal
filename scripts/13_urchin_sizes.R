@@ -15,6 +15,7 @@ library(broom)
 library(broom.mixed)
 library(ggridges)
 library(emmeans)
+library(forcats)
 
 library(wesanderson)
 pal <- wes_palette("Zissou1", 6, type = "continuous")
@@ -68,7 +69,7 @@ ggplot(urchin_size,
            y = as.character(Year))) +
     stat_density_ridges() +
     facet_wrap(vars(region)) +
-    labs(y = "")
+    labs(y = "", x = "Diameter (mm)")
 
 
 ggsave("figures/urchin_size_over_time.jpg", dpi = 600,
