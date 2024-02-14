@@ -141,7 +141,7 @@ ggplot(urchin_by_temp_effect %>% mutate(mean_temp_spring_dev = paste0("Spring Te
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
-         x = "Regional Urchin Anomaly (# per sq. m.)",
+         x = "Regional Urchin Anomaly (# per sq. m)",
          y = "Kelp Percent Cover",
          subtitle = "Lag Summer Temp anomaly held at 0")
 
