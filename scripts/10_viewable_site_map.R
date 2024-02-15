@@ -1,3 +1,14 @@
+#' -------------------------------------------------
+#' 
+#' Quick script to make an interactive leaflet map
+#' in order to visualize where sample sites
+#' occured for conversation between authors or 
+#' enhanced understanding by readers
+#' 
+#' @author Jarrett Byrnes
+#' -------------------------------------------
+
+
 library(sf)
 library(tmap)
 

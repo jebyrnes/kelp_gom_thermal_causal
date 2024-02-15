@@ -1,6 +1,9 @@
 #' -------------------------------------------
-#' Analyze compositional data
-#' 
+#' Analyze benthiccomposition data
+#' Note, gllvm has changed in more recent versions.
+#' To run this, you will need version 1.3.1
+#' @date 2023-10-30 last update
+#' @author Jarrett Byrnes
 #' -------------------------------------------
 
 #--- load libraries and get environment setup

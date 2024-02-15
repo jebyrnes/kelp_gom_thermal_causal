@@ -1,6 +1,8 @@
 #' -------------------------------------------
-#' Plot composition data
+#' Plot benthic community composition data
 #' 
+#' @author Jarrett Byrnes
+#' @date 2023-10-30 last update
 #' -------------------------------------------
 
 #--- load libraries and get environment setup

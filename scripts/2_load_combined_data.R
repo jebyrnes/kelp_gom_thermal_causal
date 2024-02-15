@@ -1,3 +1,11 @@
+#' ---------------------------------------------------------
+#' Script to load combined data (temperature and community)
+#' and modify it slightly to create derived parameters and
+#' better region names for plots, etc.
+#' @date 2023-10-30 last update
+#' @author Jarrett Byrnes
+#'-----------------------------------------------------------
+
 library(car)
 library(dplyr)
 

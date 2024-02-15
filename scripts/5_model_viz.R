@@ -1,11 +1,10 @@
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Model Visualization                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Purpose: Running a model to test if temp and/or urchin influences kelp cover       ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Thew Suskiewicz   - May 27, 2020                                         ##~~##~~##~~##~~##~
-##~~##~~##~~##~~  Worked On: May 7th, 2021 (emerging from COVID like a cicada)             ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~  Last Worked On: Oct 12th, 2021                                    ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
-##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+#' ------------------------------------------------------------------------------------
+#' Code to query and visualize implications from the causal models of 
+#' influence of temperature and urchins on kelp abundance.
+#' 
+#' @date 2023-10-30 last update
+#' @author Jarrett Byrnes
+#' ------------------------------------------------------------------------------------
 
 library(ggplot2)
 library(emmeans)
@@ -58,8 +57,6 @@ ggplot(spring_temp_effect%>% mutate(lag_mean_temp_summer_dev = paste0("Lag Temp.
     geom_line(size = 1) +
     facet_wrap(vars(lag_mean_temp_summer_dev)) +
     theme_bw(base_size = 12) +
-    #scale_y_continuous(labels = function(x) paste0(x, "%")) +
-#    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
@@ -136,8 +133,6 @@ ggplot(urchin_by_temp_effect %>% mutate(mean_temp_spring_dev = paste0("Spring Te
     geom_line(size = 1) +
     facet_wrap(vars(mean_temp_spring_dev)) +
     theme_bw(base_size = 12) +
-    #scale_y_continuous(labels = function(x) paste0(x, "%")) +
-#    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 

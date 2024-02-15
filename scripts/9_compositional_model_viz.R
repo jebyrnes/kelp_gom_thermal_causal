@@ -1,6 +1,7 @@
 #' -------------------------------------------
 #' Analyze output of compositional gllvm
 #' 
+#' @date 2023-10-30 last update
 #' -------------------------------------------
 
 #--- load libraries and get environment setup

@@ -1,3 +1,11 @@
+#' -------------------------------------------
+#' Additional figures looking at OISST and the 10m
+#' kelp data for supplementary materials
+#' 
+#' @author Jarrett Byrnes
+#' -------------------------------------------
+
+
 library(car)
 library(dplyr)
 library(ggplot2)
@@ -100,7 +108,6 @@ ggplot(combined_bio_temp_gmc,
                 alpha = 0.5)+
     theme_bw(base_size = 16) +
     labs(x = "", y = "Kelp % Cover", color = "") +
-#    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
 

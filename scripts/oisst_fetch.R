@@ -1,3 +1,10 @@
+#' ------------------------------------------------------------
+#' Script to fetch SST data from OISST for supplementary analyses
+#' 
+#' @date 2023-10-30 last update
+#' @author Jarrett Byrnes
+#' ------------------------------------------------------------
+
 library(dplyr)
 library(sf)
 library(oisstr) #https://github.com/jebyrnes/oisstr
