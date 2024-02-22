@@ -1,5 +1,5 @@
 #' -----------------------------------------------------------------------------
-#' Rasher/DMR/Steneck Data Processing                                                         ##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~##~~
+#' Rasher/DMR/Steneck Data Processing                                           
 #' Purpose: Process and combine DMR, Steneck/Rasher, and buoy temperature data  
 #' Adapted from and rewritten from code by Thew Suskiewicz
 #' @date 2023-10-30 last update

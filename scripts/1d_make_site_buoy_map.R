@@ -1,7 +1,19 @@
+#' -----------------------------------------------------------------------------
+#' Make map of sites from DMR and Rasher/Steneck
+#' biological sampling and NOAA buoys used for temperature 
+#' measurements for Figure 1 of the paper
+#' 
+#' @date 2023-10-30 last update
+#' @author: Jarrett Byrnes     
+#' -----------------------------------------------------------------------------
+
 library(rnaturalearth)
 library(rnaturalearthdata)
+library(dplyr)
 library(sf)
+library(readr)
 library(scales)
+library(ggplot2)
 library(wesanderson)
 pal <- wes_palette("Zissou1", 6, type = "continuous")
 
@@ -9,8 +21,8 @@ pal <- wes_palette("Zissou1", 6, type = "continuous")
 coastline <- ne_states(country = "United States of America", returnclass = "sf")
 
 #get map and check
-new_england <-coastline %>%
-    filter(name %in% c("Maine", "New Hampshire", "Massachusetts", "Rhode Island",
+new_england <- coastline %>%
+    dplyr::filter(name %in% c("Maine", "New Hampshire", "Massachusetts", "Rhode Island",
                        "Vermont", "Connecticut"))
 
 
@@ -58,10 +70,9 @@ ggplot() +
           panel.background = element_rect(fill = "white"),
           legend.title.align = 0.5,
           legend.position = "bottom") +
-#    scale_color_brewer(type = "div") +
-#    scale_fill_brewer(type = "div") +
     scale_color_manual(values = pal) +
     scale_fill_manual(values = pal) +
+    coord_sf(expand=FALSE) +
     labs(color = "Sites Sampled", fill = "Sites Sampled") +
     guides(colour = guide_legend(title.position = "top",
                                  override.aes = list(shape = 15, size = 5))

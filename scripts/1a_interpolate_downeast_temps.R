@@ -1,6 +1,8 @@
 #' ---------------------------------------
 #' Add interpolated values for  Downeast using the MDI Buoy
 #' so that we don't have gaps in the data
+#' 
+#' @author Jarrett Byrnes
 #' @date 2023-10-30 last update
 #' ---------------------------------------
 
