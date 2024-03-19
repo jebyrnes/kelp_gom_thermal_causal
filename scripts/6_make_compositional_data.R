@@ -58,13 +58,16 @@ rasher_2018 <- read_csv("raw_data/Rasher_Steneck_benthicsurvey_algae_urchin_alls
     comp_data_filter
 
 # Get Byrnes KEEN data ####
-byrnes <- read_csv("https://raw.githubusercontent.com/kelpecosystems/observational_data/master/cleaned_data/keen_cover.csv") %>%
-    filter(SITE %in% c("NE Appledore", "NW Appledore"),
-           YEAR == 2018)
+# byrnes <- read_csv("https://raw.githubusercontent.com/kelpecosystems/observational_data/master/cleaned_data/keen_cover.csv") %>%
+#     filter(SITE %in% c("NE Appledore", "NW Appledore"),
+#            YEAR == 2018)
+#write_csv(byrnes, "raw_data/byrnes_2018_appledore.csv")
 # c(sac, alar, agar, ldig,
 #   sder, desm, ulva,
 #   chaet, codm, poly, rhod, ptilo,
 #   porph, palm , phyc, ccrisp, coral)
+
+byrnes <- read_csv("raw_data/byrnes_2018_appledore.csv")
 
 translate <- data.frame(
     sp_code = c("SLJ", "SL", "ALES", "AGCL", "LADI",

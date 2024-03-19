@@ -1,0 +1,187 @@
+NETWORK,PI,YEAR,MONTH,DAY,SITE,TRANSECT,SP_CODE,PERCENT_COVER,GROUP,DIVISION.FAMILY,COMMON.DIVISION.NAME,SIZE,COMMON.NAME,KINGDOM,PHYLUM,CLASS,ORDER,FAMILY,GENUS,SPECIES
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,ANSP,15,Invertebrate,Molluscs,Bivalves,NA,jingle shell,Animalia,Mollusca,Bivalvia,Pectinida,Anomiidae,Anomia,Anomia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,B,97.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,BM,2.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,BUTU,3.75,Invertebrate,Bryozoans,Bryozoans,NA,spiral tufted bryozoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Crisularia,Crisularia turrita
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,CF,6.25,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,CHCR,21.25,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,CLCI,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Clathromorphum,Clathromorphum circumscriptum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,CO,17.5,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,DEAC,1.25,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia aculeata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,DIVE,10,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,HAPA,1.25,Invertebrate,Proifera,Sponges,NA,Breadcrumb Sponge,Animalia,Porifera,Demospongiae,Suberitida,Halichondriidae,Halichondria,Halichondria (Halichondria) panicea
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,HIRU,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Hildenbrandiales,Hildenbrandiaceae,Hildenbrandia,Hildenbrandia rubra
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,HJ,2.5,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,LESP,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Leptophytum,Leptophytum acervatum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,LIGL,15,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,LISP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Lithophyllum,Lithophyllum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,MEMA,6.25,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,OSED,1.25,Invertebrate,Molluscs,Bivalves,NA,European flat Oyster,Animalia,Mollusca,Bivalvia,Ostreida,Ostreidae,Ostrea,Ostrea edulis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,PHSP,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,POLS,23.75,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,RAT,3.75,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Red Algal Turf
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,SL,25,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,SPRE,2.5,Algae,Rhodophyta,Erect Red Algae,NA,NA,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Wrangeliaceae,Spermothamnion,Spermothamnion repens
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broad Cove,UFR,1.25,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Unidentified Filamentous Red
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,ANSP,3.75,Invertebrate,Molluscs,Bivalves,NA,jingle shell,Animalia,Mollusca,Bivalvia,Pectinida,Anomiidae,Anomia,Anomia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,B,62.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,BL,33.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,BM,2.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,BOVI,5,Invertebrate,Chordates,Tunicates,NA,orange sheath tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botrylloides,Botrylloides violaceus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,BUSP,5,Invertebrate,Bryozoans,Bryozoans,NA,NA,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Bugulina,Bugulina spicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,BUTU,5,Invertebrate,Bryozoans,Bryozoans,NA,spiral tufted bryozoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Crisularia,Crisularia turrita
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,CF,1.25,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,CHCR,36.25,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,CLCI,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Clathromorphum,Clathromorphum circumscriptum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,CO,23.75,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,DEVI,1.25,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia viridis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,DIVE,12.5,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,FG,11.25,Algae,Chlorophyta,Green Algae,NA,Filamentous Green,NA,NA,NA,NA,NA,NA,Filamentous Green
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,HJ,8.75,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,LIGL,3.75,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,MEMA,2.5,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,PHSP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,POLS,47.5,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,RAT,1.25,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Red Algal Turf
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,SH,1.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,SL,15,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Broadway and 42nd,TISP,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Titanoderma,Titanoderma
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,ANSP,3.75,Invertebrate,Molluscs,Bivalves,NA,jingle shell,Animalia,Mollusca,Bivalvia,Pectinida,Anomiidae,Anomia,Anomia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,B,75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BL,2.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BM,12.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BOSC,1.25,Invertebrate,Chordates,Tunicates,NA,golden star tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botryllus,Botryllus schlosseri
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BOVI,7.5,Invertebrate,Chordates,Tunicates,NA,orange sheath tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botrylloides,Botrylloides violaceus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BS,8.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BUSP,11.25,Invertebrate,Bryozoans,Bryozoans,NA,NA,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Bugulina,Bugulina spicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,BUTU,1.25,Invertebrate,Bryozoans,Bryozoans,NA,spiral tufted bryozoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Crisularia,Crisularia turrita
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,CF,3.75,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,CHCR,32.5,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,CO,20,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,DEAC,3.75,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia aculeata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,DIVE,10,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,FG,7.5,Algae,Chlorophyta,Green Algae,NA,Filamentous Green,NA,NA,NA,NA,NA,NA,Filamentous Green
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,HJ,12.5,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,LESP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Leptophytum,Leptophytum acervatum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,LIGL,3.75,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,LISP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Lithophyllum,Lithophyllum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,MEMA,8.75,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,PHSP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,POLS,35,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,SCUN,1.25,Invertebrate,Bryozoans,Bryozoans,NA,single horn bryzoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Schizoporellidae,Schizoporella,Schizoporella unicornis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,SL,20,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,SS,1.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,TETE,2.5,Invertebrate,Molluscs,Gastropods,NA,Plate Limpet,Animalia,Mollusca,Gastropoda,NA,Lottiidae,Testudinalia,Testudinalia testudinalis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,TISP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Titanoderma,Titanoderma
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Devil's Dance Floor,UFR,2.5,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Unidentified Filamentous Red
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,B,58.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,BL,15,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,BM,17.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,BOVI,2.5,Invertebrate,Chordates,Tunicates,NA,orange sheath tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botrylloides,Botrylloides violaceus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,BS,1.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,BUSP,1.25,Invertebrate,Bryozoans,Bryozoans,NA,NA,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Bugulina,Bugulina spicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,CF,2.5,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,CHCR,20,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,CLCI,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Clathromorphum,Clathromorphum circumscriptum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,CO,22.5,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,CYPU,1.25,Algae,Rhodophyta,Erect Red Algae,NA,Purple claw weed,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Cystocloniaceae,Cystoclonium,Cystoclonium purpureum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,DEAC,2.5,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia aculeata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,DEVI,10,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia viridis
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,DIVE,1.25,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,EC,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,NA,NA,NA,NA,NA,NA,Encrusting coralline
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,FG,3.75,Algae,Chlorophyta,Green Algae,NA,Filamentous Green,NA,NA,NA,NA,NA,NA,Filamentous Green
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,HIRU,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Hildenbrandiales,Hildenbrandiaceae,Hildenbrandia,Hildenbrandia rubra
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,HJ,7.5,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,LESP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Leptophytum,Leptophytum acervatum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,LIGL,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,LISP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Lithophyllum,Lithophyllum
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,MEMA,1.25,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,PAPA,2.5,Algae,Rhodophyta,Erect Red Algae,NA,Dulse,Plantae,Rhodophyta,Florideophyceae,Palmariales,Palmariaceae,Palmaria,Palmaria palmata
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,PHSP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,POLS,46.25,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,PORO,1.25,Algae,Rhodophyta,Erect Red Algae,NA,goat tang,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Polyidaceae,Polyides,Polyides rotunda
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,RAT,7.5,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Red Algal Turf
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,S,5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,SL,27.5,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,28,NE Appledore,Norwegian Cove,SS,2.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,B,17.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BL,16.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BM,46.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BOVI,1.25,Invertebrate,Chordates,Tunicates,NA,orange sheath tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botrylloides,Botrylloides violaceus
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BS,10,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BUSP,11.25,Invertebrate,Bryozoans,Bryozoans,NA,NA,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Bugulina,Bugulina spicata
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,BUTU,2.5,Invertebrate,Bryozoans,Bryozoans,NA,spiral tufted bryozoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Crisularia,Crisularia turrita
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,CF,20,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,CHCR,10,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,CO,6.25,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,DEVI,5,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia viridis
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,DIVE,2.5,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,FG,1.25,Algae,Chlorophyta,Green Algae,NA,Filamentous Green,NA,NA,NA,NA,NA,NA,Filamentous Green
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,HIRU,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Hildenbrandiales,Hildenbrandiaceae,Hildenbrandia,Hildenbrandia rubra
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,HJ,62.5,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,LIGL,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,LISP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Lithophyllum,Lithophyllum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,MEMA,6.25,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,POLS,1.25,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,PORO,3.75,Algae,Rhodophyta,Erect Red Algae,NA,goat tang,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Polyidaceae,Polyides,Polyides rotunda
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,RAT,1.25,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Red Algal Turf
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,S,2.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,SL,30,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,SS,7.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,TETE,1.25,Invertebrate,Molluscs,Gastropods,NA,Plate Limpet,Animalia,Mollusca,Gastropoda,NA,Lottiidae,Testudinalia,Testudinalia testudinalis
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,8 Ball,TUV,3.75,Algae,Chlorophyta,Green Algae,NA,Sea lettuce,NA,NA,NA,NA,NA,NA,Tubular Ulvoid
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,AGCL,6.25,Algae,Phaeophyta,Brown Algae,NA,Shotgun Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Costariaceae,Agarum,Agarum clathratum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,ANSP,5,Invertebrate,Molluscs,Bivalves,NA,jingle shell,Animalia,Mollusca,Bivalvia,Pectinida,Anomiidae,Anomia,Anomia
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,APPA,1.25,Invertebrate,Chordates,Tunicates,NA,NA,Animalia,Chordata,Ascidiacea,Aplousobranchia,Polyclinidae,Aplidium,Aplidium pallidum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,B,68.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,BL,13.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,BM,15,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,BOVI,2.5,Invertebrate,Chordates,Tunicates,NA,orange sheath tunicate,Animalia,Chordata,Ascidiacea,Stolidobranchia,Styelidae,Botrylloides,Botrylloides violaceus
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,C,1.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,CF,22.5,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,CHCR,11.25,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,CLCI,6.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Clathromorphum,Clathromorphum circumscriptum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,CO,8.75,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,CYPU,1.25,Algae,Rhodophyta,Erect Red Algae,NA,Purple claw weed,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Cystocloniaceae,Cystoclonium,Cystoclonium purpureum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,FG,1.25,Algae,Chlorophyta,Green Algae,NA,Filamentous Green,NA,NA,NA,NA,NA,NA,Filamentous Green
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,HIRU,13.75,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Hildenbrandiales,Hildenbrandiaceae,Hildenbrandia,Hildenbrandia rubra
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,HJ,25,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,LESP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Leptophytum,Leptophytum acervatum
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,LIGL,5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,MEMA,2.5,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,MYED,1.25,Invertebrate,Molluscs,Bivalves,NA,Blue Mussel,Animalia,Mollusca,Bivalvia,Mytilida,Mytilidae,Mytilus,Mytilus edulis
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,PHSP,3.75,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,POLS,41.25,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,RAT,8.75,Algae,Rhodophyta,Erect Red Algae,NA,NA,NA,NA,NA,NA,NA,NA,Red Algal Turf
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,S,1.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,SL,17.5,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,29,NW Appledore,North Head,TETE,1.25,Invertebrate,Molluscs,Gastropods,NA,Plate Limpet,Animalia,Mollusca,Gastropoda,NA,Lottiidae,Testudinalia,Testudinalia testudinalis
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,AGCL,6.25,Algae,Phaeophyta,Brown Algae,NA,Shotgun Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Costariaceae,Agarum,Agarum clathratum
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,B,23.75,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,BL,5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,BM,17.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,BS,31.25,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,BUSP,1.25,Invertebrate,Bryozoans,Bryozoans,NA,NA,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Bugulina,Bugulina spicata
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,BUTU,3.75,Invertebrate,Bryozoans,Bryozoans,NA,spiral tufted bryozoan,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Bugulidae,Crisularia,Crisularia turrita
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,CF,23.75,Invertebrate,Molluscs,Gastropods,NA,Slipper Snail,Animalia,Mollusca,Gastropoda,Littorinimorpha,Calyptraeidae,Crepidula,Crepidula fornicata
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,CHCR,10,Algae,Rhodophyta,Erect Red Algae,NA,Irish moss,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Gigartinaceae,Chondrus,Chondrus crispus
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,CLCI,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Clathromorphum,Clathromorphum circumscriptum
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,CO,1.25,Algae,Rhodophyta,Erect Red Algae,NA,coral weed,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Corallina,Corallina officinalis
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,DEVI,2.5,Algae,Phaeophyta,Brown Algae,NA,Sour or Stink Weed,Chromista,Ochrophyta,Phaeophyceae,Desmarestiales,Desmarestiaceae,Desmarestia,Desmarestia viridis
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,DIVE,5,Invertebrate,Chordates,Tunicates,NA,tunicate,Animalia,Chordata,Ascidiacea,Aplousobranchia,Didemnidae,Didemnum,Didemnum vexillum
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,HAPA,1.25,Invertebrate,Proifera,Sponges,NA,Breadcrumb Sponge,Animalia,Porifera,Demospongiae,Suberitida,Halichondriidae,Halichondria,Halichondria (Halichondria) panicea
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,HJ,62.5,Algae,Rhodophyta,Erect Red Algae,NA,japan red algae,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Dasyaceae,Dasysiphonia,Dasysiphonia japonica
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,LESP,1.25,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Leptophytum,Leptophytum acervatum
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,LIGL,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Lithothamnion,Lithothamnion
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,LISP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,NA,Plantae,Rhodophyta,Florideophyceae,Corallinales,Corallinaceae,Lithophyllum,Lithophyllum
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,MEMA,2.5,Invertebrate,Bryozoans,Bryozoans,NA,sea lace,Animalia,Bryozoa,Gymnolaemata,Cheilostomatida,Membraniporidae,Membranipora,Membranipora membranacea
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,MYED,1.25,Invertebrate,Molluscs,Bivalves,NA,Blue Mussel,Animalia,Mollusca,Bivalvia,Mytilida,Mytilidae,Mytilus,Mytilus edulis
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,OSED,1.25,Invertebrate,Molluscs,Bivalves,NA,European flat Oyster,Animalia,Mollusca,Bivalvia,Ostreida,Ostreidae,Ostrea,Ostrea edulis
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,PHSP,2.5,Algae,Rhodophyta,Red Algal Crusts,NA,rock branch algae,Plantae,Rhodophyta,Florideophyceae,Corallinales,Hapalidiaceae,Phymatolithon,Phymatolithon
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,POLS,5,Algae,Rhodophyta,Erect Red Algae,NA,lobster horns,Plantae,Rhodophyta,Florideophyceae,Ceramiales,Rhodomelaceae,Polysiphonia,Polysiphonia
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,PORO,1.25,Algae,Rhodophyta,Erect Red Algae,NA,goat tang,Plantae,Rhodophyta,Florideophyceae,Gigartinales,Polyidaceae,Polyides,Polyides rotunda
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,S,7.5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,SH,10,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,SL,15,Algae,Phaeophyta,Brown Algae,NA,Sugar Kelp,Chromista,Ochrophyta,Phaeophyceae,Laminariales,Laminariaceae,Saccharina,Saccharina latissima
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,SS,5,Substrate,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA
+KEEN ONE,Byrnes,2018,8,30,NW Appledore,Larus Ledge,TETE,1.25,Invertebrate,Molluscs,Gastropods,NA,Plate Limpet,Animalia,Mollusca,Gastropoda,NA,Lottiidae,Testudinalia,Testudinalia testudinalis
