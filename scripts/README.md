@@ -1,9 +1,3 @@
----
-editor_options: 
-  markdown: 
-    wrap: 72
----
-
 # Code and Data from Suskiewicz, T., Byrnes, J.E.K., Steneck, R.S., Russell, R., Wilson, C.J., Rasher, D.B. 2024. Ocean warming undermines the recovery resilience of New England kelp forests following a fishery-induced trophic cascade. Ecology.
 
 ## Scripts
