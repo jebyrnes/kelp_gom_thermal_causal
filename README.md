@@ -50,4 +50,4 @@ Funding for this project comes form the 2018-2019 Maine Sea Grant [R-18-03](http
 
 ## Contact
 
-For more information, contact [jarrett.byrnes\@umb.edu](mailto:jarrett.byrnes@umb.edu){.email}
+For more information, contact [jarrett.byrnes\@umb.edu](mailto:jarrett.byrnes@umb.edu)
