@@ -45,10 +45,7 @@ Wentworth (1922) for definitions.
 
 -   year - Integer for year.
 -   date - Date in M/D/Y format.
--   site.number - Integer identifier for site. Numbers were reused
-    between years, but do not correspond to the same sites.
--   region.code - Integer code of region. Controlled vocabulary matches
-    the region column.
+-   site - Character identifier for site.  
 -   region - Character identifier for name of region on the coast of
     Maine.
 -   exposure.code - Integer identifier for 1-5 qualitative scale of
@@ -58,9 +55,9 @@ Wentworth (1922) for definitions.
     Offshore islands have higher scores and sites within rivers or
     estuaries with lower scores.
 -   latitude - Latitude in decimal degrees.
--   longitude - Longitude in decimal degrees.\
+-   longitude - Longitude in decimal degrees.  
 -   depth - Numeric depth in m.
--   quadrat - Integer ID of quadrat along a transect
+-   quadrat - Integer ID of quadrat along a transect.
 -   time - HH:MM time of day of dive.
 -   sand - Percent cover in 1m\^2 quadrat of sand.
 -   pebble - Percent cover in 1m\^2 quadrat of pebbles.
@@ -73,21 +70,20 @@ Wentworth (1922) for definitions.
 -   agar - Percent cover in 1m\^2 quadrat of *Agarum clathratum*.
 -   ldig - Percent cover in 1m\^2 quadrat of *Laminaria digitata*.
 -   sder - Percent cover in 1m\^2 quadrat of *Saccorhiza dermatodea*.
--   desm - Percent cover in 1m\^2 quadrat of *Desmarestia spp.*.
--   kelp - Percent cover in 1m\^2 quadrat of summed canopy brown algae
-    (sac - desm)
+-   desm - Percent cover in 1m\^2 quadrat of *Desmarestia spp.*
+-   kelp - Percent cover in 1m\^2 quadrat of summed canopy kelp species (sac - sder).
 -   ulva - Percent cover in 1m\^2 quadrat of *Ulva spp.*
--   chaet - Percent cover in 1m\^2 quadrat of *Chaetomorpha linum*.
+-   chaet - Percent cover in 1m\^2 quadrat of *Chaetomorpha spp*.
 -   codm - Percent cover in 1m\^2 quadrat of *Codium fragile*.
--   poly - Percent cover in 1m\^2 quadrat of *Polysiphonia spp.*.
+-   poly - Percent cover in 1m\^2 quadrat of *Polysiphonia spp.* and other filamentous reds.  
 -   rhod - Percent cover in 1m\^2 quadrat of *Rhodomela spp.*.
 -   ptilo - Percent cover in 1m\^2 quadrat of *Ptilota serrata*.
--   porph - Percent cover in 1m\^2 quadrat of *Prophyra spp.*.
+-   porph - Percent cover in 1m\^2 quadrat of *Porphyra spp.*.
 -   palm - Percent cover in 1m\^2 quadrat of *Palmaria palmata*.
--   phyc - Percent cover in 1m\^2 quadrat of *Phycodurus rubens*.
+-   phyc - Percent cover in 1m\^2 quadrat of *Phycodrys fimbriata*.
 -   ccrisp - Percent cover in 1m\^2 quadrat of *Chondrus crispus*.
--   callo - - Percent cover in 1m\^2 quadrat of *Callophyllis spp.*.
--   phyll - Percent cover in 1m\^2 quadrat of *???*
+-   callo - - Percent cover in 1m\^2 quadrat of *Euthora cristata*, formerly *Callophyllis cristata*.
+-   phyll - Percent cover in 1m\^2 quadrat of *Phyllophora spp.* and *Coccotylus spp.* (not differentiated in the field).
 -   coral - Percent cover in 1m\^2 quadrat of *Corallina officionalis*.
 -   bonne - Percent cover in 1m\^2 quadrat of *Bonnemaisonia hamifera*.
 -   cystoc - Percent cover in 1m\^2 quadrat of *Cystoclonium purpureum*.
