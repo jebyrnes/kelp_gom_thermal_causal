@@ -46,7 +46,7 @@ For more about shiny, see [https://shiny.posit.co/](https://shiny.posit.co/).
 
 ## Funding
 
-Funding for this project comes form the 2018-2019 Maine Sea Grant [R-18-03](https://seagrant.umaine.edu/research/projects/r-18-03-the-return-of-maines-kelp-forests-patterns-drivers-and-implications-for-industry/): The return of Maine’s kelp forests: patterns, drivers, and implications for industry to Doug Rasher, Robert Steneck, and Thew Suskiewicz
+Funding for this project comes form the 2018-2020 Maine Sea Grant [R-18-03](https://seagrant.umaine.edu/research/projects/r-18-03-the-return-of-maines-kelp-forests-patterns-drivers-and-implications-for-industry/): The return of Maine’s kelp forests: patterns, drivers, and implications for industry to Doug Rasher, Robert Steneck, and Thew Suskiewicz
 
 ## Contact
 
