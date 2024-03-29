@@ -24,10 +24,9 @@ surface temperatures using SST from adjacent buoys and statistical fits.
 locations.
 
 `2_load_combined_data.R` - Script used to take combined CSV and add
-transformations and nicer region names for analysis and visuzliation.
+transformations and nicer region names for analysis and visualization.
 
-`2a_desmerestia.R` - Supplementary analysis looking at Desmarestia as a
-fraction of brown algae.
+`2a_desmerestia.R` - Supplementary analysis looking at Desmarestia as a fraction of brown algae.
 
 `3_timeseries_model.R` - Script that models and visualizes biological
 time series data.
