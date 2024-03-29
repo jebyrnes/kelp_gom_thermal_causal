@@ -8,8 +8,7 @@ Below, find the metadata for columns in each raw data file.
 -   date - Date in M/D/Y format.
 -   site.number - Integer identifier for site. Numbers were reused
     between years, but do not correspond to the same sites.
--   region.code - Integer code of region. Controlled vocabulary matches
-    the region column.
+-   region.code - Integer code of DMR management area. Does not match region. Not used in analyses.  
 -   region - Character identifier for name of region on the coast of
     Maine.
 -   exposure.code - Integer identifier for 1-5 qualitative scale of
@@ -23,15 +22,17 @@ Below, find the metadata for columns in each raw data file.
 -   depth.stratum.code - Integer identifier of depth where survey was
     conducted. 1 = 5m depth, 2 = 10m depth.
 -   depth - Integer of depth below mean low lower water in meters.
--   crust - Percent cover of crustose coralline algae in a 1m\^2
-    quadrat..
--   understory - Percent cover of fleshy non-kelp algae in a 1m\^2
-    quadrat..
+-   crust - Percent cover of crustose coralline algae averaged across all 1m\^2
+    quadrats in a single site.
+-   understory - Percent cover of fleshy non-kelp algae averaged across all 1m\^2
+    quadrats in a single site.  
 -   kelp - Percent cover of the kelps *Saccharina latissima*, *Laminaria
     digitata*, *Alaria esculenta*, and *Agarum clathratum* (order
-    Laminariales) as well as two *Desmarestia* species in a 1m\^2
-    quadrat.\
--   urchin - Number of urchins in a 1m\^2 quadrat.
+    Laminariales) as well as two *Desmarestia* species averaged across all 1m\^2
+    quadrats in a single site.  
+-   urchin - Average number of adult urchins (test diameter > 20mm) in a 1m\^2 quadrat across a single site.
+
+### Rasher_Steneck_benthicsurvey_algae_allsites_alldepths_2004.csv. 
 
 ### Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2016.csv
 
@@ -40,7 +41,7 @@ Below, find the metadata for columns in each raw data file.
 ### Rasher_Steneck_benthicsurvey_algae_urchin_allsites_alldepths_2018.csv
 
 Note: for all, nr = Not Recorded. For substrate classifications, see
-Wentworth (1922) for defitinions.
+Wentworth (1922) for definitions.
 
 -   year - Integer for year.
 -   date - Date in M/D/Y format.
@@ -167,3 +168,7 @@ Diameter - Integer urchin diameter in millimeters.
 -   latitude - Latitude in decimal degrees.
 
 -   longitude - Longitude in decimal degrees.
+
+
+## References
+Wentworth, C. K. 1922. A Scale of Grade and Class Terms for Clastic Sediments. The Journal of Geology 30:377–392.
