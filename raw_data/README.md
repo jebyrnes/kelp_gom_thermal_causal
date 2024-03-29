@@ -136,20 +136,19 @@ Wentworth (1922) for definitions.
 
 ### Urchin Diameters 2011-2018.xlsx
 
-Year - Integer of year. Latitude - Decimal degrees of Latitude.
-Longitude - Decimal Degrees of Longitude. Region - Integer region code
-matching regions in
-DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv. Site
-number - Site number for year sampled matching site number in
-DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv.
-Sentinel number - Character code for DMR sentinel sites. Depth stratum
-code - Depth stratum code corresponding to depth stratum code in
-DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv.
-Diameter - Integer urchin diameter in millimeters.
+- Year - Integer of year.   
+- Latitude - Decimal degrees of Latitude.  
+- Longitude - Decimal Degrees of Longitude.  
+- Region - Integer region code matching regions in DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv.  
+- Site number - Site number for year sampled matching site number in
+DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv.  
+- Sentinel number - Character code for DMR sentinel sites.  
+- Depth stratum code - Depth stratum code corresponding to depth stratum code in DMR_benthicsurvey_algae_urchin_randomsites_alldepths_2001_2018.csv.  
+- Diameter - Integer urchin diameter in millimeters.  
 
 #### NOAA_temperature_allsites_2001_2018.csv
 
--   date - M/D/Y date.
+-   date - Character M/D/Y date.
 -   month - Integer of month (1-12).
 -   year - Integer of year.
 -   variable - variable code for measurement. Includes buoy ID and depth
