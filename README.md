@@ -1,10 +1,12 @@
 # Code and Data from Suskiewicz, T., Byrnes, J.E.K., Steneck, R.S., Russell, R., Wilson, C.J., Rasher, D.B. 2024. Ocean warming undermines the recovery resilience of New England kelp forests following a fishery-induced trophic cascade. Ecology.
 
+https://github.com/jebyrnes/kelp_gom_thermal_causal
+
 ## To Replicate our Analysis
 
 In order to replicate analysis from the paper, code in the scripts folder is enumerated in the order it should be run. We have tried to provide brief overviews and comment our code in order to facilitate understanding of precisely what we did. The code was developed via a back and forth between authors Rasher and Byrnes in order to make sure lead authors knew precisely what we were doing and why.
 
-For specific questions, feel free to contact [jarrett.byrnes\@umb.edu](mailto:jarrett.byrnes@umb.edu){.email} - and we welcome any pull requests with additional code comments that users find helpful to better understand what we did.
+For specific questions, feel free to contact [jarrett.byrnes\@umb.edu](mailto:jarrett.byrnes@umb.edu) - and we welcome any pull requests with additional code comments that users find helpful to better understand what we did.
 
 ## Directories
 
