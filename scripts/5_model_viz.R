@@ -59,10 +59,11 @@ ggplot(spring_temp_effect%>% mutate(lag_mean_temp_summer_dev = paste0("Lag Temp.
     theme_bw(base_size = 12) +
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
+    ylim(c(0,100)) +
     labs(color = "", 
-         x = "Regional Spring Temperature Anomaly (C)",
+         x = "Subregional Spring Temperature Anomaly (C)",
          y = "Kelp Percent Cover",
-         subtitle = "Urchin anomaly held at 0")#, edited for publication
+         subtitle = "Urchin Anomaly held at 0")#, edited for publication
          #title ="Effect of spring temperature and lagged summer\ntemperature on kelp cover")
 
 ggsave("figures/temperature_effect_on_kelp.jpg", dpi = 600)
@@ -136,8 +137,8 @@ ggplot(urchin_by_temp_effect %>% mutate(mean_temp_spring_dev = paste0("Spring Te
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
-         x = "Regional Urchin Anomaly (# per sq. m)",
+         x = "Subregional Urchin Anomaly (# per sq. m)",
          y = "Kelp Percent Cover",
-         subtitle = "Lag Summer Temp anomaly held at 0")
+         subtitle = "Lag Summer Temp Anomaly held at 0")
 
 ggsave("figures/temperature_changing_urchin_effect.jpg", dpi = 600)
