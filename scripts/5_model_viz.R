@@ -99,7 +99,7 @@ ggplot(temp_by_urchin_effect %>% mutate(urchin_anom_from_region = paste0("Urchin
     scale_color_manual(values = pal) +
     theme(legend.position = "bottom") +
     labs(color = "", 
-         x = "Regional Spring Temperature Anomaly (C)",
+         x = "Subregional Spring Temperature Anomaly (C)",
          y = "Kelp Percent Cover",
          subtitle = "Lag Summer Temp Anomaly held at 0")
 
