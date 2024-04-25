@@ -75,7 +75,7 @@ spring_temp <- ggplot(temp_timeseries,
     stat_smooth(method = "lm", formula = y ~ x,fill = NA) +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
-    labs(x = "", y = "Average Spring\nTemperature C", color = "") +
+    labs(x = "", y = "Mean Spring\nTemperature C", color = "") +
     #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none")
@@ -96,7 +96,7 @@ summer_temp <- ggplot(temp_timeseries,
     stat_smooth(method = "lm", formula = y ~ x, fill = NA) +
     #ylim(c(0,100))  +
     theme_bw(base_size = 16) +
-    labs(x = "", y = "Average Summer\nTemperature C", color = "") +
+    labs(x = "", y = "Mean Summer\nTemperature C", color = "") +
     #    scale_color_brewer(type = "div") +
     scale_color_manual(values = pal) +
     theme(legend.position = "none") +
