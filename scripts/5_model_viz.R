@@ -101,7 +101,7 @@ ggplot(temp_by_urchin_effect %>% mutate(urchin_anom_from_region = paste0("Urchin
     labs(color = "", 
          x = "Regional Spring Temperature Anomaly (C)",
          y = "Kelp Percent Cover",
-         subtitle = "Lag Summer Temp anomaly held at 0")
+         subtitle = "Lag Summer Temp Anomaly held at 0")
 
 ggsave("figures/urchin_temperature_effect_on_kelp.jpg", dpi = 600)
 
